@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyUCI Applicant Portal — University of California, Irvine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bd: #003764; --bm: #0064A4; --bl: #3B8FD4;
+      --gd: #FFD200; --gdark: #C4820A; --gmed: #E6A817;
+      --t1: #0F1F30; --t2: #4A5E72; --t3: #8A9BAE;
+      --bg: #EDF2F8; --wh: #FFFFFF;
+      --ok: #15803D; --okbg: #DCFCE7;
+      --border: #CDD8E8;
+      --sh: 0 1px 4px rgba(0,55,100,.08), 0 2px 10px rgba(0,55,100,.06);
+    }
+    html,body { height:100%; }
+    body {
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      background:var(--bg); color:var(--t1);
+      display:flex; height:100vh; overflow:hidden;
+      font-size:14px; -webkit-font-smoothing:antialiased;
+    }
+
+    /* ── SIDEBAR ─────────────────────────── */
+    .sidebar {
+      width:252px; min-width:252px;
+      background:var(--bd);
+      display:flex; flex-direction:column;
+      height:100vh; overflow-y:auto; scrollbar-width:none;
+    }
+    .sidebar::-webkit-scrollbar{display:none}
+    .sb-logo{padding:26px 22px 20px;border-bottom:1px solid rgba(255,255,255,.09)}
+    .sb-logo-row{display:flex;align-items:center;gap:11px}
+    .sb-seal{width:38px;height:38px;background:var(--gd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:var(--bd);flex-shrink:0;box-shadow:0 0 0 3px rgba(255,210,0,.2)}
+    .sb-school{font-size:11.5px;font-weight:700;color:#fff;line-height:1.25}
+    .sb-portal{font-size:9.5px;font-weight:500;color:rgba(255,255,255,.42);letter-spacing:.7px;text-transform:uppercase;margin-top:3px}
+    .sb-student{padding:18px 22px;border-bottom:1px solid rgba(255,255,255,.07)}
+    .sb-av{width:42px;height:42px;background:linear-gradient(135deg,#1877B0,#3B8FD4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;margin-bottom:10px;border:2px solid rgba(255,255,255,.15)}
+    .sb-name{font-size:13.5px;font-weight:600;color:#fff}
+    .sb-id{font-size:10.5px;color:rgba(255,255,255,.42);margin-top:4px}
+    .sb-pill{display:inline-flex;align-items:center;gap:5px;margin-top:10px;background:rgba(21,128,61,.3);border:1px solid rgba(74,222,128,.35);color:#4ADE80;font-size:9.5px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.6px;text-transform:uppercase}
+    .sb-pill::before{content:'';width:5px;height:5px;background:#4ADE80;border-radius:50%}
+    .sb-nav{padding:14px 0;flex:1}
+    .sb-sec{padding:10px 22px 5px;font-size:9px;font-weight:700;color:rgba(255,255,255,.28);text-transform:uppercase;letter-spacing:.9px}
+    .sb-item{display:flex;align-items:center;gap:11px;padding:9px 22px;font-size:13px;font-weight:500;color:rgba(255,255,255,.6);cursor:pointer;text-decoration:none;position:relative;transition:.15s;border:none;background:none;width:100%;text-align:left}
+    .sb-item:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.88)}
+    .sb-item.active{background:rgba(255,210,0,.11);color:var(--gd)}
+    .sb-item.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gd);border-radius:0 2px 2px 0}
+    .sb-icon{font-size:14px;width:17px;text-align:center;flex-shrink:0}
+    .sb-badge{margin-left:auto;background:var(--gd);color:var(--bd);font-size:9px;font-weight:800;padding:2px 7px;border-radius:20px}
+    .sb-badge.red{background:#EF4444;color:#fff}
+    .sb-footer{padding:14px 22px 18px;border-top:1px solid rgba(255,255,255,.07)}
+    .sb-finfo{font-size:10px;color:rgba(255,255,255,.28);line-height:1.6}
+    .sb-flinks{display:flex;gap:12px;margin-top:8px}
+    .sb-flinks a{font-size:10px;color:rgba(255,255,255,.36);text-decoration:none}
+
+    /* ── MAIN ────────────────────────────── */
+    .main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+    .topbar{background:var(--wh);border-bottom:1px solid var(--border);height:58px;padding:0 30px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+    .breadcrumb{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--t2)}
+    .bc-sep{color:var(--t3)}
+    .bc-cur{color:var(--t1);font-weight:600}
+    .topbar-r{display:flex;align-items:center;gap:18px}
+    .topbar-term{font-size:11px;color:var(--t3);background:var(--bg);border:1px solid var(--border);padding:4px 10px;border-radius:6px}
+    .bell-wrap{position:relative;cursor:pointer;font-size:18px;line-height:1;color:var(--t2)}
+    .bell-dot{position:absolute;top:-1px;right:-2px;width:8px;height:8px;background:#EF4444;border-radius:50%;border:2px solid #fff}
+    .topbar-av{width:32px;height:32px;background:linear-gradient(135deg,var(--bd),var(--bm));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;color:#fff;cursor:pointer}
+
+    /* notifications dropdown */
+    .notif-panel{display:none;position:absolute;top:54px;right:30px;width:320px;background:#fff;border-radius:12px;border:1px solid var(--border);box-shadow:0 8px 30px rgba(0,55,100,.15);z-index:200}
+    .notif-panel.open{display:block}
+    .notif-hd{padding:14px 18px 10px;font-size:12.5px;font-weight:700;color:var(--t1);border-bottom:1px solid var(--border)}
+    .notif-item{display:flex;gap:12px;padding:13px 18px;border-bottom:1px solid #F0F5FB;cursor:pointer}
+    .notif-item:hover{background:#F8FAFD}
+    .notif-item:last-child{border-bottom:none}
+    .notif-dot{width:8px;height:8px;background:var(--bm);border-radius:50%;flex-shrink:0;margin-top:4px}
+    .notif-txt{font-size:12px;color:var(--t2);line-height:1.45}
+    .notif-time{font-size:10.5px;color:var(--t3);margin-top:3px}
+
+    /* ── CONTENT ─────────────────────────── */
+    .content{flex:1;overflow-y:auto;padding:26px 30px 40px;position:relative}
+    .content::-webkit-scrollbar{width:5px}
+    .content::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+    /* ── HERO ────────────────────────────── */
+    .hero{background:linear-gradient(130deg,#002F58 0%,#004F8A 55%,#0073BF 100%);border-radius:16px;padding:36px 40px;margin-bottom:22px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:-70px;right:-50px;width:320px;height:320px;background:radial-gradient(circle,rgba(255,210,0,.16) 0%,transparent 68%);pointer-events:none}
+    .hero-eyebrow{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.8px;text-transform:uppercase;margin-bottom:9px}
+    .hero-row{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:18px}
+    .hero-h{font-size:32px;font-weight:900;color:#fff;line-height:1.12;letter-spacing:-.5px}
+    .hero-h em{color:var(--gd);font-style:normal}
+    .admitted-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gd);color:var(--bd);font-size:11.5px;font-weight:900;padding:9px 20px;border-radius:40px;letter-spacing:1.2px;text-transform:uppercase;white-space:nowrap;flex-shrink:0;box-shadow:0 4px 20px rgba(255,210,0,.45);animation:glow 3s ease-in-out infinite}
+    @keyframes glow{0%,100%{box-shadow:0 4px 20px rgba(255,210,0,.45)}50%{box-shadow:0 4px 30px rgba(255,210,0,.7)}}
+    .badge-chk{width:18px;height:18px;background:var(--bd);color:var(--gd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900}
+    .hero-body{font-size:13.5px;color:rgba(255,255,255,.75);line-height:1.72;max-width:640px;margin-bottom:24px}
+    .hero-actions{display:flex;gap:11px;flex-wrap:wrap}
+    .btn-gold{display:inline-flex;align-items:center;gap:7px;background:var(--gd);color:var(--bd);font-size:12.5px;font-weight:700;padding:10px 20px;border-radius:8px;border:none;cursor:pointer;text-decoration:none;box-shadow:0 2px 10px rgba(255,210,0,.35);transition:.15s}
+    .btn-gold:hover{background:#FFDA00;transform:translateY(-1px)}
+    .btn-ghost{display:inline-flex;align-items:center;gap:7px;background:transparent;color:rgba(255,255,255,.82);font-size:12.5px;font-weight:600;padding:10px 20px;border-radius:8px;border:1px solid rgba(255,255,255,.28);cursor:pointer;text-decoration:none;transition:.15s}
+    .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5)}
+
+    /* ── STATS ───────────────────────────── */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+    .stat{background:var(--wh);border-radius:12px;border:1px solid var(--border);padding:18px 20px;box-shadow:var(--sh)}
+    .stat-lbl{font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:7px}
+    .stat-val{font-size:16.5px;font-weight:700;line-height:1.2}
+    .stat-val.green{color:#15803D}.stat-val.blue{color:var(--bm)}.stat-val.sm{font-size:14px}
+    .stat-hint{font-size:11px;color:var(--t3);margin-top:4px}
+
+    /* ── TABS ────────────────────────────── */
+    .tabs{display:flex;margin-bottom:20px;border-bottom:2px solid var(--border)}
+    .tab{padding:9px 18px;font-size:13px;font-weight:500;color:var(--t2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:.15s;white-space:nowrap;border:none;background:none}
+    .tab.active{color:var(--bm);border-bottom:2px solid var(--bm);font-weight:600;margin-bottom:-2px}
+    .tab:hover:not(.active){color:var(--t1)}
+    .tab-panel{display:none}
+    .tab-panel.active{display:block}
+
+    /* ── GRID ────────────────────────────── */
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:18px}
+
+    /* ── CARDS ───────────────────────────── */
+    .card{background:var(--wh);border-radius:12px;border:1px solid var(--border);box-shadow:var(--sh);overflow:hidden}
+    .card+.card{margin-top:18px}
+    .card-hd{padding:16px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+    .card-title{font-size:13.5px;font-weight:700;color:var(--t1)}
+    .card-sub{font-size:11px;color:var(--t3);margin-top:2px}
+    .card-lnk{font-size:11.5px;color:var(--bm);font-weight:600;cursor:pointer;border:none;background:none;text-decoration:none}
+
+    /* ── CHECKLIST ───────────────────────── */
+    .cl-item{display:flex;align-items:flex-start;gap:14px;padding:13px 22px;border-bottom:1px solid #F0F5FB}
+    .cl-item:last-child{border-bottom:none}
+    .cl-ico{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:1px}
+    .cl-ico.done{background:#DCFCE7;color:#15803D;font-weight:700}
+    .cl-ico.warn{background:#FEF9C3;color:#A16207;font-weight:700;font-size:10px}
+    .cl-ico.pend{background:#F0F4F8;color:var(--t3);border:1.5px solid var(--border);font-size:10px}
+    .cl-body{flex:1}
+    .cl-title{font-size:13px;font-weight:500;color:var(--t1);line-height:1.3}
+    .cl-title.muted{color:var(--t2)}
+    .cl-meta{font-size:11px;color:var(--t3);margin-top:3px}
+    .cl-due{font-size:11px;color:#B45309;font-weight:600;margin-top:3px}
+    .cl-req{font-size:11px;color:#7C3AED;font-weight:600;margin-top:3px}
+    .cl-action{margin-left:auto;font-size:11px;font-weight:600;color:var(--bm);cursor:pointer;border:none;background:none;white-space:nowrap;padding:4px 10px;border-radius:6px;border:1px solid var(--border);display:flex;align-items:center}
+    .cl-action:hover{background:var(--bg)}
+
+    /* ── STEPS ───────────────────────────── */
+    .step-item{display:flex;align-items:flex-start;gap:14px;padding:14px 22px;border-bottom:1px solid #F0F5FB;cursor:pointer;transition:.12s}
+    .step-item:last-child{border-bottom:none}
+    .step-item:hover{background:#F8FAFD}
+    .step-num{width:26px;height:26px;background:var(--bd);color:#fff;border-radius:50%;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+    .step-body{flex:1}
+    .step-title{font-size:13px;font-weight:600;color:var(--bm)}
+    .step-desc{font-size:12px;color:var(--t2);margin-top:3px;line-height:1.45}
+    .step-arr{color:var(--t3);font-size:17px;display:flex;align-items:center}
+
+    /* ── DATES ───────────────────────────── */
+    .date-item{display:flex;align-items:flex-start;justify-content:space-between;padding:12px 22px;border-bottom:1px solid #F0F5FB}
+    .date-item:last-child{border-bottom:none}
+    .date-lbl{font-size:12.5px;font-weight:500;color:var(--t1)}
+    .date-sub{font-size:11px;color:var(--t3);margin-top:2px}
+    .date-urg{font-size:10.5px;color:#DC2626;font-weight:700;margin-top:3px;text-transform:uppercase;letter-spacing:.4px}
+    .date-val{font-size:12px;font-weight:700;color:var(--bm);text-align:right;white-space:nowrap;margin-left:12px;line-height:1.4}
+
+    /* ── NOTICE ──────────────────────────── */
+    .notice{background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border:1px solid #FDE68A;border-radius:11px;padding:16px 18px;margin-bottom:16px}
+    .notice-title{font-size:11.5px;font-weight:700;color:#92400E;display:flex;align-items:center;gap:6px;margin-bottom:5px}
+    .notice-text{font-size:12px;color:#78350F;line-height:1.55}
+
+    /* ── QUICK LINKS ─────────────────────── */
+    .ql-item{display:flex;align-items:center;gap:12px;padding:12px 22px;border-bottom:1px solid #F0F5FB;cursor:pointer;transition:.12s}
+    .ql-item:last-child{border-bottom:none}
+    .ql-item:hover{background:#F8FAFD}
+    .ql-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+    .ql-icon.b{background:#EFF6FF}.ql-icon.g{background:#FFFBEB}.ql-icon.e{background:#F0FDF4}
+    .ql-label{font-size:12.5px;font-weight:500;color:var(--t1);flex:1}
+    .ql-arr{color:var(--t3);font-size:15px}
+
+    /* ── FINANCIAL AID PANEL ─────────────── */
+    .aid-hero{background:linear-gradient(135deg,#002F58,#004F8A);border-radius:12px;padding:24px 28px;color:#fff;margin-bottom:20px}
+    .aid-hero h2{font-size:22px;font-weight:800;margin-bottom:6px}
+    .aid-hero p{font-size:13px;color:rgba(255,255,255,.72);line-height:1.6;margin-bottom:18px}
+    .aid-total{font-size:32px;font-weight:900;color:var(--gd)}
+    .aid-total span{font-size:14px;font-weight:500;color:rgba(255,255,255,.6);margin-left:6px}
+    .aid-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+    .aid-card{background:var(--wh);border-radius:12px;border:1px solid var(--border);padding:18px 20px;box-shadow:var(--sh)}
+    .aid-type{font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
+    .aid-name{font-size:13.5px;font-weight:700;color:var(--t1);margin-bottom:4px}
+    .aid-amount{font-size:20px;font-weight:800;color:var(--ok)}
+    .aid-amount.loan{color:var(--bm)}
+    .aid-desc{font-size:11.5px;color:var(--t2);margin-top:6px;line-height:1.45}
+    .aid-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-green{display:inline-flex;align-items:center;gap:7px;background:#15803D;color:#fff;font-size:13px;font-weight:700;padding:11px 22px;border-radius:8px;border:none;cursor:pointer;box-shadow:0 2px 10px rgba(21,128,61,.3);transition:.15s}
+    .btn-green:hover{background:#166534;transform:translateY(-1px)}
+    .btn-outline-dark{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--t2);font-size:13px;font-weight:600;padding:11px 22px;border-radius:8px;border:1px solid var(--border);cursor:pointer;transition:.15s}
+    .btn-outline-dark:hover{border-color:var(--bm);color:var(--bm)}
+
+    /* ── HOUSING PANEL ───────────────────── */
+    .housing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
+    .hc{background:var(--wh);border-radius:12px;border:1px solid var(--border);overflow:hidden;box-shadow:var(--sh)}
+    .hc-img{height:110px;display:flex;align-items:center;justify-content:center;font-size:36px}
+    .hc-body{padding:16px 18px}
+    .hc-name{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:4px}
+    .hc-type{font-size:10.5px;color:var(--t3);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+    .hc-rate{font-size:15px;font-weight:800;color:var(--bm)}
+    .hc-rate span{font-size:11px;font-weight:400;color:var(--t3)}
+    .hc-features{margin-top:10px}
+    .hc-feat{font-size:11.5px;color:var(--t2);display:flex;align-items:center;gap:5px;margin-bottom:3px}
+    .hc-avail{display:inline-block;margin-top:10px;font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px}
+    .hc-avail.open{background:#DCFCE7;color:#15803D}
+    .hc-avail.limited{background:#FEF9C3;color:#A16207}
+
+    /* ── ADMITTED STUDENTS PANEL ─────────── */
+    .events-list{padding:0}
+    .event-item{display:flex;gap:16px;padding:16px 22px;border-bottom:1px solid #F0F5FB;cursor:pointer}
+    .event-item:last-child{border-bottom:none}
+    .event-item:hover{background:#F8FAFD}
+    .event-date{min-width:50px;text-align:center;background:var(--bg);border-radius:10px;padding:8px 6px;flex-shrink:0}
+    .event-mo{font-size:10px;font-weight:700;color:var(--bm);text-transform:uppercase;letter-spacing:.5px}
+    .event-day{font-size:20px;font-weight:800;color:var(--t1)}
+    .event-body{flex:1}
+    .event-title{font-size:13px;font-weight:600;color:var(--t1)}
+    .event-detail{font-size:12px;color:var(--t2);margin-top:3px;line-height:1.4}
+    .event-badge{display:inline-block;font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:20px;margin-top:5px}
+    .event-badge.virtual{background:#EFF6FF;color:var(--bm)}
+    .event-badge.inperson{background:#DCFCE7;color:#15803D}
+
+    /* ── ORIENTATION PANEL ───────────────── */
+    .ori-day{background:var(--wh);border-radius:12px;border:1px solid var(--border);margin-bottom:14px;overflow:hidden;box-shadow:var(--sh)}
+    .ori-day-hd{padding:14px 22px;background:var(--bd);color:#fff;display:flex;align-items:center;justify-content:space-between}
+    .ori-day-title{font-size:13.5px;font-weight:700}
+    .ori-day-date{font-size:11.5px;color:rgba(255,255,255,.65)}
+    .ori-session{display:flex;align-items:flex-start;gap:14px;padding:13px 22px;border-bottom:1px solid #F0F5FB}
+    .ori-session:last-child{border-bottom:none}
+    .ori-time{font-size:11px;font-weight:700;color:var(--bm);min-width:80px;flex-shrink:0;padding-top:2px}
+    .ori-info{flex:1}
+    .ori-session-title{font-size:13px;font-weight:500;color:var(--t1)}
+    .ori-session-loc{font-size:11.5px;color:var(--t3);margin-top:2px}
+
+    /* ── MODALS ──────────────────────────── */
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+    .modal-overlay.open{display:flex}
+
+    /* generic modal box */
+    .modal-box{background:#fff;border-radius:16px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+    .modal-box::-webkit-scrollbar{width:5px}
+    .modal-box::-webkit-scrollbar-thumb{background:#ddd;border-radius:3px}
+    .modal-hd{padding:22px 26px 0;display:flex;align-items:flex-start;justify-content:space-between}
+    .modal-title{font-size:17px;font-weight:800;color:var(--t1)}
+    .modal-sub{font-size:12px;color:var(--t3);margin-top:3px}
+    .modal-close{width:30px;height:30px;border-radius:50%;background:#F0F4F8;border:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--t2);transition:.15s}
+    .modal-close:hover{background:#E2E8F0}
+    .modal-body{padding:20px 26px 26px}
+
+    /* SIR form */
+    .form-group{margin-bottom:18px}
+    .form-label{font-size:12px;font-weight:600;color:var(--t2);margin-bottom:5px;display:block}
+    .form-input{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:inherit;color:var(--t1);transition:.15s;outline:none}
+    .form-input:focus{border-color:var(--bm);box-shadow:0 0 0 3px rgba(0,100,164,.1)}
+    .form-select{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:inherit;color:var(--t1);background:#fff;outline:none;cursor:pointer;transition:.15s}
+    .form-select:focus{border-color:var(--bm);box-shadow:0 0 0 3px rgba(0,100,164,.1)}
+    .form-checkbox{display:flex;align-items:flex-start;gap:10px;font-size:12.5px;color:var(--t2);line-height:1.5}
+    .form-checkbox input{margin-top:2px;width:14px;height:14px;flex-shrink:0}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .form-note{background:var(--bg);border-radius:8px;padding:12px 14px;font-size:12px;color:var(--t2);line-height:1.5;margin-bottom:18px}
+    .form-note strong{color:var(--t1)}
+    .modal-footer{display:flex;justify-content:flex-end;gap:10px;padding-top:6px}
+    .btn-cancel{background:transparent;color:var(--t2);font-size:13px;font-weight:600;padding:10px 18px;border-radius:8px;border:1px solid var(--border);cursor:pointer;transition:.15s}
+    .btn-cancel:hover{border-color:var(--t2)}
+    .btn-submit{background:var(--bd);color:#fff;font-size:13px;font-weight:700;padding:10px 22px;border-radius:8px;border:none;cursor:pointer;transition:.15s}
+    .btn-submit:hover{background:var(--bm)}
+
+    /* success state */
+    .success-state{text-align:center;padding:30px 0 10px}
+    .success-icon{width:64px;height:64px;background:linear-gradient(135deg,#15803D,#22C55E);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;margin:0 auto 18px;box-shadow:0 4px 20px rgba(21,128,61,.3)}
+    .success-title{font-size:20px;font-weight:800;color:var(--t1);margin-bottom:8px}
+    .success-sub{font-size:13.5px;color:var(--t2);line-height:1.6;max-width:380px;margin:0 auto 22px}
+    .success-ref{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:12px;color:var(--t2);text-align:left;margin-bottom:18px}
+    .success-ref strong{color:var(--t1);display:block;margin-bottom:6px}
+    .hidden{display:none!important}
+
+    /* ── LETTER MODAL ────────────────────── */
+    .letter-wrap{background:#FFFEF8;border-radius:4px;width:100%;max-width:720px;max-height:92vh;overflow-y:auto;box-shadow:0 24px 70px rgba(0,0,0,.4)}
+    .letter-wrap::-webkit-scrollbar{width:5px}
+    .letter-wrap::-webkit-scrollbar-thumb{background:#ddd;border-radius:3px}
+    .letter-toolbar{background:#f5f5f0;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e0e0d8;gap:10px;position:sticky;top:0;z-index:10}
+    .letter-toolbar-left{font-size:12px;color:#666;font-weight:500}
+    .letter-toolbar-right{display:flex;gap:8px}
+    .lt-btn{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid #ccc;background:#fff;cursor:pointer;color:#444;transition:.15s}
+    .lt-btn:hover{background:#eee}
+    .lt-btn.primary{background:var(--bd);color:#fff;border-color:var(--bd)}
+    .lt-btn.primary:hover{background:var(--bm)}
+    .letter-paper{padding:56px 68px;font-size:13.5px;line-height:1.75;color:#1a1a1a}
+    .letter-hd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:36px;padding-bottom:24px;border-bottom:2px solid var(--bd)}
+    .letter-seal-area{display:flex;align-items:center;gap:14px}
+    .letter-seal{width:52px;height:52px;background:var(--bd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:var(--gd);flex-shrink:0;border:3px solid var(--gd)}
+    .letter-inst{display:flex;flex-direction:column}
+    .letter-inst-name{font-size:14px;font-weight:900;color:var(--bd);letter-spacing:.2px;line-height:1.2}
+    .letter-inst-dept{font-size:11px;color:var(--t2);margin-top:3px;line-height:1.4}
+    .letter-addr-block{text-align:right;font-size:11px;color:var(--t2);line-height:1.65}
+    .letter-date{font-size:13px;color:var(--t2);margin-bottom:24px}
+    .letter-recipient{margin-bottom:8px;font-size:13.5px;font-weight:600;color:var(--t1)}
+    .letter-re{font-size:13px;color:var(--t2);margin-bottom:24px;padding:10px 14px;background:#F0F5FB;border-left:3px solid var(--bm);border-radius:0 6px 6px 0}
+    .letter-re strong{color:var(--t1)}
+    .letter-salutation{font-size:14px;font-weight:600;color:var(--t1);margin-bottom:16px}
+    .letter-p{margin-bottom:16px;text-align:justify;font-size:13.5px;line-height:1.8;color:#1a1a1a}
+    .letter-cond{margin:20px 0;background:#F8FAFD;border:1px solid var(--border);border-radius:8px;padding:16px 20px}
+    .letter-cond-title{font-size:12px;font-weight:700;color:var(--t2);text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px}
+    .letter-cond ol{padding-left:18px}
+    .letter-cond li{font-size:13px;line-height:1.7;color:var(--t1);margin-bottom:6px}
+    .letter-cond li:last-child{margin-bottom:0}
+    .letter-close{font-size:13.5px;margin-bottom:28px;line-height:1.8}
+    .letter-sign-block{margin-top:8px}
+    .letter-sign{font-family:'Dancing Script',cursive;font-size:30px;color:var(--bd);line-height:1.2;margin-bottom:4px}
+    .letter-signer{font-size:13px;font-weight:600;color:var(--t1);margin-bottom:2px}
+    .letter-title{font-size:12px;color:var(--t2)}
+    .letter-divider{height:1px;background:var(--border);margin:24px 0}
+    .letter-footer{font-size:11px;color:var(--t3);line-height:1.6}
+    .letter-ref{font-size:11px;color:var(--t3);font-family:monospace;margin-top:6px}
+    .admitted-stamp{display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:var(--bd);color:var(--gd);font-size:11px;font-weight:800;padding:6px 14px;border-radius:6px;letter-spacing:.8px;text-transform:uppercase}
+
+    @media print {
+      .letter-toolbar{display:none}
+      .letter-wrap{box-shadow:none;max-height:none}
+      body{background:#fff}
+      .modal-overlay{position:static;background:none;backdrop-filter:none;padding:0}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ MODALS ══════════════════════ -->
+
+<!-- Decision Letter Modal -->
+<div id="modal-letter" class="modal-overlay" role="dialog" aria-modal="true">
+  <div class="letter-wrap">
+    <div class="letter-toolbar">
+      <div class="letter-toolbar-left">📄 Official Admission Letter — UCI-2026-00847219</div>
+      <div class="letter-toolbar-right">
+        <button class="lt-btn" onclick="window.print()">🖨 Print</button>
+        <button class="lt-btn primary" onclick="closeModal('modal-letter')">✕ Close</button>
+      </div>
+    </div>
+    <div class="letter-paper">
+      <div class="letter-hd">
+        <div class="letter-seal-area">
+          <div class="letter-seal">UCI</div>
+          <div class="letter-inst">
+            <div class="letter-inst-name">University of California, Irvine</div>
+            <div class="letter-inst-dept">Office of Undergraduate Admissions<br>215 Aldrich Hall &nbsp;·&nbsp; Irvine, California 92697-1075<br>admissions@uci.edu</div>
+          </div>
+        </div>
+        <div class="letter-addr-block">
+          Donald Bren School of<br>Information &amp; Computer Sciences<br>Irvine, CA 92697
+        </div>
+      </div>
+
+      <div class="letter-date">March 21, 2026</div>
+
+      <div class="letter-recipient">Sanmay Pachika</div>
+      <div class="letter-re">
+        <strong>RE:</strong> Offer of Admission to the University of California, Irvine &nbsp;·&nbsp; Fall 2026<br>
+        <strong>Applicant Reference:</strong> UCI-2026-00847219 &nbsp;·&nbsp; Application: UC-APP-2025-847219
+      </div>
+
+      <div class="letter-salutation">Dear Sanmay,</div>
+
+      <p class="letter-p">
+        It is my distinct pleasure to inform you, on behalf of the Admissions Committee of the University of
+        California, Irvine, that you have been admitted to UC Irvine for the Fall 2026 academic year. You have
+        been offered admission to the <strong>Donald Bren School of Information and Computer Sciences</strong> as
+        a candidate for the <strong>Bachelor of Science in Computer Science</strong>.
+      </p>
+
+      <p class="letter-p">
+        This year, UC Irvine received over 85,000 undergraduate applications — among the most competitive in
+        the institution's history. Our Admissions Committee conducts a thorough, holistic review of every file,
+        evaluating academic preparation, intellectual range, personal achievement, and demonstrated potential to
+        contribute to our campus community. You distinguished yourself among this exceptionally talented group of
+        applicants, and we are confident that you will thrive here and leave a lasting impact on the Anteater
+        community.
+      </p>
+
+      <div class="letter-cond">
+        <div class="letter-cond-title">Conditions of Admission</div>
+        <ol>
+          <li>Satisfactory completion of all courses currently in progress, with no significant decline in academic performance from the record upon which this offer was based.</li>
+          <li>Graduation from your current academic institution with all degree and diploma requirements fulfilled.</li>
+          <li>Submission of official final transcripts, sent directly from your institution, no later than <strong>July 1, 2026</strong>.</li>
+        </ol>
+      </div>
+
+      <p class="letter-p">
+        To formally accept this offer and confirm your intention to enroll, you must submit your
+        <strong>Statement of Intent to Register (SIR)</strong> no later than <strong>May 1, 2026</strong>,
+        along with the required enrollment confirmation deposit of <strong>$200.00</strong>. This deadline
+        is firm; failure to respond by May 1, 2026 will result in the forfeiture of your offer of admission.
+        Your SIR may be submitted through your MyUCI Applicant Portal.
+      </p>
+
+      <p class="letter-p">
+        Information regarding your financial aid award, housing application, and mandatory orientation
+        registration will be made available through your portal in the coming weeks. We encourage you to
+        monitor your portal and respond to all outstanding action items promptly to secure the best possible
+        placement and support for your first year.
+      </p>
+
+      <p class="letter-p">
+        On behalf of every member of the UCI community — faculty, staff, and your future fellow Anteaters —
+        congratulations on this achievement. You have worked hard to reach this moment, and we are proud to
+        extend this offer. We look forward to welcoming you to Irvine this fall.
+      </p>
+
+      <div class="letter-close">Sincerely,</div>
+
+      <div class="letter-sign-block">
+        <div class="letter-sign">Gary M. Holbrook</div>
+        <div class="letter-signer">Gary M. Holbrook</div>
+        <div class="letter-title">Director of Undergraduate Admissions<br>University of California, Irvine</div>
+      </div>
+
+      <div class="admitted-stamp">✓ Officially Admitted &nbsp;·&nbsp; Fall 2026</div>
+
+      <div class="letter-divider"></div>
+      <div class="letter-footer">
+        This offer of admission is issued by the University of California, Irvine and is subject to the final
+        verification of all submitted application materials. Any material misrepresentation in the application
+        may result in the rescission of this offer. This letter is confidential and intended solely for the
+        named applicant.
+      </div>
+      <div class="letter-ref">Ref: UCI-2026-00847219 &nbsp;·&nbsp; App: UC-APP-2025-847219 &nbsp;·&nbsp; Issued: 2026-03-21T10:00:00-08:00</div>
+    </div>
+  </div>
+</div>
+
+<!-- SIR Modal -->
+<div id="modal-sir" class="modal-overlay" role="dialog">
+  <div class="modal-box">
+    <div class="modal-hd">
+      <div>
+        <div class="modal-title">Statement of Intent to Register</div>
+        <div class="modal-sub">Confirm your enrollment for Fall 2026 &nbsp;·&nbsp; Due May 1, 2026</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-sir')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="sir-form-wrap">
+        <div class="form-note">
+          <strong>Enrollment Confirmation Deposit: $200.00</strong><br>
+          By submitting this form you are confirming your intention to enroll at the University of California,
+          Irvine for the Fall 2026 academic year. This action is binding; withdrawals after May 1, 2026
+          will result in forfeiture of the deposit.
+        </div>
+        <form id="sir-form" onsubmit="submitSIR(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Legal First Name</label>
+              <input class="form-input" type="text" value="Sanmay" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Legal Last Name</label>
+              <input class="form-input" type="text" value="Pachika" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Applicant ID</label>
+            <input class="form-input" type="text" value="UCI-2026-00847219" readonly style="background:#F8FAFD;color:var(--t3)" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Intended Major</label>
+            <select class="form-select">
+              <option selected>Computer Science — Donald Bren School, ICS</option>
+              <option>Undeclared — Donald Bren School, ICS</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Payment Method</label>
+            <select class="form-select" required>
+              <option value="">Select payment method</option>
+              <option>Credit / Debit Card</option>
+              <option>Electronic Check (ACH)</option>
+              <option>Fee Waiver (if eligible)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <div class="form-checkbox">
+              <input type="checkbox" required id="sir-agree" />
+              <label for="sir-agree">I understand that submitting this SIR confirms my intent to enroll and that the $200 deposit is non-refundable after May 1, 2026.</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-checkbox">
+              <input type="checkbox" required id="sir-cond" />
+              <label for="sir-cond">I acknowledge the conditions of my admission and agree to maintain the academic standards upon which this offer was made.</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-cancel" onclick="closeModal('modal-sir')">Cancel</button>
+            <button type="submit" class="btn-submit">Submit SIR &amp; Pay $200</button>
+          </div>
+        </form>
+
+        <div id="sir-success" class="success-state hidden">
+          <div class="success-icon">✓</div>
+          <div class="success-title">SIR Submitted Successfully</div>
+          <div class="success-sub">
+            Your Statement of Intent to Register has been received. Your place in the Fall 2026
+            incoming class is now confirmed. A confirmation has been sent to your email on file.
+          </div>
+          <div class="success-ref">
+            <strong>Confirmation Details</strong>
+            Applicant: Sanmay Pachika &nbsp;·&nbsp; ID: UCI-2026-00847219<br>
+            Submitted: March 21, 2026 &nbsp;·&nbsp; Confirmation #: SIR-2026-84721<br>
+            Deposit: $200.00 processed
+          </div>
+          <button class="btn-gold" style="width:100%;justify-content:center" onclick="closeModal('modal-sir')">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Reply to Offer Modal -->
+<div id="modal-reply" class="modal-overlay" role="dialog">
+  <div class="modal-box" style="max-width:480px">
+    <div class="modal-hd">
+      <div>
+        <div class="modal-title">Reply to Offer</div>
+        <div class="modal-sub">Applicant ID: UCI-2026-00847219</div>
+      </div>
+      <button class="modal-close" onclick="closeModal('modal-reply')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="reply-form-wrap">
+        <div class="form-note">
+          <strong>Sanmay Pachika</strong> — Please select your response to your offer of admission to
+          the University of California, Irvine, Fall 2026.
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:22px">
+          <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;cursor:pointer;transition:.15s" onmouseover="this.style.borderColor='#0064A4'" onmouseout="this.style.borderColor='var(--border)'">
+            <input type="radio" name="reply" value="accept" style="width:16px;height:16px;accent-color:var(--bm)" />
+            <div>
+              <div style="font-size:13.5px;font-weight:700;color:var(--t1)">✓ Accept Offer of Admission</div>
+              <div style="font-size:12px;color:var(--t2);margin-top:2px">I will attend UC Irvine, Fall 2026. I will submit my SIR by May 1, 2026.</div>
+            </div>
+          </label>
+          <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;cursor:pointer;transition:.15s" onmouseover="this.style.borderColor='#DC2626'" onmouseout="this.style.borderColor='var(--border)'">
+            <input type="radio" name="reply" value="decline" style="width:16px;height:16px;accent-color:#DC2626" />
+            <div>
+              <div style="font-size:13.5px;font-weight:700;color:var(--t1)">✕ Decline Offer of Admission</div>
+              <div style="font-size:12px;color:var(--t2);margin-top:2px">I will not be attending UC Irvine. This action cannot be undone.</div>
+            </div>
+          </label>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-cancel" onclick="closeModal('modal-reply')">Cancel</button>
+          <button class="btn-submit" onclick="submitReply()">Submit Response</button>
+        </div>
+      </div>
+      <div id="reply-success" class="success-state hidden">
+        <div class="success-icon">✓</div>
+        <div class="success-title">Response Recorded</div>
+        <div class="success-sub">Your acceptance has been recorded. Complete your SIR through the portal to finalize enrollment.</div>
+        <button class="btn-gold" style="width:100%;justify-content:center" onclick="closeModal('modal-reply');openModal('modal-sir')">Submit SIR Now →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="modal-contact" class="modal-overlay" role="dialog">
+  <div class="modal-box" style="max-width:440px">
+    <div class="modal-hd">
+      <div><div class="modal-title">Contact Admissions</div><div class="modal-sub">UC Irvine Office of Undergraduate Admissions</div></div>
+      <button class="modal-close" onclick="closeModal('modal-contact')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border:1px solid var(--border)">
+          <div style="font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px">Email</div>
+          <div style="font-size:13.5px;font-weight:600;color:var(--bm)">admissions@uci.edu</div>
+          <div style="font-size:11.5px;color:var(--t2);margin-top:2px">Response within 2–3 business days</div>
+        </div>
+        <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border:1px solid var(--border)">
+          <div style="font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px">Phone</div>
+          <div style="font-size:13.5px;font-weight:600;color:var(--t1)">(949) 824-6703</div>
+          <div style="font-size:11.5px;color:var(--t2);margin-top:2px">Mon–Fri, 8:00 AM – 5:00 PM PST</div>
+        </div>
+        <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border:1px solid var(--border)">
+          <div style="font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px">In Person</div>
+          <div style="font-size:13.5px;font-weight:600;color:var(--t1)">215 Aldrich Hall, Irvine, CA 92697</div>
+          <div style="font-size:11.5px;color:var(--t2);margin-top:2px">Walk-in hours: Mon–Fri, 9:00 AM – 4:00 PM</div>
+        </div>
+      </div>
+      <div class="modal-footer" style="margin-top:18px">
+        <button class="btn-submit" style="width:100%;justify-content:center" onclick="closeModal('modal-contact')">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Notification Panel -->
+<div id="notif-panel" class="notif-panel" style="position:fixed;top:58px;right:20px">
+  <div class="notif-hd">Notifications <span style="color:var(--bm);font-weight:700;margin-left:6px">3 new</span></div>
+  <div class="notif-item" onclick="openModal('modal-letter');closeNotif()">
+    <div class="notif-dot"></div>
+    <div><div class="notif-txt">Your admission decision has been released. <strong>You have been admitted!</strong></div><div class="notif-time">Today, 10:00 AM</div></div>
+  </div>
+  <div class="notif-item" onclick="switchTab('financial-aid');closeNotif()">
+    <div class="notif-dot"></div>
+    <div><div class="notif-txt">Your estimated financial aid package is now available for review.</div><div class="notif-time">Today, 10:05 AM</div></div>
+  </div>
+  <div class="notif-item">
+    <div class="notif-dot" style="background:#E6A817"></div>
+    <div><div class="notif-txt">Reminder: SIR deadline is May 1, 2026. Submit your enrollment confirmation.</div><div class="notif-time">Today, 10:10 AM</div></div>
+  </div>
+</div>
+
+<!-- ══════════════ SIDEBAR ══════════════════════ -->
+<aside class="sidebar">
+  <div class="sb-logo">
+    <div class="sb-logo-row">
+      <div class="sb-seal">UCI</div>
+      <div>
+        <div class="sb-school">University of California<br>Irvine</div>
+        <div class="sb-portal">MyUCI Applicant Portal</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sb-student">
+    <div class="sb-av">SP</div>
+    <div class="sb-name">Sanmay Pachika</div>
+    <div class="sb-id">ID&nbsp; UCI-2026-00847219</div>
+    <div class="sb-pill">Admitted — Fall 2026</div>
+  </div>
+
+  <nav class="sb-nav">
+    <div class="sb-sec">Main</div>
+    <button class="sb-item active" data-tab="overview" onclick="sidebarNav(this,'overview')">
+      <span class="sb-icon">⊞</span> Dashboard
+    </button>
+    <button class="sb-item" onclick="openModal('modal-letter')">
+      <span class="sb-icon">📄</span> Decision Letter
+    </button>
+    <button class="sb-item" data-tab="overview" onclick="sidebarNav(this,'overview')">
+      <span class="sb-icon">📋</span> Application Status
+      <span class="sb-badge">1</span>
+    </button>
+
+    <div class="sb-sec" style="margin-top:6px">Enrollment</div>
+    <button class="sb-item" data-tab="financial-aid" onclick="sidebarNav(this,'financial-aid')">
+      <span class="sb-icon">💰</span> Financial Aid
+      <span class="sb-badge red">New</span>
+    </button>
+    <button class="sb-item" data-tab="housing" onclick="sidebarNav(this,'housing')">
+      <span class="sb-icon">🏠</span> Housing
+    </button>
+    <button class="sb-item" data-tab="admitted" onclick="sidebarNav(this,'admitted')">
+      <span class="sb-icon">🎓</span> Admitted Students
+    </button>
+    <button class="sb-item" data-tab="orientation" onclick="sidebarNav(this,'orientation')">
+      <span class="sb-icon">📅</span> Orientation
+    </button>
+
+    <div class="sb-sec" style="margin-top:6px">Account</div>
+    <button class="sb-item" onclick="openModal('modal-contact')">
+      <span class="sb-icon">❓</span> Help &amp; Support
+    </button>
+  </nav>
+
+  <div class="sb-footer">
+    <div class="sb-finfo">Last login: Mar 21, 2026 at 10:42 AM<br>Secure session · TLS 1.3</div>
+    <div class="sb-flinks">
+      <a href="#">Privacy</a><a href="#">Terms</a>
+      <a href="#" onclick="openModal('modal-contact');return false">Contact</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ══════════════ MAIN ══════════════════════════ -->
+<main class="main">
+  <header class="topbar">
+    <div class="breadcrumb">
+      <span>Portal</span><span class="bc-sep">›</span><span class="bc-cur" id="breadcrumb-cur">Admission Dashboard</span>
+    </div>
+    <div class="topbar-r">
+      <div class="topbar-term">Academic Year 2026–27</div>
+      <div class="bell-wrap" onclick="toggleNotif()">🔔<div class="bell-dot"></div></div>
+      <div class="topbar-av">SP</div>
+    </div>
+  </header>
+
+  <div class="content" id="main-content">
+
+    <!-- ── TAB BAR ── -->
+    <div class="tabs" id="tab-bar">
+      <button class="tab active" data-tab="overview" onclick="switchTab('overview')">Overview</button>
+      <button class="tab" data-tab="financial-aid" onclick="switchTab('financial-aid')">Financial Aid</button>
+      <button class="tab" data-tab="housing" onclick="switchTab('housing')">Housing</button>
+      <button class="tab" data-tab="admitted" onclick="switchTab('admitted')">Admitted Students</button>
+      <button class="tab" data-tab="orientation" onclick="switchTab('orientation')">Orientation</button>
+    </div>
+
+    <!-- ═══ OVERVIEW PANEL ═══════════════════ -->
+    <div class="tab-panel active" id="panel-overview">
+      <div class="hero">
+        <div class="hero-eyebrow">Admissions Decision &nbsp;·&nbsp; Fall 2026 &nbsp;·&nbsp; Released: March 21, 2026</div>
+        <div class="hero-row">
+          <div>
+            <div class="hero-h">Congratulations,<br><em>Sanmay Pachika.</em></div>
+          </div>
+          <div class="admitted-badge"><div class="badge-chk">✓</div>Admitted</div>
+        </div>
+        <div class="hero-body">
+          We are proud to welcome you to the University of California, Irvine. After thorough review by our
+          Admissions Committee, you have been selected for admission to the Donald Bren School of Information
+          and Computer Sciences for the Fall 2026 term. Your exceptional academic record, personal character,
+          and commitment to excellence distinguished you among a highly competitive applicant pool of over
+          85,000 candidates.
+        </div>
+        <div class="hero-actions">
+          <button class="btn-gold" onclick="openModal('modal-sir')">↳ Submit Statement of Intent (SIR)</button>
+          <button class="btn-ghost" onclick="openModal('modal-letter')">📄 View Decision Letter</button>
+          <button class="btn-ghost" onclick="switchTab('overview');document.getElementById('next-steps-section').scrollIntoView({behavior:'smooth'})">Explore Next Steps →</button>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-lbl">Application Status</div>
+          <div class="stat-val green">✓ Admitted</div>
+          <div class="stat-hint">Decision finalized</div>
+        </div>
+        <div class="stat">
+          <div class="stat-lbl">Decision Released</div>
+          <div class="stat-val blue">March 21, 2026</div>
+          <div class="stat-hint">10:00 AM PST</div>
+        </div>
+        <div class="stat">
+          <div class="stat-lbl">Enrollment Term</div>
+          <div class="stat-val">Fall 2026</div>
+          <div class="stat-hint">Quarter: Autumn — Sep 2026</div>
+        </div>
+        <div class="stat">
+          <div class="stat-lbl">Program of Study</div>
+          <div class="stat-val sm">Computer Science</div>
+          <div class="stat-hint">B.S. · Donald Bren School, ICS</div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <!-- Checklist -->
+          <div class="card">
+            <div class="card-hd">
+              <div><div class="card-title">Application Checklist</div><div class="card-sub">5 of 8 complete · 3 require your attention</div></div>
+              <a class="card-lnk" href="#">View All</a>
+            </div>
+            <div class="cl-item"><div class="cl-ico done">✓</div><div class="cl-body"><div class="cl-title muted">Application Submitted</div><div class="cl-meta">Oct 15, 2025 · Ref #UC-APP-2025-847219</div></div></div>
+            <div class="cl-item"><div class="cl-ico done">✓</div><div class="cl-body"><div class="cl-title muted">Application Fee Processed</div><div class="cl-meta">Oct 15, 2025 · $70.00 cleared</div></div></div>
+            <div class="cl-item"><div class="cl-ico done">✓</div><div class="cl-body"><div class="cl-title muted">Official Transcripts Received</div><div class="cl-meta">Verified Nov 3, 2025 · Records on file</div></div></div>
+            <div class="cl-item"><div class="cl-ico done">✓</div><div class="cl-body"><div class="cl-title muted">Admissions Committee Review Complete</div><div class="cl-meta">Finalized by the Admissions Committee</div></div></div>
+            <div class="cl-item"><div class="cl-ico done">✓</div><div class="cl-body"><div class="cl-title muted">Admission Decision Released</div><div class="cl-meta">Posted Mar 21, 2026 · Status: Admitted</div></div></div>
+            <div class="cl-item"><div class="cl-ico warn">!</div><div class="cl-body"><div class="cl-title">Submit Statement of Intent to Register (SIR)</div><div class="cl-due">⚑ Due May 1, 2026 — Action Required</div></div><button class="cl-action" onclick="openModal('modal-sir')">Start →</button></div>
+            <div class="cl-item"><div class="cl-ico warn">!</div><div class="cl-body"><div class="cl-title">Accept or Decline Financial Aid Offer</div><div class="cl-due">⚑ Due May 15, 2026</div></div><button class="cl-action" onclick="switchTab('financial-aid')">Review →</button></div>
+            <div class="cl-item"><div class="cl-ico pend">○</div><div class="cl-body"><div class="cl-title">Submit Final Official Transcripts</div><div class="cl-req">Required before enrollment · Due Jul 1, 2026</div></div></div>
+          </div>
+
+          <!-- Next Steps -->
+          <div class="card" id="next-steps-section">
+            <div class="card-hd"><div><div class="card-title">Your Next Steps</div><div class="card-sub">Complete these actions to secure your enrollment</div></div></div>
+            <div class="step-item" onclick="openModal('modal-sir')"><div class="step-num">1</div><div class="step-body"><div class="step-title">Submit Your Statement of Intent to Register</div><div class="step-desc">Confirm enrollment by submitting your SIR before May 1, 2026. A $200 deposit is required.</div></div><div class="step-arr">›</div></div>
+            <div class="step-item" onclick="switchTab('financial-aid')"><div class="step-num">2</div><div class="step-body"><div class="step-title">Review Your Financial Aid Package</div><div class="step-desc">Your estimated aid offer is posted. Review grants, loans, and work-study in the Financial Aid tab.</div></div><div class="step-arr">›</div></div>
+            <div class="step-item" onclick="switchTab('housing')"><div class="step-num">3</div><div class="step-body"><div class="step-title">Apply for On-Campus Housing</div><div class="step-desc">Housing opens March 28. Explore residence hall options and apply before the priority deadline.</div></div><div class="step-arr">›</div></div>
+            <div class="step-item" onclick="switchTab('admitted')"><div class="step-num">4</div><div class="step-body"><div class="step-title">Join the Admitted Anteaters Community</div><div class="step-desc">Connect with your future classmates and register for an Admitted Anteater Day event.</div></div><div class="step-arr">›</div></div>
+            <div class="step-item" onclick="switchTab('orientation')"><div class="step-num">5</div><div class="step-body"><div class="step-title">Register for New Student Orientation</div><div class="step-desc">Orientation is mandatory. Fall 2026 sessions are September 15–17 on the Irvine campus.</div></div><div class="step-arr">›</div></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="notice">
+            <div class="notice-title">⚠ Action Required by May 1, 2026</div>
+            <div class="notice-text">Submit your SIR to secure your place in the Fall 2026 class. Failure to submit by the deadline may result in forfeiture of your offer.</div>
+          </div>
+          <div class="card" style="margin-bottom:16px">
+            <div class="card-hd"><div class="card-title">Important Dates</div></div>
+            <div class="date-item"><div><div class="date-lbl">SIR Deadline</div><div class="date-sub">Statement of Intent to Register</div><div class="date-urg">Action Required</div></div><div class="date-val">May 1<br>2026</div></div>
+            <div class="date-item"><div><div class="date-lbl">Housing Application Opens</div><div class="date-sub">Priority: Mar 28 – Apr 20</div></div><div class="date-val">Mar 28<br>2026</div></div>
+            <div class="date-item"><div><div class="date-lbl">Financial Aid Acceptance</div><div class="date-sub">Accept or decline your offer</div></div><div class="date-val">May 15<br>2026</div></div>
+            <div class="date-item"><div><div class="date-lbl">Final Transcript Deadline</div><div class="date-sub">Official sealed transcript</div></div><div class="date-val">Jul 1<br>2026</div></div>
+            <div class="date-item"><div><div class="date-lbl">New Student Orientation</div><div class="date-sub">Mandatory · Irvine campus</div></div><div class="date-val">Sep 15<br>2026</div></div>
+            <div class="date-item"><div><div class="date-lbl">Fall Quarter Begins</div><div class="date-sub">First day of instruction</div></div><div class="date-val">Sep 25<br>2026</div></div>
+          </div>
+          <div class="card">
+            <div class="card-hd"><div class="card-title">Quick Links</div></div>
+            <div class="ql-item" onclick="openModal('modal-letter')"><div class="ql-icon b">📄</div><div class="ql-label">View Decision Letter</div><div class="ql-arr">›</div></div>
+            <div class="ql-item" onclick="openModal('modal-reply')"><div class="ql-icon g">✉️</div><div class="ql-label">Reply to Offer</div><div class="ql-arr">›</div></div>
+            <div class="ql-item" onclick="switchTab('housing')"><div class="ql-icon e">🏠</div><div class="ql-label">Campus Housing Guide</div><div class="ql-arr">›</div></div>
+            <div class="ql-item" onclick="switchTab('financial-aid')"><div class="ql-icon b">💰</div><div class="ql-label">Financial Aid Summary</div><div class="ql-arr">›</div></div>
+            <div class="ql-item" onclick="switchTab('admitted')"><div class="ql-icon g">🎓</div><div class="ql-label">Admitted Anteaters Hub</div><div class="ql-arr">›</div></div>
+            <div class="ql-item" onclick="openModal('modal-contact')"><div class="ql-icon e">📞</div><div class="ql-label">Contact Admissions</div><div class="ql-arr">›</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ FINANCIAL AID PANEL ══════════════ -->
+    <div class="tab-panel" id="panel-financial-aid">
+      <div class="aid-hero">
+        <h2>Financial Aid Award — Fall 2026</h2>
+        <p>Your estimated financial aid package has been prepared. Review each component below and accept or decline your offer by May 15, 2026.</p>
+        <div class="aid-total">$34,820 <span>estimated annual award</span></div>
+      </div>
+      <div class="aid-grid">
+        <div class="aid-card"><div class="aid-type">Grant</div><div class="aid-name">UC Irvine Regents Scholarship</div><div class="aid-amount">$12,500</div><div class="aid-desc">Merit-based, renewable annually. Requires 3.0+ GPA. No repayment required.</div></div>
+        <div class="aid-card"><div class="aid-type">Federal Grant</div><div class="aid-name">Federal Pell Grant</div><div class="aid-amount">$7,320</div><div class="aid-desc">Need-based federal grant. No repayment required. Renewable each year.</div></div>
+        <div class="aid-card"><div class="aid-type">Institutional Grant</div><div class="aid-name">UCI Blue &amp; Gold Opportunity Plan</div><div class="aid-amount">$9,000</div><div class="aid-desc">Covers tuition for eligible California residents. Renewable annually.</div></div>
+        <div class="aid-card"><div class="aid-type">Work-Study</div><div class="aid-name">Federal Work-Study Program</div><div class="aid-amount">$3,000</div><div class="aid-desc">Part-time employment opportunities on campus. Earnings paid directly to you.</div></div>
+        <div class="aid-card"><div class="aid-type">Loan — Subsidized</div><div class="aid-name">Direct Subsidized Loan</div><div class="aid-amount loan">$2,000</div><div class="aid-desc">No interest while enrolled. Standard 6-month grace period after graduation.</div></div>
+        <div class="aid-card"><div class="aid-type">Loan — Unsubsidized</div><div class="aid-name">Direct Unsubsidized Loan</div><div class="aid-amount loan">$1,000</div><div class="aid-desc">Interest accrues during enrollment. Optional — may be declined.</div></div>
+      </div>
+      <div class="aid-actions">
+        <button class="btn-green" onclick="showAidSuccess()">✓ Accept Financial Aid Package</button>
+        <button class="btn-outline-dark">Review Individual Components</button>
+        <button class="btn-outline-dark" onclick="openModal('modal-contact')">Contact Financial Aid Office</button>
+      </div>
+      <div id="aid-success" class="hidden" style="margin-top:20px">
+        <div style="background:#DCFCE7;border:1px solid #86EFAC;border-radius:11px;padding:16px 20px;color:#15803D;font-size:13.5px;font-weight:600">
+          ✓ Financial aid offer accepted. A confirmation has been sent to your email. Funds will be applied to your student account upon enrollment.
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ HOUSING PANEL ════════════════════ -->
+    <div class="tab-panel" id="panel-housing">
+      <div class="notice" style="margin-bottom:20px">
+        <div class="notice-title">🏠 Housing Application Opens March 28, 2026</div>
+        <div class="notice-text">Priority deadline: April 20, 2026. First-year housing is not guaranteed but highly available. Apply early to secure your preferred residence hall.</div>
+      </div>
+      <div class="housing-grid">
+        <div class="hc">
+          <div class="hc-img" style="background:linear-gradient(135deg,#003764,#0064A4)">🏢</div>
+          <div class="hc-body">
+            <div class="hc-name">Middle Earth Residence</div>
+            <div class="hc-type">Traditional Hall · First-Year</div>
+            <div class="hc-rate">$16,200 <span>/ academic year</span></div>
+            <div class="hc-features">
+              <div class="hc-feat">✓ Double occupancy</div>
+              <div class="hc-feat">✓ Dining included</div>
+              <div class="hc-feat">✓ 24/7 RD support</div>
+            </div>
+            <div class="hc-avail open">Available</div>
+          </div>
+        </div>
+        <div class="hc">
+          <div class="hc-img" style="background:linear-gradient(135deg,#0064A4,#3B8FD4)">🏗</div>
+          <div class="hc-body">
+            <div class="hc-name">Mesa Court Towers</div>
+            <div class="hc-type">Suite Style · First-Year</div>
+            <div class="hc-rate">$17,800 <span>/ academic year</span></div>
+            <div class="hc-features">
+              <div class="hc-feat">✓ 4-person suite</div>
+              <div class="hc-feat">✓ Private bathroom</div>
+              <div class="hc-feat">✓ Dining nearby</div>
+            </div>
+            <div class="hc-avail limited">Limited Availability</div>
+          </div>
+        </div>
+        <div class="hc">
+          <div class="hc-img" style="background:linear-gradient(135deg,#C4820A,#FFD200)">🏡</div>
+          <div class="hc-body">
+            <div class="hc-name">Arroyo Vista</div>
+            <div class="hc-type">Apartment Style · All Years</div>
+            <div class="hc-rate">$19,400 <span>/ academic year</span></div>
+            <div class="hc-features">
+              <div class="hc-feat">✓ 2-bedroom apt</div>
+              <div class="hc-feat">✓ Full kitchen</div>
+              <div class="hc-feat">✓ On-campus location</div>
+            </div>
+            <div class="hc-avail limited">Limited Availability</div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px">
+        <button class="btn-gold" onclick="alert('Housing application opens March 28, 2026. Check back then!')">Apply for Housing →</button>
+        <button class="btn-outline-dark" onclick="openModal('modal-contact')">Contact Housing Office</button>
+      </div>
+    </div>
+
+    <!-- ═══ ADMITTED STUDENTS PANEL ══════════ -->
+    <div class="tab-panel" id="panel-admitted">
+      <div style="margin-bottom:22px">
+        <div style="background:linear-gradient(135deg,#002F58,#0064A4);border-radius:14px;padding:28px 32px;color:#fff;margin-bottom:20px">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px">Welcome, Admitted Anteater</div>
+          <div style="font-size:24px;font-weight:900;color:#fff;margin-bottom:10px">You're one of us now, Sanmay.</div>
+          <div style="font-size:13.5px;color:rgba(255,255,255,.72);line-height:1.65;max-width:600px">Join thousands of your future classmates in the Admitted Anteaters community. Explore events, find your roommate, and start connecting with the UCI community before your first day.</div>
+          <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn-gold">Join Admitted Anteaters Portal →</button>
+            <button class="btn-ghost">Virtual Campus Tour</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-hd"><div><div class="card-title">Upcoming Events for Admitted Students</div><div class="card-sub">RSVP required for in-person events</div></div></div>
+          <div class="events-list">
+            <div class="event-item">
+              <div class="event-date"><div class="event-mo">Apr</div><div class="event-day">5</div></div>
+              <div class="event-body">
+                <div class="event-title">Admitted Anteater Day — Main Campus Visit</div>
+                <div class="event-detail">Tour the campus, meet faculty advisors, attend department open houses, and connect with current students. Lunch included.</div>
+                <div class="event-badge inperson">In-Person · Irvine Campus</div>
+              </div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-mo">Apr</div><div class="event-day">12</div></div>
+              <div class="event-body">
+                <div class="event-title">ICS Admitted Students Info Session</div>
+                <div class="event-detail">Learn about the Computer Science curriculum, research opportunities, and student clubs from the Donald Bren School faculty and advisors.</div>
+                <div class="event-badge virtual">Virtual · Zoom</div>
+              </div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-mo">Apr</div><div class="event-day">19</div></div>
+              <div class="event-body">
+                <div class="event-title">Financial Aid &amp; Scholarships Webinar</div>
+                <div class="event-detail">Understand your aid package, learn about additional scholarship opportunities, and get answers from the Financial Aid team.</div>
+                <div class="event-badge virtual">Virtual · Zoom</div>
+              </div>
+            </div>
+            <div class="event-item">
+              <div class="event-date"><div class="event-mo">May</div><div class="event-day">3</div></div>
+              <div class="event-body">
+                <div class="event-title">Roommate Matching &amp; Housing Q&amp;A</div>
+                <div class="event-detail">Get tips on finding your roommate, explore housing options, and hear from current residents about life in the dorms.</div>
+                <div class="event-badge virtual">Virtual · Zoom</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ ORIENTATION PANEL ════════════════ -->
+    <div class="tab-panel" id="panel-orientation">
+      <div class="notice" style="margin-bottom:20px">
+        <div class="notice-title">📅 Orientation Registration Opens April 1, 2026</div>
+        <div class="notice-text">New Student Orientation is mandatory for all incoming Fall 2026 students. Please register by August 1, 2026. The 3-day program includes advising, class registration, and campus introductions.</div>
+      </div>
+
+      <div class="ori-day">
+        <div class="ori-day-hd"><div class="ori-day-title">Day 1 — Arrival &amp; Welcome</div><div class="ori-day-date">Monday, September 15, 2026</div></div>
+        <div class="ori-session"><div class="ori-time">9:00 AM</div><div class="ori-info"><div class="ori-session-title">Check-In &amp; Residence Hall Move-In</div><div class="ori-session-loc">Mesa Court &amp; Middle Earth Check-In Desks</div></div></div>
+        <div class="ori-session"><div class="ori-time">12:00 PM</div><div class="ori-info"><div class="ori-session-title">Welcome Address — Chancellor's Convocation</div><div class="ori-session-loc">Bren Events Center, Main Stage</div></div></div>
+        <div class="ori-session"><div class="ori-time">2:30 PM</div><div class="ori-info"><div class="ori-session-title">School of ICS Welcome &amp; Faculty Meet</div><div class="ori-session-loc">Donald Bren Hall, Room 1100</div></div></div>
+        <div class="ori-session"><div class="ori-time">5:00 PM</div><div class="ori-info"><div class="ori-session-title">Admitted Student Campus Mixer</div><div class="ori-session-loc">ARC Courtyard, Irvine Campus</div></div></div>
+      </div>
+
+      <div class="ori-day">
+        <div class="ori-day-hd"><div class="ori-day-title">Day 2 — Academic Advising &amp; Registration</div><div class="ori-day-date">Tuesday, September 16, 2026</div></div>
+        <div class="ori-session"><div class="ori-time">9:00 AM</div><div class="ori-info"><div class="ori-session-title">Academic Advising Appointment</div><div class="ori-session-loc">ICS Advising Center, Bren Hall 2nd Floor</div></div></div>
+        <div class="ori-session"><div class="ori-time">11:00 AM</div><div class="ori-info"><div class="ori-session-title">Course Registration — Fall 2026 Classes</div><div class="ori-session-loc">Online via WebReg portal</div></div></div>
+        <div class="ori-session"><div class="ori-time">1:30 PM</div><div class="ori-info"><div class="ori-session-title">Financial Aid &amp; Student Services Fair</div><div class="ori-session-loc">Student Center Pavilion</div></div></div>
+        <div class="ori-session"><div class="ori-time">4:00 PM</div><div class="ori-info"><div class="ori-session-title">Research Opportunities Info Session</div><div class="ori-session-loc">Calit2 Building, Atrium</div></div></div>
+      </div>
+
+      <div class="ori-day">
+        <div class="ori-day-hd"><div class="ori-day-title">Day 3 — Campus Life &amp; Send-Off</div><div class="ori-day-date">Wednesday, September 17, 2026</div></div>
+        <div class="ori-session"><div class="ori-time">10:00 AM</div><div class="ori-info"><div class="ori-session-title">Student Organizations &amp; Clubs Fair</div><div class="ori-session-loc">Cross-Cultural Center Lawn</div></div></div>
+        <div class="ori-session"><div class="ori-time">1:00 PM</div><div class="ori-info"><div class="ori-session-title">Campus Safety &amp; Resources Walkthrough</div><div class="ori-session-loc">Meet at Aldrich Hall Steps</div></div></div>
+        <div class="ori-session"><div class="ori-time">3:00 PM</div><div class="ori-info"><div class="ori-session-title">Closing Ceremony — Welcome to UCI</div><div class="ori-session-loc">Bren Events Center</div></div></div>
+      </div>
+
+      <div style="margin-top:20px;display:flex;gap:12px">
+        <button class="btn-gold" onclick="alert('Orientation registration opens April 1, 2026. Check back then!')">Register for Orientation →</button>
+        <button class="btn-outline-dark" onclick="openModal('modal-contact')">Questions? Contact Us</button>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+</main>
+
+<script>
+  // ── MODAL ──────────────────────────────
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.modal-overlay').forEach(o => {
+    o.addEventListener('click', e => { if (e.target === o) { o.classList.remove('open'); document.body.style.overflow = ''; } });
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { document.querySelectorAll('.modal-overlay.open').forEach(m => { m.classList.remove('open'); document.body.style.overflow = ''; }); }
+  });
+
+  // ── TABS ───────────────────────────────
+  function switchTab(tab) {
+    document.querySelectorAll('.tab').forEach(t => { t.classList.toggle('active', t.dataset.tab === tab); });
+    document.querySelectorAll('.tab-panel').forEach(p => { p.classList.toggle('active', p.id === 'panel-' + tab); });
+    const labels = { overview:'Admission Dashboard', 'financial-aid':'Financial Aid', housing:'Housing', admitted:'Admitted Students', orientation:'Orientation' };
+    document.getElementById('breadcrumb-cur').textContent = labels[tab] || 'Dashboard';
+    document.getElementById('main-content').scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ── SIDEBAR NAV ─────────────────────────
+  function sidebarNav(el, tab) {
+    document.querySelectorAll('.sb-item').forEach(i => i.classList.remove('active'));
+    el.classList.add('active');
+    switchTab(tab);
+  }
+
+  // ── NOTIFICATIONS ───────────────────────
+  function toggleNotif() {
+    document.getElementById('notif-panel').classList.toggle('open');
+  }
+  function closeNotif() {
+    document.getElementById('notif-panel').classList.remove('open');
+  }
+  document.addEventListener('click', e => {
+    const panel = document.getElementById('notif-panel');
+    if (panel.classList.contains('open') && !panel.contains(e.target) && !e.target.closest('.bell-wrap')) {
+      closeNotif();
+    }
+  });
+
+  // ── SIR FORM ───────────────────────────
+  function submitSIR(e) {
+    e.preventDefault();
+    document.getElementById('sir-form').classList.add('hidden');
+    document.getElementById('sir-success').classList.remove('hidden');
+    // Mark checklist item as done visually
+    const cl = document.querySelectorAll('.cl-ico.warn');
+    if (cl[0]) { cl[0].className = 'cl-ico done'; cl[0].textContent = '✓'; cl[0].nextElementSibling.querySelector('.cl-due').textContent = 'Submitted March 21, 2026'; }
+  }
+
+  // ── REPLY FORM ─────────────────────────
+  function submitReply() {
+    const sel = document.querySelector('input[name="reply"]:checked');
+    if (!sel) { alert('Please select a response.'); return; }
+    document.getElementById('reply-form-wrap').querySelector('.form-note').style.display = 'none';
+    document.querySelectorAll('label[onmouseover]').forEach(l => l.style.display = 'none');
+    document.querySelector('.modal-footer').style.display = 'none';
+    document.getElementById('reply-success').classList.remove('hidden');
+  }
+
+  // ── FINANCIAL AID ──────────────────────
+  function showAidSuccess() {
+    document.getElementById('aid-success').classList.remove('hidden');
+    document.querySelector('.aid-actions').style.display = 'none';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+pandas
+requests
+beautifulsoup4
+streamlit
+playwright
+dnspython
+python-dotenv
+schedule

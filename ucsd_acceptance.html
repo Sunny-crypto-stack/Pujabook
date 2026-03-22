@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triton Connect — UC San Diego Admissions Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #182B49; --navymid: #1E3860; --triton: #006A96; --tritonlt: #0087BF;
+      --gold: #C69214; --goldlt: #E8B230; --goldbright: #FFCD00;
+      --t1: #0D1F30; --t2: #445566; --t3: #8899AA;
+      --bg: #F2F6FA; --wh: #FFFFFF; --border: #D0DCE8;
+      --ok: #15803D; --okbg: #DCFCE7;
+      --sh: 0 1px 3px rgba(24,43,73,.07), 0 2px 10px rgba(24,43,73,.05);
+    }
+    html,body { height:100%; }
+    body {
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      background:var(--bg); color:var(--t1);
+      display:flex; flex-direction:column;
+      min-height:100vh;
+      -webkit-font-smoothing:antialiased;
+      font-feature-settings:'kern' 1,'liga' 1;
+    }
+
+    /* ── NAVBAR ──────────────────────────── */
+    .navbar {
+      background:var(--navy); height:62px; padding:0 36px;
+      display:flex; align-items:center; justify-content:space-between;
+      flex-shrink:0; position:sticky; top:0; z-index:100;
+      box-shadow:0 2px 16px rgba(24,43,73,.35);
+    }
+    .nav-brand { display:flex; align-items:center; gap:13px; }
+    .nav-anchor { width:36px; height:36px; background:linear-gradient(135deg,var(--gold),var(--goldlt)); border-radius:9px; display:flex; align-items:center; justify-content:center; font-size:18px; box-shadow:0 2px 10px rgba(198,146,20,.4); }
+    .nav-portal { font-size:14px; font-weight:800; color:#fff; letter-spacing:-.1px; line-height:1.2; }
+    .nav-school { font-size:9.5px; font-weight:500; color:rgba(255,255,255,.45); letter-spacing:.7px; text-transform:uppercase; margin-top:1px; }
+    .nav-links { display:flex; align-items:center; gap:4px; }
+    .nav-link { font-size:13px; font-weight:500; color:rgba(255,255,255,.62); padding:6px 14px; border-radius:6px; cursor:pointer; text-decoration:none; transition:.15s; border:none; background:none; }
+    .nav-link:hover { color:#fff; background:rgba(255,255,255,.08); }
+    .nav-link.active { color:var(--goldbright); background:rgba(255,205,0,.12); }
+    .nav-pill { display:inline-block; background:#EF4444; color:#fff; font-size:8.5px; font-weight:800; padding:1px 5px; border-radius:20px; margin-left:5px; vertical-align:middle; letter-spacing:.3px; }
+    .nav-right { display:flex; align-items:center; gap:14px; }
+    .nav-bell { position:relative; cursor:pointer; color:rgba(255,255,255,.6); font-size:17px; line-height:1; }
+    .nav-bell-dot { position:absolute; top:-1px; right:-2px; width:7px; height:7px; background:#EF4444; border-radius:50%; border:2px solid var(--navy); }
+    .nav-avrow { display:flex; align-items:center; gap:8px; cursor:pointer; }
+    .nav-avcircle { width:32px; height:32px; background:linear-gradient(135deg,#1E5080,#3B8FD4); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11.5px; font-weight:700; color:#fff; border:2px solid rgba(255,255,255,.2); }
+    .nav-avname { font-size:12px; font-weight:500; color:rgba(255,255,255,.75); }
+
+    /* notifications dropdown */
+    .notif-drop { display:none; position:fixed; top:62px; right:20px; width:320px; background:#fff; border-radius:12px; border:1px solid var(--border); box-shadow:0 8px 30px rgba(24,43,73,.15); z-index:200; }
+    .notif-drop.open { display:block; }
+    .notif-hd { padding:14px 18px 10px; font-size:12.5px; font-weight:700; color:var(--t1); border-bottom:1px solid var(--border); }
+    .notif-row { display:flex; gap:12px; padding:13px 18px; border-bottom:1px solid #EDF3F8; cursor:pointer; }
+    .notif-row:hover { background:#F6FAFE; }
+    .notif-row:last-child { border-bottom:none; }
+    .notif-dot { width:8px; height:8px; background:var(--triton); border-radius:50%; flex-shrink:0; margin-top:4px; }
+    .notif-txt { font-size:12px; color:var(--t2); line-height:1.45; }
+    .notif-time { font-size:10.5px; color:var(--t3); margin-top:3px; }
+
+    /* ── HERO ────────────────────────────── */
+    .hero { background:linear-gradient(145deg,#0D1F35 0%,#182B49 40%,#1B3A6E 75%,#0F4A7A 100%); padding:60px 36px 52px; position:relative; overflow:hidden; }
+    .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 600px 400px at 80% 60%,rgba(0,106,150,.35) 0%,transparent 60%),radial-gradient(ellipse 400px 300px at 10% -20%,rgba(198,146,20,.1) 0%,transparent 60%); pointer-events:none; }
+    .hero::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,rgba(198,146,20,.4),transparent); }
+    .hero-inner { max-width:1200px; margin:0 auto; position:relative; z-index:1; }
+    .hero-eyebrow { display:flex; align-items:center; gap:10px; margin-bottom:20px; }
+    .hero-line { width:32px; height:2px; background:var(--gold); border-radius:1px; }
+    .hero-eyetext { font-size:10px; font-weight:700; color:rgba(255,255,255,.5); letter-spacing:2px; text-transform:uppercase; }
+    .hero-main { display:flex; align-items:flex-start; justify-content:space-between; gap:40px; }
+    .hero-left { flex:1; }
+    .hero-school-lbl { font-size:11px; font-weight:700; color:var(--gold); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:14px; }
+    .hero-name { font-size:44px; font-weight:900; color:#fff; line-height:1.05; letter-spacing:-1px; margin-bottom:8px; }
+    .hero-name span { color:var(--goldlt); }
+    .hero-sub { font-size:16px; font-weight:400; color:rgba(255,255,255,.55); margin-bottom:24px; }
+    .hero-body { font-size:14px; color:rgba(255,255,255,.68); line-height:1.75; max-width:580px; margin-bottom:32px; }
+    .hero-acts { display:flex; gap:12px; flex-wrap:wrap; }
+    .btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:#0D1F35; font-size:13px; font-weight:800; padding:11px 22px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 3px 14px rgba(198,146,20,.45); transition:.15s; }
+    .btn-primary:hover { background:var(--goldlt); transform:translateY(-1px); }
+    .btn-outline { display:inline-flex; align-items:center; gap:8px; background:transparent; color:rgba(255,255,255,.8); font-size:13px; font-weight:600; padding:11px 22px; border-radius:8px; border:1px solid rgba(255,255,255,.25); cursor:pointer; transition:.15s; }
+    .btn-outline:hover { background:rgba(255,255,255,.09); border-color:rgba(255,255,255,.5); }
+
+    /* Decision card */
+    .dc { flex-shrink:0; }
+    .dc-card { background:rgba(255,255,255,.07); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.15); border-radius:16px; padding:28px 26px; min-width:270px; box-shadow:0 8px 32px rgba(0,0,0,.2); }
+    .dc-lbl { font-size:9.5px; font-weight:700; color:rgba(255,255,255,.4); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:14px; }
+    .dc-status { display:flex; align-items:center; gap:10px; margin-bottom:20px; }
+    .dc-chk { width:38px; height:38px; background:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px; color:#0D1F35; font-weight:900; box-shadow:0 0 0 5px rgba(198,146,20,.2); animation:pulsering 2.5s ease-in-out infinite; }
+    @keyframes pulsering { 0%,100%{box-shadow:0 0 0 5px rgba(198,146,20,.2)}50%{box-shadow:0 0 0 10px rgba(198,146,20,.08)} }
+    .dc-admitted { font-size:20px; font-weight:900; color:#fff; letter-spacing:.5px; }
+    .dc-admitted-sub { font-size:11px; color:rgba(255,255,255,.5); margin-top:2px; }
+    .dc-div { height:1px; background:rgba(255,255,255,.12); margin:0 0 16px; }
+    .dc-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+    .dc-row:last-child { margin-bottom:0; }
+    .dc-key { font-size:11px; color:rgba(255,255,255,.42); }
+    .dc-val { font-size:11.5px; font-weight:600; color:rgba(255,255,255,.82); text-align:right; }
+
+    /* ── BODY ────────────────────────────── */
+    .body-wrap { max-width:1200px; margin:0 auto; padding:30px 36px 50px; width:100%; }
+
+    /* STAT ROW */
+    .stat-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:28px; }
+    .sc { background:var(--wh); border-radius:12px; border:1px solid var(--border); padding:20px 22px; box-shadow:var(--sh); border-left:4px solid var(--triton); }
+    .sc.gold-acc { border-left-color:var(--gold); }
+    .sc.green-acc { border-left-color:#15803D; }
+    .sc-lbl { font-size:10px; font-weight:700; color:var(--t3); text-transform:uppercase; letter-spacing:.7px; margin-bottom:7px; }
+    .sc-val { font-size:17px; font-weight:800; color:var(--t1); line-height:1.2; }
+    .sc-val.tb { color:var(--triton); }
+    .sc-val.gn { color:#15803D; }
+    .sc-val.sm { font-size:14px; }
+    .sc-hint { font-size:11px; color:var(--t3); margin-top:4px; }
+
+    /* TABS */
+    .tab-bar { display:flex; margin-bottom:22px; border-bottom:2px solid var(--border); }
+    .tb { padding:9px 20px; font-size:13px; font-weight:500; color:var(--t2); cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-2px; transition:.15s; white-space:nowrap; border:none; background:none; }
+    .tb.active { color:var(--triton); border-bottom:2px solid var(--triton); font-weight:700; margin-bottom:-2px; }
+    .tb:hover:not(.active) { color:var(--t1); }
+    .tab-panel { display:none; }
+    .tab-panel.active { display:block; }
+
+    /* TWO-COL */
+    .two-col { display:grid; grid-template-columns:340px 1fr; gap:20px; }
+
+    /* CARDS */
+    .card { background:var(--wh); border-radius:12px; border:1px solid var(--border); box-shadow:var(--sh); overflow:hidden; }
+    .card+.card { margin-top:18px; }
+    .card-hd { padding:16px 22px; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; }
+    .card-title { font-size:13.5px; font-weight:700; color:var(--t1); }
+    .card-sub { font-size:11px; color:var(--t3); margin-top:2px; }
+    .card-act { font-size:11.5px; color:var(--triton); font-weight:600; cursor:pointer; border:none; background:none; }
+
+    /* CHECKLIST */
+    .cl-row { display:flex; align-items:flex-start; gap:14px; padding:13px 22px; border-bottom:1px solid #EDF3F8; }
+    .cl-row:last-child { border-bottom:none; }
+    .cl-ico { width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; flex-shrink:0; margin-top:1px; }
+    .cl-ico.done { background:#DCFCE7; color:#15803D; font-weight:800; }
+    .cl-ico.warn { background:#FEF9C3; color:#A16207; font-weight:800; font-size:10px; }
+    .cl-ico.open { background:#EEF4FB; color:var(--t3); border:1.5px solid var(--border); font-size:10px; }
+    .cl-txt { flex:1; }
+    .cl-name { font-size:13px; font-weight:500; color:var(--t1); line-height:1.3; }
+    .cl-name.muted { color:var(--t2); }
+    .cl-info { font-size:11px; color:var(--t3); margin-top:3px; }
+    .cl-deadline { font-size:11px; color:#B45309; font-weight:700; margin-top:3px; }
+    .cl-req { font-size:11px; color:#6D28D9; font-weight:700; margin-top:3px; }
+    .cl-action { margin-left:auto; font-size:11px; font-weight:600; color:var(--triton); cursor:pointer; border:1px solid var(--border); background:none; white-space:nowrap; padding:4px 10px; border-radius:6px; display:flex; align-items:center; }
+    .cl-action:hover { background:var(--bg); }
+
+    /* STEPS */
+    .ns-row { display:flex; align-items:flex-start; gap:14px; padding:14px 22px; border-bottom:1px solid #EDF3F8; cursor:pointer; transition:.12s; }
+    .ns-row:last-child { border-bottom:none; }
+    .ns-row:hover { background:#F6FAFE; }
+    .ns-num { width:26px; height:26px; background:var(--navy); color:#fff; border-radius:50%; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+    .ns-title { font-size:13px; font-weight:600; color:var(--triton); }
+    .ns-desc { font-size:12px; color:var(--t2); margin-top:3px; line-height:1.5; }
+    .ns-arr { color:var(--t3); font-size:17px; display:flex; align-items:center; }
+
+    /* DATES */
+    .dl-row { display:flex; align-items:flex-start; justify-content:space-between; padding:13px 22px; border-bottom:1px solid #EDF3F8; }
+    .dl-row:last-child { border-bottom:none; }
+    .dl-lbl { font-size:12.5px; font-weight:600; color:var(--t1); }
+    .dl-sub { font-size:11px; color:var(--t3); margin-top:2px; }
+    .dl-urg { font-size:10.5px; color:#DC2626; font-weight:700; margin-top:3px; text-transform:uppercase; letter-spacing:.4px; }
+    .dl-date { text-align:right; font-size:12px; font-weight:700; color:var(--triton); white-space:nowrap; margin-left:12px; line-height:1.5; }
+
+    /* QUICK LINKS */
+    .ql-row { display:flex; align-items:center; gap:13px; padding:12px 22px; border-bottom:1px solid #EDF3F8; cursor:pointer; transition:.12s; }
+    .ql-row:last-child { border-bottom:none; }
+    .ql-row:hover { background:#F6FAFE; }
+    .ql-ico { width:34px; height:34px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0; }
+    .ql-ico.b { background:#EEF7FF; } .ql-ico.g { background:#FDFBF0; } .ql-ico.e { background:#F0FDF4; }
+    .ql-lbl { font-size:12.5px; font-weight:500; color:var(--t1); flex:1; }
+    .ql-arr { color:var(--t3); font-size:14px; }
+
+    /* NOTICE */
+    .notice { background:linear-gradient(135deg,#FFFBEB,#FEF3C7); border:1px solid #FDE68A; border-radius:11px; padding:16px 18px; margin-bottom:16px; }
+    .notice-title { font-size:11.5px; font-weight:700; color:#92400E; display:flex; align-items:center; gap:6px; margin-bottom:5px; }
+    .notice-text { font-size:12px; color:#78350F; line-height:1.55; }
+
+    /* MESSAGE CARD */
+    .msg-card { background:linear-gradient(135deg,#EEF7FF,#E6F2FA); border:1px solid #C0D9EE; border-radius:11px; padding:20px 22px; margin-bottom:16px; }
+    .msg-from { font-size:10px; font-weight:700; color:var(--triton); letter-spacing:.8px; text-transform:uppercase; margin-bottom:8px; }
+    .msg-quote { font-size:13px; color:var(--t1); line-height:1.65; font-style:italic; }
+    .msg-sig { font-size:11px; color:var(--t3); margin-top:12px; font-style:normal; }
+
+    /* FINANCIAL AID */
+    .aid-hero { background:linear-gradient(135deg,#0D1F35,#1E3860); border-radius:12px; padding:24px 28px; color:#fff; margin-bottom:20px; }
+    .aid-hero h2 { font-size:22px; font-weight:800; margin-bottom:6px; }
+    .aid-hero p { font-size:13px; color:rgba(255,255,255,.72); line-height:1.6; margin-bottom:18px; }
+    .aid-total { font-size:32px; font-weight:900; color:var(--goldbright); }
+    .aid-total span { font-size:14px; font-weight:500; color:rgba(255,255,255,.6); margin-left:6px; }
+    .aid-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:20px; }
+    .aid-card { background:var(--wh); border-radius:12px; border:1px solid var(--border); padding:18px 20px; box-shadow:var(--sh); }
+    .aid-type { font-size:10px; font-weight:700; color:var(--t3); text-transform:uppercase; letter-spacing:.7px; margin-bottom:6px; }
+    .aid-name { font-size:13.5px; font-weight:700; color:var(--t1); margin-bottom:4px; }
+    .aid-amount { font-size:20px; font-weight:800; color:#15803D; }
+    .aid-amount.loan { color:var(--triton); }
+    .aid-desc { font-size:11.5px; color:var(--t2); margin-top:6px; line-height:1.45; }
+    .aid-actions { display:flex; gap:12px; flex-wrap:wrap; }
+    .btn-green { display:inline-flex; align-items:center; gap:7px; background:#15803D; color:#fff; font-size:13px; font-weight:700; padding:11px 22px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 2px 10px rgba(21,128,61,.3); transition:.15s; }
+    .btn-green:hover { background:#166534; transform:translateY(-1px); }
+    .btn-outline-d { display:inline-flex; align-items:center; gap:7px; background:transparent; color:var(--t2); font-size:13px; font-weight:600; padding:11px 22px; border-radius:8px; border:1px solid var(--border); cursor:pointer; transition:.15s; }
+    .btn-outline-d:hover { border-color:var(--triton); color:var(--triton); }
+
+    /* HOUSING */
+    .hg { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:20px; }
+    .hc { background:var(--wh); border-radius:12px; border:1px solid var(--border); overflow:hidden; box-shadow:var(--sh); }
+    .hc-img { height:110px; display:flex; align-items:center; justify-content:center; font-size:36px; }
+    .hc-body { padding:16px 18px; }
+    .hc-name { font-size:13px; font-weight:700; color:var(--t1); margin-bottom:4px; }
+    .hc-type { font-size:10.5px; color:var(--t3); margin-bottom:8px; text-transform:uppercase; letter-spacing:.5px; }
+    .hc-rate { font-size:15px; font-weight:800; color:var(--triton); }
+    .hc-rate span { font-size:11px; font-weight:400; color:var(--t3); }
+    .hc-feat { font-size:11.5px; color:var(--t2); display:flex; align-items:center; gap:5px; margin-bottom:3px; }
+    .hc-avail { display:inline-block; margin-top:10px; font-size:10px; font-weight:700; padding:3px 8px; border-radius:20px; }
+    .hc-avail.open { background:#DCFCE7; color:#15803D; }
+    .hc-avail.limited { background:#FEF9C3; color:#A16207; }
+
+    /* EVENTS */
+    .event-item { display:flex; gap:16px; padding:16px 22px; border-bottom:1px solid #EDF3F8; cursor:pointer; }
+    .event-item:last-child { border-bottom:none; }
+    .event-item:hover { background:#F6FAFE; }
+    .event-dt { min-width:50px; text-align:center; background:var(--bg); border-radius:10px; padding:8px 6px; flex-shrink:0; }
+    .event-mo { font-size:10px; font-weight:700; color:var(--triton); text-transform:uppercase; letter-spacing:.5px; }
+    .event-day { font-size:20px; font-weight:800; color:var(--t1); }
+    .event-title { font-size:13px; font-weight:600; color:var(--t1); }
+    .event-detail { font-size:12px; color:var(--t2); margin-top:3px; line-height:1.4; }
+    .event-badge { display:inline-block; font-size:9.5px; font-weight:700; padding:2px 7px; border-radius:20px; margin-top:5px; }
+    .event-badge.virt { background:#EEF7FF; color:var(--triton); }
+    .event-badge.live { background:#DCFCE7; color:#15803D; }
+
+    /* ORIENTATION */
+    .ori-day { background:var(--wh); border-radius:12px; border:1px solid var(--border); margin-bottom:14px; overflow:hidden; box-shadow:var(--sh); }
+    .ori-hd { padding:14px 22px; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:space-between; }
+    .ori-hd-title { font-size:13.5px; font-weight:700; }
+    .ori-hd-date { font-size:11.5px; color:rgba(255,255,255,.65); }
+    .ori-sess { display:flex; align-items:flex-start; gap:14px; padding:13px 22px; border-bottom:1px solid #EDF3F8; }
+    .ori-sess:last-child { border-bottom:none; }
+    .ori-time { font-size:11px; font-weight:700; color:var(--triton); min-width:80px; flex-shrink:0; padding-top:2px; }
+    .ori-title { font-size:13px; font-weight:500; color:var(--t1); }
+    .ori-loc { font-size:11.5px; color:var(--t3); margin-top:2px; }
+
+    /* ── MODALS ──────────────────────────── */
+    .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.65); z-index:1000; align-items:center; justify-content:center; padding:20px; backdrop-filter:blur(4px); }
+    .modal-overlay.open { display:flex; }
+    .modal-box { background:#fff; border-radius:16px; width:100%; max-width:520px; max-height:90vh; overflow-y:auto; box-shadow:0 20px 60px rgba(0,0,0,.3); }
+    .modal-box::-webkit-scrollbar { width:5px; }
+    .modal-box::-webkit-scrollbar-thumb { background:#ddd; border-radius:3px; }
+    .modal-hd { padding:22px 26px 0; display:flex; align-items:flex-start; justify-content:space-between; }
+    .modal-title { font-size:17px; font-weight:800; color:var(--t1); }
+    .modal-sub { font-size:12px; color:var(--t3); margin-top:3px; }
+    .modal-close { width:30px; height:30px; border-radius:50%; background:#F0F4F8; border:none; cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--t2); transition:.15s; }
+    .modal-close:hover { background:#E2E8F0; }
+    .modal-body { padding:20px 26px 26px; }
+    .form-group { margin-bottom:18px; }
+    .form-label { font-size:12px; font-weight:600; color:var(--t2); margin-bottom:5px; display:block; }
+    .form-input { width:100%; padding:10px 14px; border:1.5px solid var(--border); border-radius:8px; font-size:13px; font-family:inherit; color:var(--t1); transition:.15s; outline:none; }
+    .form-input:focus { border-color:var(--triton); box-shadow:0 0 0 3px rgba(0,106,150,.1); }
+    .form-select { width:100%; padding:10px 14px; border:1.5px solid var(--border); border-radius:8px; font-size:13px; font-family:inherit; color:var(--t1); background:#fff; outline:none; cursor:pointer; }
+    .form-select:focus { border-color:var(--triton); box-shadow:0 0 0 3px rgba(0,106,150,.1); }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .form-checkbox { display:flex; align-items:flex-start; gap:10px; font-size:12.5px; color:var(--t2); line-height:1.5; }
+    .form-checkbox input { margin-top:2px; width:14px; height:14px; flex-shrink:0; }
+    .form-note { background:var(--bg); border-radius:8px; padding:12px 14px; font-size:12px; color:var(--t2); line-height:1.5; margin-bottom:18px; }
+    .form-note strong { color:var(--t1); }
+    .modal-footer { display:flex; justify-content:flex-end; gap:10px; padding-top:6px; }
+    .btn-cancel { background:transparent; color:var(--t2); font-size:13px; font-weight:600; padding:10px 18px; border-radius:8px; border:1px solid var(--border); cursor:pointer; }
+    .btn-submit { background:var(--navy); color:#fff; font-size:13px; font-weight:700; padding:10px 22px; border-radius:8px; border:none; cursor:pointer; transition:.15s; }
+    .btn-submit:hover { background:var(--navymid); }
+    .success-state { text-align:center; padding:30px 0 10px; }
+    .success-icon { width:64px; height:64px; background:linear-gradient(135deg,#15803D,#22C55E); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:28px; color:#fff; margin:0 auto 18px; box-shadow:0 4px 20px rgba(21,128,61,.3); }
+    .success-title { font-size:20px; font-weight:800; color:var(--t1); margin-bottom:8px; }
+    .success-sub { font-size:13.5px; color:var(--t2); line-height:1.6; max-width:380px; margin:0 auto 22px; }
+    .success-ref { background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:12px 16px; font-size:12px; color:var(--t2); text-align:left; margin-bottom:18px; }
+    .success-ref strong { color:var(--t1); display:block; margin-bottom:6px; }
+    .hidden { display:none!important; }
+
+    /* ── LETTER ──────────────────────────── */
+    .letter-wrap { background:#FFFEF8; border-radius:4px; width:100%; max-width:720px; max-height:92vh; overflow-y:auto; box-shadow:0 24px 70px rgba(0,0,0,.4); }
+    .letter-wrap::-webkit-scrollbar { width:5px; }
+    .letter-wrap::-webkit-scrollbar-thumb { background:#ddd; border-radius:3px; }
+    .letter-toolbar { background:#f5f5f0; padding:10px 18px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #e0e0d8; gap:10px; position:sticky; top:0; z-index:10; }
+    .letter-toolbar-l { font-size:12px; color:#666; font-weight:500; }
+    .letter-toolbar-r { display:flex; gap:8px; }
+    .lt-btn { display:inline-flex; align-items:center; gap:5px; font-size:11.5px; font-weight:600; padding:6px 14px; border-radius:6px; border:1px solid #ccc; background:#fff; cursor:pointer; color:#444; transition:.15s; }
+    .lt-btn:hover { background:#eee; }
+    .lt-btn.primary { background:var(--navy); color:#fff; border-color:var(--navy); }
+    .lt-btn.primary:hover { background:var(--navymid); }
+    .letter-paper { padding:56px 68px; font-size:13.5px; line-height:1.75; color:#1a1a1a; }
+    .letter-hd { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:36px; padding-bottom:24px; border-bottom:2px solid var(--navy); }
+    .letter-seal-row { display:flex; align-items:center; gap:14px; }
+    .letter-seal { width:52px; height:52px; background:var(--navy); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; border:3px solid var(--gold); }
+    .letter-inst-name { font-size:14px; font-weight:900; color:var(--navy); letter-spacing:.2px; line-height:1.2; }
+    .letter-inst-dept { font-size:11px; color:var(--t2); margin-top:3px; line-height:1.4; }
+    .letter-addr-block { text-align:right; font-size:11px; color:var(--t2); line-height:1.65; }
+    .letter-date { font-size:13px; color:var(--t2); margin-bottom:24px; }
+    .letter-recipient { margin-bottom:8px; font-size:13.5px; font-weight:600; color:var(--t1); }
+    .letter-re { font-size:13px; color:var(--t2); margin-bottom:24px; padding:10px 14px; background:#EEF7FF; border-left:3px solid var(--triton); border-radius:0 6px 6px 0; }
+    .letter-re strong { color:var(--t1); }
+    .letter-sal { font-size:14px; font-weight:600; color:var(--t1); margin-bottom:16px; }
+    .letter-p { margin-bottom:16px; text-align:justify; font-size:13.5px; line-height:1.8; color:#1a1a1a; }
+    .letter-cond { margin:20px 0; background:#F6FAFD; border:1px solid var(--border); border-radius:8px; padding:16px 20px; }
+    .letter-cond-title { font-size:12px; font-weight:700; color:var(--t2); text-transform:uppercase; letter-spacing:.6px; margin-bottom:12px; }
+    .letter-cond ol { padding-left:18px; }
+    .letter-cond li { font-size:13px; line-height:1.7; color:var(--t1); margin-bottom:6px; }
+    .letter-cond li:last-child { margin-bottom:0; }
+    .letter-close { font-size:13.5px; margin-bottom:28px; line-height:1.8; }
+    .letter-sign-block { margin-top:8px; }
+    .letter-sign { font-family:'Dancing Script',cursive; font-size:30px; color:var(--navy); line-height:1.2; margin-bottom:4px; }
+    .letter-signer { font-size:13px; font-weight:600; color:var(--t1); margin-bottom:2px; }
+    .letter-title { font-size:12px; color:var(--t2); }
+    .letter-divider { height:1px; background:var(--border); margin:24px 0; }
+    .letter-footer { font-size:11px; color:var(--t3); line-height:1.6; }
+    .letter-ref { font-size:11px; color:var(--t3); font-family:monospace; margin-top:6px; }
+    .admitted-stamp { display:inline-flex; align-items:center; gap:6px; margin-top:16px; background:var(--navy); color:var(--gold); font-size:11px; font-weight:800; padding:6px 14px; border-radius:6px; letter-spacing:.8px; text-transform:uppercase; }
+
+    footer { background:var(--navy); color:rgba(255,255,255,.35); text-align:center; font-size:11px; padding:18px 36px; letter-spacing:.3px; border-top:1px solid rgba(198,146,20,.15); margin-top:auto; }
+    footer a { color:rgba(255,255,255,.45); text-decoration:none; margin:0 10px; }
+    footer a:hover { color:rgba(255,255,255,.7); }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ MODALS ══════════════════════ -->
+
+<!-- Decision Letter Modal -->
+<div id="modal-letter" class="modal-overlay" role="dialog">
+  <div class="letter-wrap">
+    <div class="letter-toolbar">
+      <div class="letter-toolbar-l">📄 Official Admission Letter — UCSD-2026-A1938472</div>
+      <div class="letter-toolbar-r">
+        <button class="lt-btn" onclick="window.print()">🖨 Print</button>
+        <button class="lt-btn primary" onclick="closeModal('modal-letter')">✕ Close</button>
+      </div>
+    </div>
+    <div class="letter-paper">
+      <div class="letter-hd">
+        <div class="letter-seal-row">
+          <div class="letter-seal">⚓</div>
+          <div>
+            <div class="letter-inst-name">University of California, San Diego</div>
+            <div class="letter-inst-dept">Office of Undergraduate Admissions<br>9500 Gilman Drive, Mail Code 0021 · La Jolla, California 92093-0021<br>admissionsinfo@ucsd.edu</div>
+          </div>
+        </div>
+        <div class="letter-addr-block">
+          Jacobs School of Engineering<br>9500 Gilman Dr., MC 0403<br>La Jolla, CA 92093
+        </div>
+      </div>
+
+      <div class="letter-date">March 21, 2026</div>
+
+      <div class="letter-recipient">Sanmay Pachika</div>
+      <div class="letter-re">
+        <strong>RE:</strong> Offer of Admission — University of California, San Diego · Fall 2026<br>
+        <strong>Applicant Reference:</strong> UCSD-2026-A1938472 · Application: UCSD-APP-2025-193847
+      </div>
+
+      <div class="letter-sal">Dear Sanmay,</div>
+
+      <p class="letter-p">
+        On behalf of the Chancellor and the faculty of the University of California, San Diego, I am honored
+        to inform you that the Office of Admissions is pleased to offer you admission to UC San Diego for the
+        <strong>Fall 2026 academic year</strong>. You have been admitted to the
+        <strong>Jacobs School of Engineering</strong> as a candidate for the
+        <strong>Bachelor of Science in Computer Science and Engineering</strong>.
+      </p>
+
+      <p class="letter-p">
+        UC San Diego is consistently ranked among the world's premier public research universities, and
+        admission to our undergraduate program is among the most selective in the University of California
+        system. This year, we received applications from more than 90,000 prospective students. Following a
+        rigorous, holistic review of each file — weighing academic achievement, intellectual promise, personal
+        character, and potential for contribution — the Admissions Committee identified you as a student of
+        exceptional merit. Your application reflected precisely the intellectual curiosity, analytical depth,
+        and personal initiative that define the Triton spirit.
+      </p>
+
+      <div class="letter-cond">
+        <div class="letter-cond-title">Conditions of This Offer</div>
+        <ol>
+          <li>Continued satisfactory academic performance and successful completion of all coursework currently in progress, with no significant decline from the record upon which this offer is based.</li>
+          <li>Graduation from your secondary institution with all diploma and program requirements fulfilled.</li>
+          <li>Submission of a final official transcript, sent directly and under seal from your institution, no later than <strong>July 1, 2026</strong>.</li>
+        </ol>
+      </div>
+
+      <p class="letter-p">
+        To accept this offer, you must submit your <strong>Statement of Intent to Register (SIR)</strong>
+        through the Triton Connect admissions portal no later than <strong>May 1, 2026</strong>, accompanied
+        by the required enrollment confirmation deposit of <strong>$200.00</strong>. Please be aware that this
+        deadline is absolute; offers not confirmed by May 1, 2026 will be rescinded and the space offered to
+        another qualified applicant.
+      </p>
+
+      <p class="letter-p">
+        Your financial aid award letter, housing application portal, and orientation registration information
+        will be posted to Triton Connect in the weeks ahead. We encourage you to review all portal items and
+        meet each deadline without delay to ensure the best possible support for your first year at UC San
+        Diego.
+      </p>
+
+      <p class="letter-p">
+        UC San Diego is a place where extraordinary things happen. From the cliffs of La Jolla to the
+        forefront of global research, you will find here a community of thinkers and leaders ready to
+        challenge and inspire you. We believe you will be among them — and we are proud to welcome you to
+        the Triton family.
+      </p>
+
+      <div class="letter-close">Sincerely,</div>
+
+      <div class="letter-sign-block">
+        <div class="letter-sign">Rachel L. Thompson</div>
+        <div class="letter-signer">Rachel L. Thompson</div>
+        <div class="letter-title">Associate Vice Chancellor for Enrollment Management<br>University of California, San Diego</div>
+      </div>
+
+      <div class="admitted-stamp">⚓ Officially Admitted · Fall 2026</div>
+
+      <div class="letter-divider"></div>
+      <div class="letter-footer">
+        This offer of admission is issued by the University of California, San Diego and is subject to the final
+        verification of all submitted application materials. Any material misrepresentation in the application
+        may result in the rescission of this offer. This letter is confidential and intended solely for the
+        named applicant.
+      </div>
+      <div class="letter-ref">Ref: UCSD-2026-A1938472 · App: UCSD-APP-2025-193847 · Issued: 2026-03-21T10:00:00-08:00</div>
+    </div>
+  </div>
+</div>
+
+<!-- SIR Modal -->
+<div id="modal-sir" class="modal-overlay" role="dialog">
+  <div class="modal-box">
+    <div class="modal-hd">
+      <div><div class="modal-title">Statement of Intent to Register</div><div class="modal-sub">Confirm enrollment for Fall 2026 · Due May 1, 2026</div></div>
+      <button class="modal-close" onclick="closeModal('modal-sir')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="sir-form-wrap">
+        <div class="form-note"><strong>Enrollment Confirmation Deposit: $200.00</strong><br>Submitting this form confirms your intent to enroll at UC San Diego for Fall 2026. This action is binding; withdrawals after May 1, 2026 forfeit the deposit.</div>
+        <form onsubmit="submitSIR(event)">
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Legal First Name</label><input class="form-input" type="text" value="Sanmay" required /></div>
+            <div class="form-group"><label class="form-label">Legal Last Name</label><input class="form-input" type="text" value="Pachika" required /></div>
+          </div>
+          <div class="form-group"><label class="form-label">Applicant ID</label><input class="form-input" type="text" value="UCSD-2026-A1938472" readonly style="background:#F6FAFE;color:var(--t3)" /></div>
+          <div class="form-group"><label class="form-label">Intended Major</label><select class="form-select"><option selected>Computer Science &amp; Engineering — Jacobs School of Engineering</option><option>Undeclared Engineering</option></select></div>
+          <div class="form-group"><label class="form-label">Payment Method</label><select class="form-select" required><option value="">Select payment method</option><option>Credit / Debit Card</option><option>Electronic Check (ACH)</option><option>Fee Waiver (if eligible)</option></select></div>
+          <div class="form-group"><div class="form-checkbox"><input type="checkbox" required /><label>I understand that this SIR confirms my intent to enroll and that the $200 deposit is non-refundable after May 1, 2026.</label></div></div>
+          <div class="form-group"><div class="form-checkbox"><input type="checkbox" required /><label>I acknowledge the conditions of my offer and agree to maintain the academic standards upon which this offer was made.</label></div></div>
+          <div class="modal-footer">
+            <button type="button" class="btn-cancel" onclick="closeModal('modal-sir')">Cancel</button>
+            <button type="submit" class="btn-submit">Submit SIR &amp; Pay $200</button>
+          </div>
+        </form>
+        <div id="sir-success" class="success-state hidden">
+          <div class="success-icon">✓</div>
+          <div class="success-title">SIR Submitted Successfully</div>
+          <div class="success-sub">Your enrollment is now confirmed for Fall 2026 at UC San Diego. A confirmation has been sent to your email.</div>
+          <div class="success-ref"><strong>Confirmation Details</strong>Applicant: Sanmay Pachika · ID: UCSD-2026-A1938472<br>Submitted: March 21, 2026 · Confirmation #: SIR-UCSD-2026-193847<br>Deposit: $200.00 processed</div>
+          <button class="btn-primary" style="width:100%;justify-content:center" onclick="closeModal('modal-sir')">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Reply to Offer Modal -->
+<div id="modal-reply" class="modal-overlay" role="dialog">
+  <div class="modal-box" style="max-width:480px">
+    <div class="modal-hd">
+      <div><div class="modal-title">Reply to Offer</div><div class="modal-sub">Applicant ID: UCSD-2026-A1938472</div></div>
+      <button class="modal-close" onclick="closeModal('modal-reply')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="reply-wrap">
+        <div class="form-note"><strong>Sanmay Pachika</strong> — Please indicate your response to UC San Diego's offer of admission for Fall 2026.</div>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:22px">
+          <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;cursor:pointer;transition:.15s" onmouseover="this.style.borderColor='#006A96'" onmouseout="this.style.borderColor='var(--border)'">
+            <input type="radio" name="reply" value="accept" style="width:16px;height:16px;accent-color:var(--triton)" />
+            <div><div style="font-size:13.5px;font-weight:700;color:var(--t1)">✓ Accept Offer of Admission</div><div style="font-size:12px;color:var(--t2);margin-top:2px">I will attend UC San Diego, Fall 2026. I will submit my SIR by May 1, 2026.</div></div>
+          </label>
+          <label style="display:flex;align-items:center;gap:12px;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;cursor:pointer;transition:.15s" onmouseover="this.style.borderColor='#DC2626'" onmouseout="this.style.borderColor='var(--border)'">
+            <input type="radio" name="reply" value="decline" style="width:16px;height:16px;accent-color:#DC2626" />
+            <div><div style="font-size:13.5px;font-weight:700;color:var(--t1)">✕ Decline Offer of Admission</div><div style="font-size:12px;color:var(--t2);margin-top:2px">I will not be attending UC San Diego. This cannot be undone.</div></div>
+          </label>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-cancel" onclick="closeModal('modal-reply')">Cancel</button>
+          <button class="btn-submit" onclick="submitReply()">Submit Response</button>
+        </div>
+      </div>
+      <div id="reply-success" class="success-state hidden">
+        <div class="success-icon">✓</div>
+        <div class="success-title">Response Recorded</div>
+        <div class="success-sub">Your acceptance has been recorded. Submit your SIR to finalize enrollment.</div>
+        <button class="btn-primary" style="width:100%;justify-content:center" onclick="closeModal('modal-reply');openModal('modal-sir')">Submit SIR Now →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="modal-contact" class="modal-overlay" role="dialog">
+  <div class="modal-box" style="max-width:440px">
+    <div class="modal-hd"><div><div class="modal-title">Contact Admissions</div><div class="modal-sub">UC San Diego Office of Undergraduate Admissions</div></div><button class="modal-close" onclick="closeModal('modal-contact')">✕</button></div>
+    <div class="modal-body">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border:1px solid var(--border)"><div style="font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px">Email</div><div style="font-size:13.5px;font-weight:600;color:var(--triton)">admissionsinfo@ucsd.edu</div><div style="font-size:11.5px;color:var(--t2);margin-top:2px">Response within 2–3 business days</div></div>
+        <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border:1px solid var(--border)"><div style="font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px">Phone</div><div style="font-size:13.5px;font-weight:600;color:var(--t1)">(858) 534-4831</div><div style="font-size:11.5px;color:var(--t2);margin-top:2px">Mon–Fri, 8:00 AM – 5:00 PM PST</div></div>
+        <div style="padding:14px 16px;background:var(--bg);border-radius:10px;border:1px solid var(--border)"><div style="font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px">Visit</div><div style="font-size:13.5px;font-weight:600;color:var(--t1)">9500 Gilman Drive, La Jolla, CA 92093</div><div style="font-size:11.5px;color:var(--t2);margin-top:2px">Walk-in: Mon–Fri, 9:00 AM – 4:00 PM</div></div>
+      </div>
+      <div class="modal-footer" style="margin-top:18px"><button class="btn-submit" style="width:100%;justify-content:center" onclick="closeModal('modal-contact')">Close</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- Notification Dropdown -->
+<div id="notif-drop" class="notif-drop">
+  <div class="notif-hd">Notifications <span style="color:var(--triton);font-weight:700;margin-left:6px">3 new</span></div>
+  <div class="notif-row" onclick="openModal('modal-letter');closeNotif()"><div class="notif-dot"></div><div><div class="notif-txt">Your admission decision is available. <strong>Congratulations — you've been admitted!</strong></div><div class="notif-time">Today, 10:00 AM</div></div></div>
+  <div class="notif-row" onclick="switchTab('financial-aid');closeNotif()"><div class="notif-dot"></div><div><div class="notif-txt">Your financial aid award letter is now available for review.</div><div class="notif-time">Today, 10:05 AM</div></div></div>
+  <div class="notif-row"><div class="notif-dot" style="background:var(--gold)"></div><div><div class="notif-txt">Reminder: SIR deadline is May 1, 2026. Submit soon to secure your spot.</div><div class="notif-time">Today, 10:10 AM</div></div></div>
+</div>
+
+<!-- ══════════════ NAVBAR ════════════════════════ -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <div class="nav-anchor">⚓</div>
+    <div><div class="nav-portal">Triton Connect</div><div class="nav-school">UC San Diego · Office of Admissions</div></div>
+  </div>
+  <div class="nav-links">
+    <button class="nav-link active" data-tab="overview" onclick="navClick(this,'overview')">Dashboard</button>
+    <button class="nav-link" data-tab="overview" onclick="navClick(this,'overview')">Application</button>
+    <button class="nav-link" data-tab="financial-aid" onclick="navClick(this,'financial-aid')">Financial Aid<span class="nav-pill">New</span></button>
+    <button class="nav-link" data-tab="housing" onclick="navClick(this,'housing')">Housing</button>
+    <button class="nav-link" data-tab="admitted" onclick="navClick(this,'admitted')">Admitted Students</button>
+    <button class="nav-link" onclick="openModal('modal-contact');return false">Contact</button>
+  </div>
+  <div class="nav-right">
+    <div class="nav-bell" onclick="toggleNotif()">🔔<div class="nav-bell-dot"></div></div>
+    <div class="nav-avrow"><div class="nav-avcircle">SP</div><div class="nav-avname">Sanmay P.</div></div>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><div class="hero-line"></div><div class="hero-eyetext">Admissions Decision · Fall 2026 Academic Year</div></div>
+    <div class="hero-main">
+      <div class="hero-left">
+        <div class="hero-school-lbl">University of California, San Diego</div>
+        <div class="hero-name">Congratulations,<br><span>Sanmay Pachika.</span></div>
+        <div class="hero-sub">Fall 2026 &nbsp;·&nbsp; Jacobs School of Engineering</div>
+        <div class="hero-body">
+          On behalf of the Chancellor's Office and the faculty of UC San Diego, the Office of Admissions
+          is honored to extend an offer of admission to you for the Fall 2026 academic year. Your application
+          demonstrated the intellectual curiosity, analytical depth, and personal initiative that are hallmarks
+          of the Triton spirit. We are proud to welcome you to our community of scholars, innovators, and
+          changemakers.
+        </div>
+        <div class="hero-acts">
+          <button class="btn-primary" onclick="openModal('modal-sir')">↳ Submit Statement of Intent (SIR)</button>
+          <button class="btn-outline" onclick="openModal('modal-letter')">📄 View Admission Letter</button>
+          <button class="btn-outline" onclick="switchTab('overview');document.getElementById('steps-section').scrollIntoView({behavior:'smooth'})">Explore Next Steps →</button>
+        </div>
+      </div>
+      <div class="dc">
+        <div class="dc-card">
+          <div class="dc-lbl">Admission Decision</div>
+          <div class="dc-status"><div class="dc-chk">✓</div><div><div class="dc-admitted">Admitted</div><div class="dc-admitted-sub">Decision confirmed</div></div></div>
+          <div class="dc-div"></div>
+          <div class="dc-row"><div class="dc-key">Applicant</div><div class="dc-val">Sanmay Pachika</div></div>
+          <div class="dc-row"><div class="dc-key">Applicant ID</div><div class="dc-val">UCSD-2026-A1938472</div></div>
+          <div class="dc-row"><div class="dc-key">Term</div><div class="dc-val">Fall 2026</div></div>
+          <div class="dc-row"><div class="dc-key">Program</div><div class="dc-val">B.S. CS &amp; Engineering</div></div>
+          <div class="dc-row"><div class="dc-key">Decision Date</div><div class="dc-val">March 21, 2026</div></div>
+          <div class="dc-row"><div class="dc-key">SIR Deadline</div><div class="dc-val" style="color:var(--goldlt)">May 1, 2026</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ BODY ══════════════════════════ -->
+<div class="body-wrap">
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="sc green-acc"><div class="sc-lbl">Application Status</div><div class="sc-val gn">✓ Admitted</div><div class="sc-hint">Decision finalized</div></div>
+    <div class="sc"><div class="sc-lbl">Decision Released</div><div class="sc-val tb">March 21, 2026</div><div class="sc-hint">10:00 AM PST</div></div>
+    <div class="sc gold-acc"><div class="sc-lbl">SIR Deadline</div><div class="sc-val" style="color:#A16207">May 1, 2026</div><div class="sc-hint">Action required</div></div>
+    <div class="sc"><div class="sc-lbl">Program of Study</div><div class="sc-val sm">CS &amp; Engineering</div><div class="sc-hint">B.S. · Jacobs School of Engineering</div></div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tab-bar">
+    <button class="tb active" data-tab="overview" onclick="switchTab('overview')">Overview</button>
+    <button class="tb" data-tab="financial-aid" onclick="switchTab('financial-aid')">Financial Aid</button>
+    <button class="tb" data-tab="housing" onclick="switchTab('housing')">Housing</button>
+    <button class="tb" data-tab="admitted" onclick="switchTab('admitted')">Admitted Students</button>
+    <button class="tb" data-tab="orientation" onclick="switchTab('orientation')">Orientation</button>
+  </div>
+
+  <!-- ═══ OVERVIEW ════════════════════════ -->
+  <div class="tab-panel active" id="panel-overview">
+    <div class="two-col">
+      <div>
+        <!-- Alert -->
+        <div class="notice">
+          <div class="notice-title">⚠ Action Required — May 1, 2026</div>
+          <div class="notice-text">Submit your SIR to secure your place in the Fall 2026 class. Offers not confirmed by May 1 will be rescinded.</div>
+        </div>
+
+        <!-- Deadlines -->
+        <div class="card" style="margin-bottom:16px">
+          <div class="card-hd"><div class="card-title">Key Deadlines</div></div>
+          <div class="dl-row"><div><div class="dl-lbl">Statement of Intent to Register</div><div class="dl-sub">Deposit: $200.00</div><div class="dl-urg">Action Required</div></div><div class="dl-date">May 1<br>2026</div></div>
+          <div class="dl-row"><div><div class="dl-lbl">Housing Application Opens</div><div class="dl-sub">Priority period ends Apr 22</div></div><div class="dl-date">Mar 28<br>2026</div></div>
+          <div class="dl-row"><div><div class="dl-lbl">Financial Aid Offer Response</div><div class="dl-sub">Accept or decline your package</div></div><div class="dl-date">May 15<br>2026</div></div>
+          <div class="dl-row"><div><div class="dl-lbl">Final Official Transcript</div><div class="dl-sub">Sent directly under seal</div></div><div class="dl-date">Jul 1<br>2026</div></div>
+          <div class="dl-row"><div><div class="dl-lbl">New Student Orientation</div><div class="dl-sub">Mandatory · La Jolla campus</div></div><div class="dl-date">Sep 16<br>2026</div></div>
+          <div class="dl-row"><div><div class="dl-lbl">Fall Quarter Begins</div><div class="dl-sub">First day of classes</div></div><div class="dl-date">Sep 26<br>2026</div></div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="card" style="margin-bottom:16px">
+          <div class="card-hd"><div class="card-title">Quick Links</div></div>
+          <div class="ql-row" onclick="openModal('modal-letter')"><div class="ql-ico b">📄</div><div class="ql-lbl">View Admission Letter</div><div class="ql-arr">›</div></div>
+          <div class="ql-row" onclick="openModal('modal-reply')"><div class="ql-ico g">✉️</div><div class="ql-lbl">Reply to Offer</div><div class="ql-arr">›</div></div>
+          <div class="ql-row" onclick="switchTab('housing')"><div class="ql-ico e">🏠</div><div class="ql-lbl">Campus Housing Portal</div><div class="ql-arr">›</div></div>
+          <div class="ql-row" onclick="switchTab('financial-aid')"><div class="ql-ico b">💰</div><div class="ql-lbl">Financial Aid Summary</div><div class="ql-arr">›</div></div>
+          <div class="ql-row" onclick="switchTab('admitted')"><div class="ql-ico g">🎓</div><div class="ql-lbl">Admitted Tritons Hub</div><div class="ql-arr">›</div></div>
+          <div class="ql-row" onclick="openModal('modal-contact')"><div class="ql-ico e">📞</div><div class="ql-lbl">Contact Admissions</div><div class="ql-arr">›</div></div>
+        </div>
+
+        <!-- Message -->
+        <div class="msg-card">
+          <div class="msg-from">From the Office of Admissions</div>
+          <div class="msg-quote">"Sanmay — your record speaks to everything we seek in a Triton. We are delighted to welcome you and look forward to the contributions you will make at UC San Diego and beyond."</div>
+          <div class="msg-sig">— Office of Undergraduate Admissions, UC San Diego · March 21, 2026</div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Checklist -->
+        <div class="card" style="margin-bottom:18px">
+          <div class="card-hd"><div><div class="card-title">Admitted Student Checklist</div><div class="card-sub">5 of 8 complete · 3 need attention</div></div><button class="card-act">View All</button></div>
+          <div class="cl-row"><div class="cl-ico done">✓</div><div class="cl-txt"><div class="cl-name muted">Application Submitted</div><div class="cl-info">Oct 15, 2025 · Ref #UCSD-APP-2025-193847</div></div></div>
+          <div class="cl-row"><div class="cl-ico done">✓</div><div class="cl-txt"><div class="cl-name muted">Application Fee Confirmed</div><div class="cl-info">Oct 15, 2025 · $70.00 processed</div></div></div>
+          <div class="cl-row"><div class="cl-ico done">✓</div><div class="cl-txt"><div class="cl-name muted">Transcripts Received &amp; Verified</div><div class="cl-info">Nov 5, 2025 · Records on file</div></div></div>
+          <div class="cl-row"><div class="cl-ico done">✓</div><div class="cl-txt"><div class="cl-name muted">Admissions Committee Review</div><div class="cl-info">Review completed &amp; finalized</div></div></div>
+          <div class="cl-row"><div class="cl-ico done">✓</div><div class="cl-txt"><div class="cl-name muted">Admission Decision Released</div><div class="cl-info">Mar 21, 2026 · Status: Admitted</div></div></div>
+          <div class="cl-row"><div class="cl-ico warn">!</div><div class="cl-txt"><div class="cl-name">Submit Statement of Intent to Register</div><div class="cl-deadline">⚑ Due May 1, 2026 — Action Required</div></div><button class="cl-action" onclick="openModal('modal-sir')">Start →</button></div>
+          <div class="cl-row"><div class="cl-ico warn">!</div><div class="cl-txt"><div class="cl-name">Respond to Financial Aid Offer</div><div class="cl-deadline">⚑ Due May 15, 2026</div></div><button class="cl-action" onclick="switchTab('financial-aid')">Review →</button></div>
+          <div class="cl-row"><div class="cl-ico open">○</div><div class="cl-txt"><div class="cl-name">Submit Final Official Transcripts</div><div class="cl-req">Required before enrollment · Due Jul 1, 2026</div></div></div>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="card" id="steps-section">
+          <div class="card-hd"><div><div class="card-title">Your Next Steps</div><div class="card-sub">Secure your enrollment for Fall 2026</div></div></div>
+          <div class="ns-row" onclick="openModal('modal-sir')"><div class="ns-num">1</div><div style="flex:1"><div class="ns-title">Submit Your Statement of Intent to Register</div><div class="ns-desc">Confirm enrollment before May 1, 2026. $200 deposit required.</div></div><div class="ns-arr">›</div></div>
+          <div class="ns-row" onclick="switchTab('financial-aid')"><div class="ns-num">2</div><div style="flex:1"><div class="ns-title">Review Your Financial Aid Award</div><div class="ns-desc">Preliminary package available. Review grants, loans, and work-study.</div></div><div class="ns-arr">›</div></div>
+          <div class="ns-row" onclick="switchTab('housing')"><div class="ns-num">3</div><div style="flex:1"><div class="ns-title">Apply for On-Campus Housing</div><div class="ns-desc">First-year housing guaranteed. Apply before April 22 priority deadline.</div></div><div class="ns-arr">›</div></div>
+          <div class="ns-row" onclick="switchTab('admitted')"><div class="ns-num">4</div><div style="flex:1"><div class="ns-title">Join the Admitted Tritons Community</div><div class="ns-desc">Connect with classmates, attend preview day, explore student life.</div></div><div class="ns-arr">›</div></div>
+          <div class="ns-row" onclick="switchTab('orientation')"><div class="ns-num">5</div><div style="flex:1"><div class="ns-title">Register for New Student Orientation</div><div class="ns-desc">Mandatory · September 16–18, La Jolla campus.</div></div><div class="ns-arr">›</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FINANCIAL AID ════════════════════ -->
+  <div class="tab-panel" id="panel-financial-aid">
+    <div class="aid-hero"><h2>Financial Aid Award — Fall 2026</h2><p>Your estimated financial aid package has been prepared based on your submitted FAFSA/California Dream Act application. Review each component and respond by May 15, 2026.</p><div class="aid-total">$36,450 <span>estimated annual award</span></div></div>
+    <div class="aid-grid">
+      <div class="aid-card"><div class="aid-type">Grant</div><div class="aid-name">UC San Diego Triton Scholarship</div><div class="aid-amount">$13,500</div><div class="aid-desc">Merit-based, renewable annually. Requires 3.0+ GPA. No repayment.</div></div>
+      <div class="aid-card"><div class="aid-type">Federal Grant</div><div class="aid-name">Federal Pell Grant</div><div class="aid-amount">$7,320</div><div class="aid-desc">Need-based federal grant. No repayment required. Renewable annually.</div></div>
+      <div class="aid-card"><div class="aid-type">Institutional Grant</div><div class="aid-name">UCSD Blue &amp; Gold Opportunity Plan</div><div class="aid-amount">$9,630</div><div class="aid-desc">Covers full tuition for eligible CA residents with family income ≤ $80K.</div></div>
+      <div class="aid-card"><div class="aid-type">Work-Study</div><div class="aid-name">Federal Work-Study Program</div><div class="aid-amount">$3,000</div><div class="aid-desc">Part-time campus employment. Earnings paid directly to you bi-weekly.</div></div>
+      <div class="aid-card"><div class="aid-type">Loan — Subsidized</div><div class="aid-name">Direct Subsidized Loan</div><div class="aid-amount loan">$2,000</div><div class="aid-desc">No interest while enrolled. 6-month grace period after graduation.</div></div>
+      <div class="aid-card"><div class="aid-type">Loan — Unsubsidized</div><div class="aid-name">Direct Unsubsidized Loan</div><div class="aid-amount loan">$1,000</div><div class="aid-desc">Interest accrues during enrollment. Optional — may be declined.</div></div>
+    </div>
+    <div class="aid-actions">
+      <button class="btn-green" onclick="showAidSuccess()">✓ Accept Financial Aid Package</button>
+      <button class="btn-outline-d">Review Individual Components</button>
+      <button class="btn-outline-d" onclick="openModal('modal-contact')">Contact Financial Aid</button>
+    </div>
+    <div id="aid-success" class="hidden" style="margin-top:20px"><div style="background:#DCFCE7;border:1px solid #86EFAC;border-radius:11px;padding:16px 20px;color:#15803D;font-size:13.5px;font-weight:600">✓ Financial aid offer accepted. Confirmation sent to your email. Funds will be applied to your student account upon enrollment.</div></div>
+  </div>
+
+  <!-- ═══ HOUSING ════════════════════════════ -->
+  <div class="tab-panel" id="panel-housing">
+    <div class="notice" style="margin-bottom:20px"><div class="notice-title">🏠 Housing Application Opens March 28, 2026</div><div class="notice-text">First-year housing is guaranteed at UC San Diego. Priority deadline: April 22, 2026. Apply early to rank your preferred college and residence style.</div></div>
+    <div class="hg">
+      <div class="hc"><div class="hc-img" style="background:linear-gradient(135deg,#182B49,#1E3860)">🌊</div><div class="hc-body"><div class="hc-name">Muir College Residence</div><div class="hc-type">Traditional Hall · First-Year</div><div class="hc-rate">$16,800 <span>/ academic year</span></div><div style="margin-top:10px"><div class="hc-feat">✓ Double occupancy</div><div class="hc-feat">✓ All-inclusive dining</div><div class="hc-feat">✓ Ocean-view common areas</div></div><div class="hc-avail open">Available</div></div></div>
+      <div class="hc"><div class="hc-img" style="background:linear-gradient(135deg,#006A96,#0087BF)">🏗</div><div class="hc-body"><div class="hc-name">Warren College Towers</div><div class="hc-type">Suite Style · First-Year</div><div class="hc-rate">$18,200 <span>/ academic year</span></div><div style="margin-top:10px"><div class="hc-feat">✓ 4-person suite</div><div class="hc-feat">✓ Private bathroom</div><div class="hc-feat">✓ Courtyard access</div></div><div class="hc-avail limited">Limited Availability</div></div></div>
+      <div class="hc"><div class="hc-img" style="background:linear-gradient(135deg,#C69214,#E8B230)">🏡</div><div class="hc-body"><div class="hc-name">Sixth College Apartments</div><div class="hc-type">Apartment Style · All Years</div><div class="hc-rate">$19,900 <span>/ academic year</span></div><div style="margin-top:10px"><div class="hc-feat">✓ 2-bedroom apt</div><div class="hc-feat">✓ Full kitchen</div><div class="hc-feat">✓ Near Geisel Library</div></div><div class="hc-avail limited">Limited Availability</div></div></div>
+    </div>
+    <div style="display:flex;gap:12px">
+      <button class="btn-primary" onclick="alert('Housing application opens March 28, 2026. Check back then!')">Apply for Housing →</button>
+      <button class="btn-outline-d" onclick="openModal('modal-contact')">Contact Housing Office</button>
+    </div>
+  </div>
+
+  <!-- ═══ ADMITTED STUDENTS ════════════════ -->
+  <div class="tab-panel" id="panel-admitted">
+    <div style="background:linear-gradient(145deg,#0D1F35,#1B3A6E);border-radius:14px;padding:28px 32px;color:#fff;margin-bottom:20px">
+      <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px">Welcome, Admitted Triton</div>
+      <div style="font-size:24px;font-weight:900;margin-bottom:10px">You're one of us now, Sanmay.</div>
+      <div style="font-size:13.5px;color:rgba(255,255,255,.72);line-height:1.65;max-width:600px">Connect with your future Triton classmates, explore the La Jolla campus, and start preparing for one of the most exciting chapters of your life.</div>
+      <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn-primary">Join Admitted Tritons Hub →</button>
+        <button class="btn-outline">Virtual Campus Tour</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div><div class="card-title">Upcoming Events for Admitted Students</div><div class="card-sub">RSVP required for in-person events</div></div></div>
+      <div class="event-item"><div class="event-dt"><div class="event-mo">Apr</div><div class="event-day">4</div></div><div><div class="event-title">Triton Day — Admitted Student Open Campus</div><div class="event-detail">Tour colleges, meet department faculty, attend lab demos, and explore student life at UC San Diego. Includes lunch and shuttle service.</div><div class="event-badge live">In-Person · La Jolla Campus</div></div></div>
+      <div class="event-item"><div class="event-dt"><div class="event-mo">Apr</div><div class="event-day">10</div></div><div><div class="event-title">Jacobs School of Engineering Info Session</div><div class="event-detail">Learn about the CSE curriculum, research groups, internship placement, and student clubs from Jacobs School faculty and students.</div><div class="event-badge virt">Virtual · Zoom</div></div></div>
+      <div class="event-item"><div class="event-dt"><div class="event-mo">Apr</div><div class="event-day">17</div></div><div><div class="event-title">Financial Aid &amp; Scholarships Webinar</div><div class="event-detail">Understand your aid offer, explore additional scholarship opportunities, and ask questions directly to the UCSD Financial Aid team.</div><div class="event-badge virt">Virtual · Zoom</div></div></div>
+      <div class="event-item"><div class="event-dt"><div class="event-mo">Apr</div><div class="event-day">30</div></div><div><div class="event-title">Housing Q&amp;A &amp; Roommate Matching Event</div><div class="event-detail">Get tips for finding your roommate through the Triton Connect community, and hear from current residents about campus living.</div><div class="event-badge virt">Virtual · Zoom</div></div></div>
+    </div>
+  </div>
+
+  <!-- ═══ ORIENTATION ═════════════════════ -->
+  <div class="tab-panel" id="panel-orientation">
+    <div class="notice" style="margin-bottom:20px"><div class="notice-title">📅 Orientation Registration Opens April 1, 2026</div><div class="notice-text">New Student Orientation is mandatory for all incoming Fall 2026 students. Please register by August 1, 2026. The 3-day program includes academic advising, course enrollment, and campus introductions.</div></div>
+    <div class="ori-day"><div class="ori-hd"><div class="ori-hd-title">Day 1 — Arrival &amp; Welcome</div><div class="ori-hd-date">Tuesday, September 16, 2026</div></div><div class="ori-sess"><div class="ori-time">9:00 AM</div><div><div class="ori-title">Check-In &amp; Move-In</div><div class="ori-loc">College Residential Welcome Desks</div></div></div><div class="ori-sess"><div class="ori-time">12:00 PM</div><div><div class="ori-title">Chancellor's Welcome Convocation</div><div class="ori-loc">RIMAC Arena, Main Stage</div></div></div><div class="ori-sess"><div class="ori-time">2:30 PM</div><div><div class="ori-title">Jacobs School CSE Welcome Session</div><div class="ori-loc">EBU3B, Room 2154</div></div></div><div class="ori-sess"><div class="ori-time">5:30 PM</div><div><div class="ori-title">Admitted Student Welcome Mixer</div><div class="ori-loc">Price Center Ballroom</div></div></div></div>
+    <div class="ori-day"><div class="ori-hd"><div class="ori-hd-title">Day 2 — Advising &amp; Course Enrollment</div><div class="ori-hd-date">Wednesday, September 17, 2026</div></div><div class="ori-sess"><div class="ori-time">9:00 AM</div><div><div class="ori-title">Academic Advising Appointment</div><div class="ori-loc">CSE Advising, EBU3B 1st Floor</div></div></div><div class="ori-sess"><div class="ori-time">11:00 AM</div><div><div class="ori-title">Course Enrollment — Fall 2026</div><div class="ori-loc">Online via WebReg / TritonLink</div></div></div><div class="ori-sess"><div class="ori-time">2:00 PM</div><div><div class="ori-title">Financial Aid &amp; Student Services Fair</div><div class="ori-loc">Price Center Plaza</div></div></div><div class="ori-sess"><div class="ori-time">4:30 PM</div><div><div class="ori-title">Research Opportunities Panel</div><div class="ori-loc">Atkinson Hall, Calit2</div></div></div></div>
+    <div class="ori-day"><div class="ori-hd"><div class="ori-hd-title">Day 3 — Campus Life &amp; Closing</div><div class="ori-hd-date">Thursday, September 18, 2026</div></div><div class="ori-sess"><div class="ori-time">10:00 AM</div><div><div class="ori-title">Student Organizations &amp; Clubs Fair</div><div class="ori-loc">Library Walk, Central Campus</div></div></div><div class="ori-sess"><div class="ori-time">1:00 PM</div><div><div class="ori-title">Campus Safety &amp; Health Resources</div><div class="ori-loc">Student Health Services Building</div></div></div><div class="ori-sess"><div class="ori-time">3:00 PM</div><div><div class="ori-title">Closing Ceremony — Welcome, Tritons</div><div class="ori-loc">RIMAC Arena</div></div></div></div>
+    <div style="margin-top:20px;display:flex;gap:12px">
+      <button class="btn-primary" onclick="alert('Orientation registration opens April 1, 2026. Check back then!')">Register for Orientation →</button>
+      <button class="btn-outline-d" onclick="openModal('modal-contact')">Questions? Contact Us</button>
+    </div>
+  </div>
+
+</div><!-- /body-wrap -->
+
+<footer>
+  © 2026 The Regents of the University of California, San Diego. All rights reserved. &nbsp;|&nbsp;
+  <a href="#">Privacy Policy</a><a href="#">Accessibility</a><a href="#">Terms of Use</a>
+  <a href="#" onclick="openModal('modal-contact');return false">Contact Admissions</a>
+  &nbsp;·&nbsp; Session ID: TC-SES-20260321-8472 &nbsp;·&nbsp; TLS 1.3 Encrypted
+</footer>
+
+<script>
+  // ── MODALS ──────────────────────────────
+  function openModal(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow=''; }
+  document.querySelectorAll('.modal-overlay').forEach(o => {
+    o.addEventListener('click', e => { if(e.target===o){ o.classList.remove('open'); document.body.style.overflow=''; } });
+  });
+  document.addEventListener('keydown', e => {
+    if(e.key==='Escape') document.querySelectorAll('.modal-overlay.open').forEach(m=>{m.classList.remove('open');document.body.style.overflow='';});
+  });
+
+  // ── TABS ────────────────────────────────
+  function switchTab(tab) {
+    document.querySelectorAll('.tb').forEach(t => t.classList.toggle('active', t.dataset.tab===tab));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id==='panel-'+tab));
+    window.scrollTo({ top: document.querySelector('.stat-row').offsetTop - 80, behavior: 'smooth' });
+  }
+
+  // ── NAV LINKS ────────────────────────────
+  function navClick(el, tab) {
+    document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
+    el.classList.add('active');
+    switchTab(tab);
+  }
+
+  // ── NOTIFICATIONS ────────────────────────
+  function toggleNotif() { document.getElementById('notif-drop').classList.toggle('open'); }
+  function closeNotif() { document.getElementById('notif-drop').classList.remove('open'); }
+  document.addEventListener('click', e => {
+    const d = document.getElementById('notif-drop');
+    if(d.classList.contains('open') && !d.contains(e.target) && !e.target.closest('.nav-bell')) closeNotif();
+  });
+
+  // ── SIR FORM ─────────────────────────────
+  function submitSIR(e) {
+    e.preventDefault();
+    e.target.classList.add('hidden');
+    document.getElementById('sir-success').classList.remove('hidden');
+  }
+
+  // ── REPLY ────────────────────────────────
+  function submitReply() {
+    const sel = document.querySelector('input[name="reply"]:checked');
+    if(!sel){ alert('Please select a response.'); return; }
+    document.getElementById('reply-wrap').querySelectorAll(':scope > *:not(:last-child)').forEach(el => el.style.display='none');
+    document.getElementById('reply-success').classList.remove('hidden');
+  }
+
+  // ── FINANCIAL AID ────────────────────────
+  function showAidSuccess() {
+    document.getElementById('aid-success').classList.remove('hidden');
+    document.querySelector('.aid-actions').style.display='none';
+  }
+</script>
+</body>
+</html>

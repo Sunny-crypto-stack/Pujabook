@@ -1,0 +1,38 @@
+[
+  {
+    "id": "d217d011-e698-44b0-9a7d-5515341a6330",
+    "name": "Priya Sharma",
+    "email": "priya@test.com",
+    "phone": "+91 98765 43210",
+    "college": "BITS Pilani",
+    "degree": "B.Tech CS",
+    "year": "3rd Year",
+    "skills": [
+      "React",
+      "Python"
+    ],
+    "linkedin": "",
+    "jobTypes": [
+      "Remote Internship"
+    ],
+    "createdAt": "2026-03-12T23:27:43.812Z"
+  },
+  {
+    "id": "a97a8277-be97-46c1-92de-85f28a7251ed",
+    "name": "vifsbv",
+    "email": "sanmay.pachika@gmail.com",
+    "phone": "+1 4703381677",
+    "college": "fgbn",
+    "degree": "fgdbnp",
+    "year": "1st Year",
+    "skills": [
+      "FastAPI",
+      "Data Science"
+    ],
+    "linkedin": "",
+    "jobTypes": [
+      "Remote Internship"
+    ],
+    "createdAt": "2026-03-13T20:35:27.133Z"
+  }
+]
