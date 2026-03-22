@@ -2,13 +2,29 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
+  --foreground: #1c1917;
+  color-scheme: light;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Force light mode always */
+* {
+  color-scheme: light;
+}
+
+/* Fix input text color */
+input, textarea, select {
+  color: #1c1917;
+  background-color: #ffffff;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #a8a29e;
 }
 
 /* Smooth scroll */
