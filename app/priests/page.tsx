@@ -399,7 +399,7 @@ export default function PriestsPage() {
       <div className="px-6 py-12 text-white text-center"
         style={{ background: "linear-gradient(135deg, #7c2d12 0%, #c2410c 60%, #f97316 100%)" }}>
         <h1 className="text-3xl font-black md:text-4xl">Find a Priest</h1>
-        <p className="mt-2 text-orange-100">Verified priests across Hyderabad, Bangalore &amp; Mumbai</p>
+        <p className="mt-2 text-orange-100">Verified priests across Pan India · 40+ cities</p>
       </div>
 
       {/* Filters */}

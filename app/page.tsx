@@ -35,9 +35,13 @@ const HOW_IT_WORKS = [
 ];
 
 const CITIES = [
-  { name: "Hyderabad", count: "50+ priests", emoji: "🕌" },
-  { name: "Bangalore", count: "50+ priests", emoji: "🌆" },
-  { name: "Mumbai", count: "50+ priests", emoji: "🌊" },
+  "Hyderabad", "Bangalore", "Mumbai", "Delhi", "Chennai", "Kolkata",
+  "Pune", "Ahmedabad", "Jaipur", "Surat", "Lucknow", "Kanpur",
+  "Nagpur", "Indore", "Bhopal", "Patna", "Vadodara", "Visakhapatnam",
+  "Ludhiana", "Agra", "Varanasi", "Prayagraj", "Amritsar", "Chandigarh",
+  "Coimbatore", "Kochi", "Bhubaneswar", "Guwahati", "Noida", "Gurugram",
+  "Nashik", "Mysore", "Thiruvananthapuram", "Mangalore", "Dehradun",
+  "Ranchi", "Raipur", "Jodhpur", "Madurai", "Vijayawada",
 ];
 
 const TESTIMONIALS = [
@@ -79,7 +83,7 @@ const FAQS = [
   },
   {
     q: "Which cities are available?",
-    a: "Currently Hyderabad, Bangalore and Mumbai. More cities coming soon.",
+    a: "Currently available in 40+ cities across India including Hyderabad, Bangalore, Mumbai, Delhi, Chennai, Kolkata, Pune, and many more.",
   },
 ];
 
@@ -199,6 +203,43 @@ function PriestRegisterForm() {
           <option value="Hyderabad">Hyderabad</option>
           <option value="Bangalore">Bangalore</option>
           <option value="Mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Pune">Pune</option>
+          <option value="Ahmedabad">Ahmedabad</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Surat">Surat</option>
+          <option value="Lucknow">Lucknow</option>
+          <option value="Kanpur">Kanpur</option>
+          <option value="Nagpur">Nagpur</option>
+          <option value="Indore">Indore</option>
+          <option value="Bhopal">Bhopal</option>
+          <option value="Patna">Patna</option>
+          <option value="Vadodara">Vadodara</option>
+          <option value="Visakhapatnam">Visakhapatnam</option>
+          <option value="Ludhiana">Ludhiana</option>
+          <option value="Agra">Agra</option>
+          <option value="Varanasi">Varanasi</option>
+          <option value="Prayagraj">Prayagraj</option>
+          <option value="Amritsar">Amritsar</option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Kochi">Kochi</option>
+          <option value="Bhubaneswar">Bhubaneswar</option>
+          <option value="Guwahati">Guwahati</option>
+          <option value="Noida">Noida</option>
+          <option value="Gurugram">Gurugram</option>
+          <option value="Nashik">Nashik</option>
+          <option value="Mysore">Mysore</option>
+          <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+          <option value="Mangalore">Mangalore</option>
+          <option value="Dehradun">Dehradun</option>
+          <option value="Ranchi">Ranchi</option>
+          <option value="Raipur">Raipur</option>
+          <option value="Jodhpur">Jodhpur</option>
+          <option value="Madurai">Madurai</option>
+          <option value="Vijayawada">Vijayawada</option>
         </select>
       </div>
 
@@ -437,26 +478,18 @@ export default function HomePage() {
       {/* Cities */}
       <section id="cities" className="px-6 py-24" style={{ backgroundColor: "#fff7ed" }}>
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-black md:text-4xl">Now available in 3 cities</h2>
-          <p className="mt-3 text-slate-500">More cities coming soon.</p>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {CITIES.map(({ name, count, emoji }) => (
-              <div
+          <h2 className="text-3xl font-black md:text-4xl">Now available in 40+ cities</h2>
+          <p className="mt-3 text-slate-500">Pan India coverage. More cities added regularly.</p>
+          <div className="mt-12 flex flex-wrap justify-center gap-3">
+            {CITIES.map((name) => (
+              <a
                 key={name}
-                className="rounded-2xl border p-8 text-center transition-all hover:shadow-md"
-                style={{ borderColor: "#fed7aa", backgroundColor: "white" }}
+                href="/priests"
+                className="rounded-full border px-4 py-2 text-sm font-medium transition-all hover:shadow-sm"
+                style={{ borderColor: "#fed7aa", backgroundColor: "white", color: "#92400e" }}
               >
-                <div className="text-4xl mb-4">{emoji}</div>
-                <h3 className="text-xl font-bold text-slate-900">{name}</h3>
-                <p className="mt-2 text-sm font-medium" style={{ color: "#f97316" }}>{count}</p>
-                <a
-                  href="/priests"
-                  className="mt-4 inline-flex items-center gap-1 text-sm font-medium transition-colors"
-                  style={{ color: "#f97316" }}
-                >
-                  Browse priests <ArrowRight className="h-3 w-3" />
-                </a>
-              </div>
+                📍 {name}
+              </a>
             ))}
           </div>
         </div>
@@ -541,7 +574,7 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 text-sm text-slate-400 md:flex-row">
           <span className="text-lg font-black" style={{ color: "#f97316" }}>PujaBook</span>
           <p>© 2026 PujaBook. All rights reserved.</p>
-          <span>Hyderabad · Bangalore · Mumbai</span>
+          <span>Pan India · 40+ Cities</span>
         </div>
       </footer>
     </div>
