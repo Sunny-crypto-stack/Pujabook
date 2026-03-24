@@ -9,6 +9,7 @@ interface Priest {
   id: string;
   name: string;
   city: string;
+  phone: string;
   ceremonies: string[];
   languages: string[];
   experience: number;
@@ -16,9 +17,52 @@ interface Priest {
   bio: string;
   photo_url: string | null;
   verified: boolean;
+  upi_id: string | null;
 }
 
-const CITIES = ["All Cities", "Hyderabad", "Bangalore", "Mumbai"];
+const CITIES = [
+  "All Cities",
+  "Hyderabad",
+  "Bangalore",
+  "Mumbai",
+  "Delhi",
+  "Chennai",
+  "Kolkata",
+  "Pune",
+  "Ahmedabad",
+  "Jaipur",
+  "Surat",
+  "Lucknow",
+  "Kanpur",
+  "Nagpur",
+  "Indore",
+  "Bhopal",
+  "Patna",
+  "Vadodara",
+  "Visakhapatnam",
+  "Ludhiana",
+  "Agra",
+  "Varanasi",
+  "Prayagraj",
+  "Amritsar",
+  "Chandigarh",
+  "Coimbatore",
+  "Kochi",
+  "Bhubaneswar",
+  "Guwahati",
+  "Noida",
+  "Gurugram",
+  "Nashik",
+  "Mysore",
+  "Thiruvananthapuram",
+  "Mangalore",
+  "Dehradun",
+  "Ranchi",
+  "Raipur",
+  "Jodhpur",
+  "Madurai",
+  "Vijayawada",
+];
 
 const TIME_SLOTS = [
   "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM",
@@ -77,6 +121,7 @@ function BookingModal({ priest, onClose }: BookingModalProps) {
   const [address, setAddress] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [bookingId, setBookingId] = useState<string | null>(null);
   const [error, setError] = useState("");
   const dateScrollRef = useRef<HTMLDivElement>(null);
 
@@ -108,6 +153,7 @@ function BookingModal({ priest, onClose }: BookingModalProps) {
       });
       const data = await res.json();
       if (data.success) {
+        setBookingId(data.booking_id ?? null);
         setSuccess(true);
       } else {
         setError(data.error ?? "Something went wrong. Please try again.");
@@ -155,11 +201,23 @@ function BookingModal({ priest, onClose }: BookingModalProps) {
               <span className="font-semibold">{priest.name}</span> is confirmed for{" "}
               {new Date(selectedDate).toLocaleDateString("en-IN", { day: "numeric", month: "long" })} at {selectedTime}.
             </p>
+            {bookingId && (
+              <p className="mt-2 text-xs text-slate-400">Booking ID: <span className="font-mono font-semibold text-slate-600">{bookingId}</span></p>
+            )}
             <div className="mt-6 w-full rounded-xl p-4 text-sm" style={{ backgroundColor: "#fff7ed", borderColor: "#fed7aa", border: "1px solid #fed7aa" }}>
               <p className="font-semibold" style={{ color: "#92400e" }}>Payment Instructions</p>
-              <p className="mt-1" style={{ color: "#78350f" }}>
-                Please send <strong>₹{priest.price.toLocaleString("en-IN")}</strong> to the priest via PhonePe, GPay, or Paytm at <strong>{priest.city}</strong>.
-              </p>
+              {priest.upi_id ? (
+                <p className="mt-1" style={{ color: "#78350f" }}>
+                  Send <strong>₹{priest.price.toLocaleString("en-IN")}</strong> to{" "}
+                  <strong>{priest.upi_id}</strong> via PhonePe / GPay / Paytm to confirm your booking.
+                  {bookingId && <> Use Booking ID <strong>{bookingId}</strong> as the payment note.</>}
+                </p>
+              ) : (
+                <p className="mt-1" style={{ color: "#78350f" }}>
+                  Contact the priest directly at <strong>{priest.phone}</strong> to arrange payment of{" "}
+                  <strong>₹{priest.price.toLocaleString("en-IN")}</strong>.
+                </p>
+              )}
             </div>
             <button
               onClick={onClose}

@@ -36,6 +36,35 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
+    // Send push notification to the priest
+    try {
+      const { data: priestData } = await supabase
+        .from("priests")
+        .select("push_token")
+        .eq("id", priest_id)
+        .single();
+
+      if (priestData?.push_token) {
+        await fetch("https://exp.host/--/api/v2/push/send", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Accept-Encoding": "gzip, deflate",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            to: priestData.push_token,
+            title: "New Booking! 🪔",
+            body: `${customer_name} booked ${ceremony} on ${booking_date} at ${booking_time}`,
+            data: { bookingId: data.id },
+          }),
+        });
+      }
+    } catch (notifErr) {
+      console.error("Failed to send push notification:", notifErr);
+      // Don't fail the booking if notification fails
+    }
+
     return NextResponse.json({ success: true, booking_id: data.id });
   } catch (err) {
     console.error("Booking error:", err);

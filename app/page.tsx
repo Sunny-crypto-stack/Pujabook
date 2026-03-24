@@ -352,7 +352,7 @@ export default function HomePage() {
             Find a trusted priest for your puja, ceremony or wedding
           </h1>
           <p className="mt-6 text-lg text-orange-100 md:text-xl max-w-2xl mx-auto">
-            Verified priests in Hyderabad, Bangalore &amp; Mumbai. Instant booking. Fair pricing.
+            Verified priests across Pan India · 40+ cities. Instant booking. Fair pricing.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
@@ -370,7 +370,7 @@ export default function HomePage() {
             </a>
           </div>
           <div className="mt-8 flex items-center justify-center gap-3 flex-wrap">
-            {["Hyderabad", "Bangalore", "Mumbai"].map((city) => (
+            {["Hyderabad", "Bangalore", "Mumbai", "Delhi", "Chennai", "Kolkata", "Pune", "Ahmedabad"].map((city) => (
               <span
                 key={city}
                 className="rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white"
@@ -378,6 +378,9 @@ export default function HomePage() {
                 📍 {city}
               </span>
             ))}
+            <span className="rounded-full bg-white/15 px-4 py-1.5 text-sm font-medium text-white">
+              +32 more cities
+            </span>
           </div>
         </div>
       </section>

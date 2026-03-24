@@ -144,6 +144,17 @@ interface Priest {
   bio: string;
   photo_url: string | null;
   verified: boolean;
+  upi_id: string | null;
+}
+
+interface Review {
+  id: string;
+  priest_id: string;
+  customer_name: string;
+  rating: number;
+  ceremony: string;
+  comment: string | null;
+  created_at: string;
 }
 
 // ── Avatar ────────────────────────────────────────────────────────────────────
@@ -198,6 +209,7 @@ function BookingModal({ priest, prefilledCeremony, onClose }: BookingModalProps)
   const [address, setAddress] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [bookingId, setBookingId] = useState<string | null>(null);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -226,8 +238,10 @@ function BookingModal({ priest, prefilledCeremony, onClose }: BookingModalProps)
         }),
       });
       const data = await res.json();
-      if (data.success) setSuccess(true);
-      else setError(data.error ?? "Something went wrong. Please try again.");
+      if (data.success) {
+        setBookingId(data.booking_id ?? null);
+        setSuccess(true);
+      } else setError(data.error ?? "Something went wrong. Please try again.");
     } catch {
       setError("Network error. Please try again.");
     } finally {
@@ -267,11 +281,23 @@ function BookingModal({ priest, prefilledCeremony, onClose }: BookingModalProps)
               Your booking for <span className="font-semibold text-orange-600">{ceremony}</span> with{" "}
               <span className="font-semibold">{priest.name}</span> is confirmed.
             </p>
+            {bookingId && (
+              <p className="mt-2 text-xs text-slate-400">Booking ID: <span className="font-mono font-semibold text-slate-600">{bookingId}</span></p>
+            )}
             <div className="mt-6 w-full rounded-xl p-4 text-sm" style={{ backgroundColor: "#fff7ed", border: "1px solid #fed7aa" }}>
               <p className="font-semibold" style={{ color: "#92400e" }}>Payment Instructions</p>
-              <p className="mt-1" style={{ color: "#78350f" }}>
-                Please send <strong>₹{priest.price.toLocaleString("en-IN")}</strong> to the priest via PhonePe, GPay, or Paytm.
-              </p>
+              {priest.upi_id ? (
+                <p className="mt-1" style={{ color: "#78350f" }}>
+                  Send <strong>₹{priest.price.toLocaleString("en-IN")}</strong> to{" "}
+                  <strong>{priest.upi_id}</strong> via PhonePe / GPay / Paytm to confirm your booking.
+                  {bookingId && <> Use Booking ID <strong>{bookingId}</strong> as the payment note.</>}
+                </p>
+              ) : (
+                <p className="mt-1" style={{ color: "#78350f" }}>
+                  Contact the priest directly at <strong>{priest.phone}</strong> to arrange payment of{" "}
+                  <strong>₹{priest.price.toLocaleString("en-IN")}</strong>.
+                </p>
+              )}
             </div>
             <button onClick={onClose} className="mt-6 w-full rounded-xl py-3 text-sm font-semibold text-white" style={{ backgroundColor: "#f97316" }}>
               Done
@@ -353,6 +379,16 @@ function BookingModal({ priest, prefilledCeremony, onClose }: BookingModalProps)
 
 // ── Main page ─────────────────────────────────────────────────────────────────
 
+function StarRating({ rating, max = 5 }: { rating: number; max?: number }) {
+  return (
+    <span className="text-lg leading-none">
+      {Array.from({ length: max }).map((_, i) => (
+        <span key={i} style={{ color: i < rating ? "#f97316" : "#e5e7eb" }}>★</span>
+      ))}
+    </span>
+  );
+}
+
 export default function PriestDetailPage() {
   const params = useParams();
   const id = params?.id as string;
@@ -361,6 +397,19 @@ export default function PriestDetailPage() {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [bookingCeremony, setBookingCeremony] = useState<string | null>(null);
+
+  // Reviews state
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [reviewsLoading, setReviewsLoading] = useState(true);
+
+  // Review form state
+  const [reviewName, setReviewName] = useState("");
+  const [reviewRating, setReviewRating] = useState(5);
+  const [reviewCeremony, setReviewCeremony] = useState("");
+  const [reviewComment, setReviewComment] = useState("");
+  const [reviewSubmitting, setReviewSubmitting] = useState(false);
+  const [reviewSuccess, setReviewSuccess] = useState(false);
+  const [reviewError, setReviewError] = useState("");
 
   useEffect(() => {
     if (!id) return;
@@ -375,7 +424,56 @@ export default function PriestDetailPage() {
         else setPriest(data);
         setLoading(false);
       });
+
+    // Fetch reviews for this priest
+    supabase
+      .from("reviews")
+      .select("*")
+      .eq("priest_id", id)
+      .order("created_at", { ascending: false })
+      .limit(10)
+      .then(({ data }) => {
+        setReviews(data ?? []);
+        setReviewsLoading(false);
+      });
   }, [id]);
+
+  async function handleReviewSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setReviewError("");
+    setReviewSubmitting(true);
+    try {
+      const res = await fetch("/api/reviews", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          priest_id: id,
+          customer_name: reviewName,
+          rating: reviewRating,
+          ceremony: reviewCeremony,
+          comment: reviewComment,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setReviewSuccess(true);
+        setReviewName("");
+        setReviewRating(5);
+        setReviewCeremony("");
+        setReviewComment("");
+        // Add new review to top of list optimistically
+        if (data.review) {
+          setReviews((prev) => [data.review, ...prev]);
+        }
+      } else {
+        setReviewError(data.error ?? "Failed to submit review. Please try again.");
+      }
+    } catch {
+      setReviewError("Network error. Please try again.");
+    } finally {
+      setReviewSubmitting(false);
+    }
+  }
 
   if (loading) {
     return (
@@ -463,7 +561,7 @@ export default function PriestDetailPage() {
       </div>
 
       {/* Ceremony cards */}
-      <div className="mx-auto max-w-4xl px-6 pb-16">
+      <div className="mx-auto max-w-4xl px-6 pb-8">
         <h2 className="mb-6 text-xl font-black text-slate-900">Ceremonies Offered</h2>
 
         <div className="space-y-4">
@@ -526,6 +624,152 @@ export default function PriestDetailPage() {
                 ))}
               </div>
             </div>
+          )}
+        </div>
+      </div>
+
+      {/* ── Reviews Section ── */}
+      <div className="mx-auto max-w-4xl px-6 pb-16">
+        {/* Average rating banner */}
+        {reviews.length > 0 && (() => {
+          const avg = reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
+          return (
+            <div className="mb-6 flex items-center gap-4 rounded-2xl border bg-white p-5 shadow-sm" style={{ borderColor: "#fed7aa" }}>
+              <div className="text-center">
+                <p className="text-4xl font-black" style={{ color: "#f97316" }}>{avg.toFixed(1)}</p>
+                <StarRating rating={Math.round(avg)} />
+                <p className="text-xs text-slate-400 mt-1">{reviews.length} review{reviews.length !== 1 ? "s" : ""}</p>
+              </div>
+            </div>
+          );
+        })()}
+
+        <h2 className="mb-6 text-xl font-black text-slate-900">Reviews</h2>
+
+        {reviewsLoading ? (
+          <div className="space-y-3">
+            {[1, 2].map((i) => <div key={i} className="h-24 animate-pulse rounded-2xl bg-orange-50" />)}
+          </div>
+        ) : reviews.length === 0 ? (
+          <div className="rounded-2xl border bg-white p-8 text-center" style={{ borderColor: "#fed7aa" }}>
+            <p className="text-3xl mb-2">⭐</p>
+            <p className="font-semibold text-slate-700">No reviews yet. Be the first to review!</p>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            {reviews.map((review) => (
+              <div key={review.id} className="rounded-2xl border bg-white p-5 shadow-sm" style={{ borderColor: "#fed7aa" }}>
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="font-semibold text-slate-900">{review.customer_name}</p>
+                    {review.ceremony && (
+                      <p className="text-xs text-orange-600 mt-0.5">{review.ceremony}</p>
+                    )}
+                  </div>
+                  <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                    <StarRating rating={review.rating} />
+                    <p className="text-xs text-slate-400">
+                      {new Date(review.created_at).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
+                    </p>
+                  </div>
+                </div>
+                {review.comment && (
+                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">{review.comment}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* ── Review Form ── */}
+        <div className="mt-10 rounded-2xl border bg-white p-6 shadow-sm" style={{ borderColor: "#fed7aa" }}>
+          <h3 className="text-lg font-bold text-slate-900 mb-5">Write a Review</h3>
+
+          {reviewSuccess ? (
+            <div className="flex flex-col items-center py-8 text-center">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 mb-3">
+                <span className="text-2xl">⭐</span>
+              </div>
+              <p className="font-semibold text-slate-800">Thank you for your review!</p>
+              <p className="text-sm text-slate-500 mt-1">Your review has been submitted.</p>
+              <button
+                onClick={() => setReviewSuccess(false)}
+                className="mt-4 text-sm font-semibold"
+                style={{ color: "#f97316" }}
+              >
+                Write another review
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleReviewSubmit} className="space-y-4">
+              <div>
+                <label className="mb-1.5 block text-sm font-semibold text-slate-700">Your Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  value={reviewName}
+                  onChange={(e) => setReviewName(e.target.value)}
+                  required
+                  className="w-full rounded-xl border px-4 py-3 text-sm outline-none focus:border-orange-400"
+                  style={{ borderColor: "#fed7aa" }}
+                />
+              </div>
+
+              <div>
+                <label className="mb-1.5 block text-sm font-semibold text-slate-700">Rating</label>
+                <div className="flex gap-2">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <button
+                      key={star}
+                      type="button"
+                      onClick={() => setReviewRating(star)}
+                      className="text-3xl leading-none transition-transform hover:scale-110"
+                      style={{ color: star <= reviewRating ? "#f97316" : "#e5e7eb" }}
+                    >
+                      ★
+                    </button>
+                  ))}
+                  <span className="ml-2 self-center text-sm text-slate-500">{reviewRating} / 5</span>
+                </div>
+              </div>
+
+              <div>
+                <label className="mb-1.5 block text-sm font-semibold text-slate-700">Ceremony (optional)</label>
+                <input
+                  type="text"
+                  placeholder="e.g. Ganesh Puja, Vivah…"
+                  value={reviewCeremony}
+                  onChange={(e) => setReviewCeremony(e.target.value)}
+                  className="w-full rounded-xl border px-4 py-3 text-sm outline-none focus:border-orange-400"
+                  style={{ borderColor: "#fed7aa" }}
+                />
+              </div>
+
+              <div>
+                <label className="mb-1.5 block text-sm font-semibold text-slate-700">Comment (optional)</label>
+                <textarea
+                  placeholder="Share your experience…"
+                  value={reviewComment}
+                  onChange={(e) => setReviewComment(e.target.value)}
+                  rows={3}
+                  className="w-full rounded-xl border px-4 py-3 text-sm outline-none focus:border-orange-400 resize-none"
+                  style={{ borderColor: "#fed7aa" }}
+                />
+              </div>
+
+              {reviewError && (
+                <p className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-600">{reviewError}</p>
+              )}
+
+              <button
+                type="submit"
+                disabled={reviewSubmitting}
+                className="w-full rounded-xl py-3 text-sm font-semibold text-white transition-colors disabled:opacity-60"
+                style={{ backgroundColor: "#f97316" }}
+              >
+                {reviewSubmitting ? "Submitting…" : "Submit Review"}
+              </button>
+            </form>
           )}
         </div>
       </div>
