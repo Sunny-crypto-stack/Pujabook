@@ -5050,3 +5050,2288 @@ Call log:
 
 ───────────────────────────────────────────────────────
 [2026-03-24 04:00:30]   Pipeline complete.
+
+─────────────────── PIPELINE START ───────────────────
+[2026-03-25 00:30:00]   Running steps: scrape, enrich, verify, generate, followup, send, track
+
+─────────────────────── SCRAPE ───────────────────────
+[2026-03-25 00:30:00]   Scraping: software development company Hyderabad
+[>] Google Maps: software development company Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] mTouch Labs – Software Development Company | +919390683154 | http://www.mtouchlabs.com/
+  [03] Ahex Technologies | +918885564224 | —
+  [04] BSIT Software Services Pvt. Ltd.- Leading Software Development Company. | +919985222841 | —
+  [05] iPrism Technologies | +919848220099 | —
+  [06] Access Info Sources | +919848780827 | —
+  [07] Conquerors Software Technologies | +917013196804 | —
+  [08] Highladder Software Solutions Pvt. Ltd. | +917330866644 | —
+  [09] Techweblabs | +917670837961 | —
+  [10] Syoft- Software Development Company | +919030819534 | —
+  [11] Techally Labs | +919985202223 | http://www.mtouchlabs.com/
+  [12] Tvisha Technologies | +918688810000 | —
+  [13] Spark Infosys | +918886100031 | —
+  [14] Siri IT Innovations Pvt Ltd | +918374444448 | —
+  [15] Innoit Labs Pvt Ltd | +916305553907 | http://www.mtouchlabs.com/
+  [16] Cosmicvent | +917702063689 | —
+  [17] DevRabbit | +914023551445 | —
+  [18] Infochord Technologies Pvt. Ltd. | +918099636946 | —
+  [19] Sparity | +914064650707 | —
+  [20] Devopod Digital | +919618173161 | —
+  [21] United Online Software Development Pvt. Ltd | +914066824444 | —
+  [22] Analogue IT Solutions-Best Mobile App Development Company | +918919088163 | —
+  [23] Velocious Solutions Pvt. Ltd. | +918106413242 | —
+  [24] Softpal Technologies Pvt Ltd (Corporate Office) | +919652168221 | —
+  [25] Techally Labs | +919985202223 | http://www.mtouchlabs.com/
+  [26] Siri IT Innovations Pvt Ltd | +918374444448 | —
+  [27] Rational Technologies | +918179797732 | —
+  [28] Rational Technologies | +918179797732 | —
+  [29] Melvault Software Solutions, Pvt Ltd | +914029300768 | —
+  [30] Sparity | +914064650707 | —
+  [31] IBaseIT: Product Engineering & Quality Assurance Services | +914068156789 | —
+  [32] IBaseIT: Product Engineering & Quality Assurance Services | +914068156789 | —
+  [33] Devathon (Crypsis Technologies Pvt. Ltd.) | +918070780101 | —
+  [34] Mariox Software | +919599287045 | —
+  [35] Suvidha Software Solutions | +914040150065 | —
+  [36] Focus Softnet | +918008403263 | —
+  [37] EasyQuickWeb | +918142445122 | —
+  [38] Kamex IT Solutions (OPC) Private Limited | +918686142306 | —
+  [39] Lahari Technologies | +918977615615 | —
+  [40] Hilton Software | +917993606894 | —
+[2026-03-25 00:30:59] ✓ 39 new leads from: software development company Hyderabad
+[2026-03-25 00:30:59]   Scraping: digital marketing agency Hyderabad
+[>] Google Maps: digital marketing agency Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] SanBrains | +918247269553 | —
+  [03] Highladder Software Solutions Pvt. Ltd. | — | —
+  [04] Digital Mojo | +919908398763 | —
+  [05] Geekschip | +919100068885 | —
+  [06] DigitalZap – Digital Marketing, SEO & Branding Agency | +917331122663 | —
+  [07] Brandingnuts | +918341392803 | —
+  [08] Vihaan Digitals | +917396033325 | —
+  [09] Digital i360 | +918599002222 | —
+  [10] Digital Shout | +918919203640 | —
+  [11] KL ADS INDIA PVT LTD | +918919175736 | —
+  [12] Social DNA | +919849561567 | —
+  [13] Infinity Reach | +918500666366 | —
+  [14] Web Rocz | +917799660016 | —
+  [15] 3DM | +917799009912 | —
+  [16] ShootOrder | +916303921512 | —
+  [17] Emblix Solutions | +919849555829 | —
+  [18] DigitalCatalyst | +919849037822 | —
+  [19] RevSoc Digital Marketing Agency | +919182892264 | —
+  [20] WE PROMOTE U DIGITAL MARKETING AGENCY | +917337441363 | —
+  [21] 8 Views | +918099708888 | —
+  [22] Digital Brandlance | +919390242702 | —
+  [23] We Are Very | +919459557999 | —
+  [24] SanBrains | +918247269553 | —
+  [25] SanBrains | +918247269553 | —
+  [26] DigitalCatalyst | +919849037822 | —
+  [27] DigitalCatalyst | +919849037822 | —
+  [28] RevSoc Digital Marketing Agency | +919182892264 | —
+  [29] RevSoc Digital Marketing Agency | +919182892264 | —
+  [30] Web Rocz | +917799660016 | —
+  [31] Ventez Digital PVT LTD | +919059379933 | —
+  [32] Ventez Digital PVT LTD | +919059379933 | —
+  [33] Souvenir-IT | +919705696696 | —
+  [34] GenYmedium | +918019888314 | —
+  [35] Redmatter Full-Funnel Marketing Agency | +917901010174 | —
+  [36] Digi Carotene | +919959820874 | —
+  [37] Tag Digital | +919640498584 | —
+  [38] Brand Your Work | +919160197157 | —
+  [39] DigLvate | — | —
+  [40] Samskriti Business Solutions | +914023402060 | —
+[2026-03-25 00:32:13] ✓ 39 new leads from: digital marketing agency Hyderabad
+[2026-03-25 00:32:13]   Scraping: chartered accountant firm Hyderabad
+[>] Google Maps: chartered accountant firm Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] VNR Associates | +919392144289 | http://www.vnrassociates.com/
+  [03] KS Pratap & Co., Chartered Accountants (CA Firm) | +919000786310 | —
+  [04] CH & Associates | +919700246888 | http://www.vnrassociates.com/
+  [05] Chartered Accountants l CA office I CA firms | +919160337807 | —
+  [06] Owaisuddin and Associates -Chartered Accountant | +918639348078 | http://www.vnrassociates.com/
+  [07] GG & Company (Formerly Gandhi & Gandhi) | +914067018000 | —
+  [08] SIR & COMPANY ; Chartered Accountants || Kothapet | +919492484060 | —
+  [09] Anil Reddy and Co | +916357445566 | —
+  [10] C L A N & Associates | +919742384394 | http://www.vnrassociates.com/
+  [11] Vijendra & Co (Company Secretary, CS, CA, Chartered Accountant, Valuation, Payroll, Accounting, Foreign Subsidiary) | +919032225574 | —
+  [12] C B & Associates, Chartered Accountants | +917022013892 | http://www.vnrassociates.com/
+  [13] Praveen Lakshmi & Co Chartered Accountant Firms | +917416406177 | —
+  [14] SRINATH MANIKANTA & CO (Chartered Accountants, Tax Notice Experts) | — | —
+  [15] Raju And Prasad Chartered Accountants | +914023410404 | —
+  [16] PSMG & ASSOCIATES., Chartered Accountants(CA FIRM) | +919032427206 | http://www.vnrassociates.com/
+  [17] AMRV AND ASSOCIATES | +919986435189 | http://www.vnrassociates.com/
+  [18] LPC Services | +918919382274 | —
+  [19] Palod and Loya,Chartered Accountants | +918125306067 | —
+  [20] M S Y and Associates, Chartered Accountants | +914040024527 | http://www.vnrassociates.com/
+  [21] Shivam D & Co Chartered Accountants | +916300347380 | —
+  [22] Vijendra & Co (Company Secretary, CS, CA, Chartered Accountant, Valuation, Payroll, Accounting, Foreign Subsidiary) | +919032225574 | —
+  [23] Shivam D & Co Chartered Accountants | +916300347380 | —
+  [24] Shivam D & Co Chartered Accountants | +916300347380 | —
+  [25] Arpan Bohra & Co, Chartered Accountants CA firm | +919030499151 | —
+  [26] A P T AND Co LLP. Chartered Accountants | +919490119196 | —
+  [27] SVRL & Co, Chartered Accountants | +919440663011 | —
+  [28] Suravaram and Associates, Chartered Accountants | +919440050047 | http://www.vnrassociates.com/
+  [29] IRFAN ALI SYED & Co. (CHARTERED ACCOUNTANTS) CA CPA | +919623631990 | —
+  [30] Gudipati Nagaraju & Co , Chartered Accountants | +919652469056 | —
+  [31] BANDARI AND ASSOCIATES, Expert Chartered Accountants: Auditing, Taxation, and Financial Advisory Services | +919652261086 | http://www.vnrassociates.com/
+  [32] Prashanth and Neeraj Chartered Accountants | +919059843067 | —
+  [33] L A B & Associates – Chartered Accountants |CA Laxman|Near by CA | +918897448201 | http://www.vnrassociates.com/
+  [34] Gokhale & Co Chartered Accountants | +914023228874 | —
+  [35] U S K & ASSOCIATES, Chartered Accountants | — | http://www.vnrassociates.com/
+  [36] V N R C & Associates | +919493929333 | http://www.vnrassociates.com/
+  [37] S.Bhalotia & Associates Chartered Accountants CA | +919550009518 | http://www.vnrassociates.com/
+  [38] Ravi Ladia & Co | +919182561916 | —
+  [39] Vanaja & Co, Chartered Accountants | — | —
+  [40] LPC Services | +918919382274 | —
+[2026-03-25 00:33:06] ✓ 39 new leads from: chartered accountant firm Hyderabad
+[2026-03-25 00:33:06]   Scraping: architect firm Hyderabad
+[>] Google Maps: architect firm Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] Finger6 Architects | +914048565966 | http://www.f6architects.com/
+  [03] B DESIGN STUDIOS | +919885777181 | —
+  [04] RAJA ARCHITECTS | +914023006699 | http://www.f6architects.com/
+  [05] Architects | +917997181426 | http://www.f6architects.com/
+  [06] MDeepa Architects And Interiors | +918309838138 | http://www.f6architects.com/
+  [07] Raj Architects | +919849034433 | http://www.f6architects.com/
+  [08] N S Associates® | +919849023778 | —
+  [09] AN ARCHITECT_FSD | — | http://www.f6architects.com/
+  [10] FHD India Consultants LLP | +914023743324 | —
+  [11] SEP Architects Private Limited | +914066203330 | http://www.f6architects.com/
+  [12] STUDIO ARCHITECTS GROUP | +914040184606 | http://www.f6architects.com/
+  [13] DEV & KAUSHIK ARCHITECTS | +918501839626 | http://www.f6architects.com/
+  [14] SHAIK ARCHITECTS | +918686301217 | http://www.f6architects.com/
+  [15] Studio A+D | +917090656433 | http://www.f6architects.com/
+  [16] b9architects | +919849018515 | http://www.f6architects.com/
+  [17] F+S Designs | +914042618550 | —
+  [18] Arkadesign Studio | +919701052861 | —
+  [19] NA Architects (Niroop Associates) | — | http://www.f6architects.com/
+  [20] Clark Lloyd Architects(CLA) | +919553518185 | http://www.f6architects.com/
+  [21] YD Architects & Interiors | +919866872794 | http://www.f6architects.com/
+  [22] YD Architects & Interiors | +919866872794 | http://www.f6architects.com/
+  [23] SHAIK ARCHITECTS | +918686301217 | http://www.f6architects.com/
+  [24] KANAN MODI ASSOCIATES LLP | +918977514137 | —
+  [25] KANAN MODI ASSOCIATES LLP | +918977514137 | —
+  [26] Genesis Planners Pvt.Ltd | +914066977777 | —
+  [27] BIM & GRAFX INTEGRATED STUDIO PVT. LTD. | +914029709867 | —
+  [28] Clark Lloyd Architects(CLA) | +919553518185 | http://www.f6architects.com/
+  [29] Instone Architects | +914023310971 | http://www.f6architects.com/
+  [30] Instone Architects | +914023310971 | http://www.f6architects.com/
+  [31] NA Architects (Niroop Associates) | — | http://www.f6architects.com/
+  [32] STUDIO ARCHITECTS GROUP | +914040184606 | http://www.f6architects.com/
+  [33] Shri Dhaatri Architects & Interior Designers | +919908573733 | http://www.f6architects.com/
+  [34] Shri Dhaatri Architects & Interior Designers | +919908573733 | http://www.f6architects.com/
+  [35] KREATIVE HOUSE | +919963277542 | —
+  [36] Spacefiction Studio | +919502127722 | —
+  [37] Kruthica Architects | +914023355794 | http://www.f6architects.com/
+  [38] Simha Associates | +914023354247 | —
+  [39] RoundSquare Architects | — | http://www.f6architects.com/
+  [40] Shilpalaya Associates | +919885107087 | —
+[2026-03-25 00:34:17] ✓ 39 new leads from: architect firm Hyderabad
+[2026-03-25 00:34:17]   Scraping: event management company Hyderabad
+[>] Google Maps: event management company Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] SOS Party | +917973432360 | https://www.sosparty.io/
+  [03] Traditions Event Management & Marketing Pvt. Ltd | +919849666080 | —
+  [04] SEASON 5 EVENTS | +919963979723 | —
+  [05] Alankaran Events- Best Event Management & Wedding Management Company | +919177210150 | —
+  [06] Vajra Events | +919248755551 | —
+  [07] Susaadhya Event Management | +917386777177 | —
+  [08] Eventina | +919959999182 | —
+  [09] iGRACE EVENTS | +918977481234 | —
+  [10] Hyderabad Events - Event Organizers in Hyderabad | +919966828280 | —
+  [11] Ideal Events | +917842224444 | —
+  [12] RakLead Events | +919550760678 | —
+  [13] Golden trumpet events | — | —
+  [14] Event Needz | +919100009770 | —
+  [15] My Choice Events | +919959969090 | —
+  [16] Harsha Events & Wedding Planners | +919030516216 | —
+  [17] Isheeka Events | +917842395867 | —
+  [18] Eventara Events -Corporate Event Management & Wedding Planners | +919346505686 | —
+  [19] New Image Events | +919849386552 | —
+  [20] KMK Event Management Limited | — | —
+  [21] Athidi Event Management | +918801101133 | —
+  [22] Megha Varna Events planner birthday organiser | +919666599335 | —
+  [23] The Show | +919030345929 | —
+  [24] Events By Eshu : Event Organisers | +919160428252 | —
+  [25] AVANT EVENTZ | +919866711711 | —
+  [26] JASARENA INDIA PRIVATE LIMITED | +917099040106 | —
+  [27] Swastik Event Management | +919885146505 | —
+  [28] Golden trumpet events | — | —
+  [29] Isheeka Events | +917842395867 | —
+  [30] Rachnoutsav Events Pvt. Ltd | +919848012241 | —
+  [31] Rachnoutsav Events Pvt. Ltd | +919848012241 | —
+  [32] Brand Act An Event Organisers | +919949095038 | —
+  [33] Athidi Event Management | +918801101133 | —
+  [34] Athidi Event Management | +918801101133 | —
+  [35] Wizcraft Entertainment Agency Pvt Ltd | +914040201215 | —
+  [36] Allika Event Planners | +919000200200 | —
+  [37] GiggleMug Events | +919704403988 | —
+  [38] Smart Choice Events | — | —
+  [39] Meety Events – Professional Conference Organiser(PCO) | +919848440272 | —
+  [40] HiFiEventsOfficial Best Event planner | +919652517975 | —
+[2026-03-25 00:35:16] ✓ 39 new leads from: event management company Hyderabad
+[2026-03-25 00:35:16]   Scraping: IT consulting firm Hyderabad
+[>] Google Maps: IT consulting firm Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] Launch IT Consulting India Pvt. Ltd. | — | https://www.launchcg.com/
+  [03] BlueStone Consultancy (NON IT) toomanyjobs.com | +919291691234 | —
+  [04] Tecdatum | +914027897009 | —
+  [05] Applogic Consulting | +918978886018 | —
+  [06] Launchio Consulting Pvt. Ltd | +917337327769 | —
+  [07] Acme Consulting | +919959599903 | —
+  [08] H2o IT Consulting | +919515377951 | —
+  [09] Magnific IT Consulting | +919985201444 | —
+  [10] Futurz Consultancy Services | +919182575391 | —
+  [11] OpenTeQ Technologies Pvt. Ltd. | +917032254999 | —
+  [12] AG Consulting Services Pvt Ltd | +914048575859 | —
+  [13] Squircle IT Consulting Services Pvt Ltd | +914048549044 | —
+  [14] Fly Consulting Services | — | —
+  [15] SQUARE ROUTE CONSULTANCY | +917993996222 | —
+  [16] Delta Consulting Company | — | —
+  [17] Imarat Consulting Services | +919885256273 | —
+  [18] Cornerstone IT Consulting | +919949655597 | —
+  [19] First Tech Consulting | +919039032829 | —
+  [20] JSS Pro Services, part of TMF Group | +919951267070 | —
+  [21] UR TURN Consulting & Services | +919000774488 | —
+  [22] Velocious Solutions Pvt. Ltd. | +918106413242 | —
+  [23] Virtusa Consulting Services Private Limited | +914030847500 | —
+  [24] ManVision Consulting | +917815957947 | —
+  [25] TEKhops | +919722568703 | —
+  [26] GEMSOURCE IT CONSULTING LIMITED | +914040170111 | —
+  [27] AG Consulting Services Pvt Ltd | +914048575859 | —
+  [28] Fabrise Consulting | +917780569930 | —
+  [29] Fabrise Consulting | +917780569930 | —
+  [30] Worthit Consultancy Services Pvt. Ltd. | — | —
+  [31] Blackridge Research & Consulting (Market Research Services Provider) | +918500460460 | —
+  [32] SQUARE ROUTE CONSULTANCY | +917993996222 | —
+  [33] La Global Consultancy | — | —
+  [34] La Global Consultancy | — | —
+  [35] Quest Ph.D Consultancy | +917672023883 | —
+  [36] Accurate Consulting Group | +919440688100 | —
+  [37] Delta Consulting Company | — | —
+  [38] JOBMINAR-Best Training and Recruitment and Jobs Consultancy | +919951111167 | —
+  [39] First Tech Consulting | +919039032829 | —
+  [40] Vagdevi Consultancy Services Pvt. Ltd. | +919052520090 | —
+[2026-03-25 00:36:21] ✓ 39 new leads from: IT consulting firm Hyderabad
+[2026-03-25 00:36:21]   Scraping: web design company Hyderabad
+[>] Google Maps: web design company Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] Waytowebs | +919951991336 | https://www.waytowebs.com/
+  [03] Dizi Solutions | +918374419650 | —
+  [04] EasyQuickWeb | +918142445122 | —
+  [05] TONNI WEBS | +919666666493 | https://www.waytowebs.com/
+  [06] VS Techno Solutions | +919052052200 | —
+  [07] Freelance website designer | +919949922244 | —
+  [08] CLOUDTIMON | +918125771969 | —
+  [09] 4 Max Designers | +919700210681 | —
+  [10] Slash Web Designers | +918143019933 | —
+  [11] Scioon Digital | +918328472767 | —
+  [12] Sky Web Design | +918106393972 | —
+  [13] Innovative House | +919849473457 | —
+  [14] SriG Systems | +918341377722 | —
+  [15] Spark Infosys | +918886100031 | —
+  [16] Lahari Technologies | +918977615615 | —
+  [17] 3KITS | +919032868666 | —
+  [18] Catliza | +918801391616 | —
+  [19] Srikanth Giddalur Webmaster | +919989529756 | —
+  [20] ARM Website | +919250101070 | —
+  [21] Highladder Software Solutions Pvt. Ltd. | +917330866644 | —
+  [22] Highladder Software Solutions Pvt. Ltd. | +917330866644 | —
+  [23] Spark Infosys | +918886100031 | —
+  [24] Highladder Software Solutions Pvt. Ltd. | +917330866644 | —
+  [25] Highladder Software Solutions Pvt. Ltd. | +917330866644 | —
+  [26] Software10x | — | —
+  [27] Hosting Square | +918466876489 | —
+  [28] DigitalZap – Digital Marketing, SEO & Branding Agency | +917331122663 | —
+  [29] Catliza | +918801391616 | —
+  [30] Catliza | +918801391616 | —
+  [31] Web Gen World | +919000748471 | —
+  [32] Kiwart Solutions | — | —
+  [33] ZIM Web Solutions | +919059086074 | —
+  [34] KKEYDOS | +919581083083 | —
+  [35] Website designers | +917702406026 | —
+  [36] ITinfo Digital | +919959052728 | —
+  [37] iPrism Technologies | +919848220099 | —
+  [38] J H Web | +919391348470 | —
+  [39] Social DNA | +919849561567 | —
+  [40] The Lutetium | +917097930295 | —
+[2026-03-25 00:37:27] ✓ 39 new leads from: web design company Hyderabad
+[2026-03-25 00:37:27]   Scraping: dental clinic Hyderabad
+[>] Google Maps: dental clinic Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] HYDERABAD DENTAL HOSPITAL & IMPLANT CENTRE | +919705856879 | http://www.hyderabaddentalhospitals.com/
+  [03] GA Dental Clinic | +919505443330 | —
+  [04] FMS DENTAL Hospital | +918886643223 | https://www.fmsdental.com/fms-dental-hospitals-koti/
+  [05] Dantam The Dental Lounge | +919912186174 | https://www.dantamclinics.com/
+  [06] Clove Dental Clinic | +914069260057 | https://clovedental.in/dentist-near-me/hyderabad/sr-nagar?utm_source=website&utm_medium=gmb&utm_campaign=SR_Nagar_GMB
+  [07] Smiline Dental Hospital | +914029804422 | https://smiline.com/smiline-hitech-city/
+  [08] The Dental Specialists | +919959448800 | https://www.thedentalspecialists.in/
+  [09] FMS International Dental Center | +918885060770 | —
+  [10] Smiline dental hospital | +919676100045 | https://smiline.com/smiline-panjagutta/
+  [11] Clove Dental Clinic | +914038245763 | https://clovedental.in/dentist-near-me/hyderabad/himayathnagar?utm_source=website&utm_medium=gmb&utm_campaign=Himayathnagar_GMB_Hyderabad
+  [12] Eledent Dental Hospital | +917799639994 | https://eledenthospitals.com/kondapur/
+  [13] Ameerpet Dental Hospital | +919989691114 | https://www.adsdentalhospitals.com/
+  [14] Dr Smiles Dental Clinic | +919849077320 | https://drsmiles.co.in/vidyanagar.html
+  [15] National Dental Care | +919169269369 | https://www.nationaldentalcare.in/?utm_source=google&utm_medium=organic&utm_campaign=GMB-Srinagar+Colony
+  [16] National Dental Care | +919169269369 | https://www.nationaldentalcare.in/?utm_source=google&utm_medium=organic&utm_campaign=GMB-Kukatpally
+  [17] Harsha Dental | +917093220226 | http://www.dantamclinics.com/
+  [18] Partha Dental Clinic | +919154076445 | https://parthadental.com/dental-skin-hair-clinic-banjara-hills/?utm_source=google&utm_medium=banjara-hills
+  [19] Hyderabad Smiles Advanced Dental Hospital | +918106247675 | https://hyderabadsmiles.com/
+  [20] Partha Dental Clinic | +918121991010 | https://parthadental.com/dental-skin-hair-clinic-himayat-nagar/?utm_source=google&utm_medium=gmb&utm_campaign=himayat-nagar
+  [21] Manik Dental Clinic | — | https://manikdental.com/
+  [22] Best Smiles Dental Clinic | — | —
+  [23] Alux Dental Clinic | +917676111999 | http://www.aluxdental.com/
+  [24] Best Smiles Dental Clinic | +919182395370 | https://bestsmilesdentalclinic.com/
+  [25] The Dental Specialists | +919959448800 | https://www.thedentalspecialists.in/
+  [26] Smiline dental hospital | +919676100045 | https://smiline.com/smiline-panjagutta/
+  [27] Harsha Dental | +917093220226 | http://www.dantamclinics.com/
+  [28] Harsha Dental | +917093220226 | http://www.dantamclinics.com/
+  [29] Hyderabad Smiles Advanced Dental Hospital | +918106247675 | https://hyderabadsmiles.com/
+  [30] Clove Dental Clinic | +914069260057 | https://clovedental.in/dentist-near-me/hyderabad/kavuri-hills?utm_source=website&utm_medium=gmb&utm_campaign=Kavuri_Hills_GMB
+  [31] Clove Dental Clinic | +914069260057 | https://clovedental.in/dentist-near-me/hyderabad/kavuri-hills?utm_source=website&utm_medium=gmb&utm_campaign=Kavuri_Hills_GMB
+  [32] Clove Dental Clinic in Botanical Gardens | +914069260059 | https://clovedental.in/dentist-near-me/hyderabad/botanical-gardens?utm_source=website&utm_medium=gmb&utm_campaign=Botanical_Gardens_GMB_Hyderabad
+  [33] Partha | +919121142631 | https://parthadental.com/dental-skin-hair-clinic-jubilee-hills/?utm_source=google&utm_medium=gmb&utm_campaign=jubilee-hills
+  [34] Partha Dental Clinic | +919154076445 | https://parthadental.com/dental-skin-hair-clinic-banjara-hills/?utm_source=google&utm_medium=banjara-hills
+  [35] Partha Dental Clinic | +919030622077 | https://parthadental.com/dental-hair-clinic-ameerpet/?utm_source=google&utm_medium=gmb&utm_campaign=ameerpet
+  [36] Partha Dental Clinic | +919030622077 | https://parthadental.com/dental-hair-clinic-ameerpet/?utm_source=google&utm_medium=gmb&utm_campaign=ameerpet
+  [37] Clove Dental Clinic | +914038245763 | https://clovedental.in/dentist-near-me/hyderabad/dd-colony?utm_source=website&utm_medium=gmb&utm_campaign=DD_Colony_GMB_Hyderabad
+  [38] FMS International Dental Center | +918885060770 | —
+  [39] Sowjanya Dental Hospitals | +919000455700 | —
+  [40] Sowjanya Dental Hospitals | +919000455700 | —
+[2026-03-25 00:38:44] ✓ 39 new leads from: dental clinic Hyderabad
+[2026-03-25 00:38:44]   Scraping: law firm Hyderabad
+[>] Google Maps: law firm Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] Absolute Law Firm | +918179360507 | https://absolutelawfirm.in/
+  [03] TLH, Advocates and Solicitors | +914023581000 | —
+  [04] Brzee Law Firm (Corporate, Real Estate, all Civil, Criminal & Family cases) 18 years of expertise | +918884456656 | https://absolutelawfirm.in/
+  [05] HYDERABAD LAW FIRM(R) | +919030006491 | https://absolutelawfirm.in/
+  [06] Advocate Syed Hashim Adil & Associates Law Firm | +919700000531 | —
+  [07] Sai Krishna Azad Advocate | +919491856568 | —
+  [08] BMR Law Offices | +914048503199 | —
+  [09] AequitasJuris Law Firm | +918790301199 | https://absolutelawfirm.in/
+  [10] Khanna Law Associates | +919848091011 | —
+  [11] Hyderabad Lawyer for NRIs | +919490119818 | —
+  [12] KR SunilKumar Advocate | — | —
+  [13] Juris Prime Law Services | +914023551101 | —
+  [14] G.M.Rao Advocates & Associates LLP | +919590059999 | —
+  [15] SL LAW FIRM | +917654040506 | https://absolutelawfirm.in/
+  [16] Sanghi Law Chamber | +919849001994 | —
+  [17] Unnam Law Firm | +919701890891 | https://absolutelawfirm.in/
+  [18] Orient Lawfirm | — | https://absolutelawfirm.in/
+  [19] Misra Law Office | +919849188398 | —
+  [20] Thakur & Co Law Firm | +918886686177 | https://absolutelawfirm.in/
+  [21] Jai Bhim Attorney's law Firm | +919618780445 | https://absolutelawfirm.in/
+  [22] Juris Prime Law Services | +914023551101 | —
+  [23] Juris Prime Law Services | +914023551101 | —
+  [24] SJ Law Firm | +916305371529 | https://absolutelawfirm.in/
+  [25] Rights & Marks IP Law Firm | — | https://absolutelawfirm.in/
+  [26] Orient Lawfirm | — | https://absolutelawfirm.in/
+  [27] Sanghi Law Chamber | +919849001994 | —
+  [28] Sanghi Law Chamber | +919849001994 | —
+  [29] Ambadipudi Law Firm | +919849131651 | https://absolutelawfirm.in/
+  [30] Unnam Law Firm | +919701890891 | https://absolutelawfirm.in/
+  [31] JSL Advocates | +919048809468 | —
+  [32] JSL Advocates | +919048809468 | —
+  [33] A P SURESH & ASSOCIATES | — | —
+  [34] SJ Law Firm, Shalini Junjur Advocate | +919885515039 | https://absolutelawfirm.in/
+  [35] Satya Law Chamber | +919182220670 | —
+  [36] Satya lawyer | +919182220670 | —
+  [37] AR Law Warrior's Firm | +919100003727 | https://absolutelawfirm.in/
+  [38] Misra Law Office | +919849188398 | —
+  [39] RVK Law Associates | +917093247988 | —
+  [40] RVK Law Associates | +917093247988 | —
+[2026-03-25 00:39:55] ✓ 39 new leads from: law firm Hyderabad
+[2026-03-25 00:39:55]   Scraping: solar energy company Hyderabad
+[>] Google Maps: solar energy company Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] Four Solar Energy Systems Pvt Ltd | +919248716892 | https://www.foursolar.com/
+  [03] Suntek Energy Systems Pvt Ltd (Truzon Solar) | +919030032222 | —
+  [04] Freyr Energy | +919000828333 | —
+  [05] Creative Energy Solutions (Best Solar Energy Company) | +917095677321 | —
+  [06] 🌞 Oliytech Solar – Best Solar Energy Company | +919032102837 | —
+  [07] SolarCircuit Energy | +919440757763 | —
+  [08] Solar Idea Private Limited | +914049464332 | —
+  [09] Satyajan Energy Solutions Pvt.Ltd. | +918019179159 | —
+  [10] Unisolar Power Private Limited | +918897196960 | —
+  [11] GIGAWATT SOLAR PVT LTD | +918977759911 | —
+  [12] ORBIT SOLAR ENERGY SYSTEM | +919346176617 | —
+  [13] ORBIT SOLAR ENERGY SYSTEM | +919346176617 | —
+  [14] Greentek India Limited | +914027807145 | —
+  [15] NextGen Solar Power | +919542227772 | —
+  [16] Milestone Solarcom Pvt. Ltd. | +919030005033 | —
+  [17] Valcan Solar | +919030033425 | —
+  [18] Junna Solar Systems Limited | +916309395555 | —
+  [19] OSMIUM ENERGY PRIVATE LIMITED | +918977780597 | —
+  [20] Solar | — | —
+  [21] Avghni Renewable Energy System India Pvt. Ltd. | +914040033983 | —
+  [22] ASJ SOLAR ENERGY PRIVATE LIMITED | +919000710319 | —
+  [23] Solar | — | —
+  [24] Solarsquare Energy Private Limited | — | —
+  [25] Avghni Renewable Energy System India Pvt. Ltd. | +914040033983 | —
+  [26] Rishi Solar LLP | +919542877302 | —
+  [27] Rishi Solar LLP | +919542877302 | —
+  [28] Nuevosol Energy Pvt Ltd | +918978575413 | —
+  [29] Kypas Solar Power Private Limited | +919100522215 | —
+  [30] Solar rooftop | +919392293942 | —
+  [31] SOLAK RENEWABLES ENERGY | +918187864440 | —
+  [32] SOLAR6 | +919912355344 | —
+  [33] Dinkrit Solar Power Systems | +919030552238 | —
+  [34] OSMIUM ENERGY PRIVATE LIMITED | +918977780597 | —
+  [35] Milestone Solarcom Pvt. Ltd. | +919030005033 | —
+  [36] Pioneer Renewable Energy Pvt.Ltd | +919985257822 | —
+  [37] Pioneer Renewable Energy Pvt.Ltd | +919985257822 | —
+  [38] AB SOLAR POWER SYSTEMS | +918099040600 | —
+  [39] SIRIUS SOLAR ENERGY SYSTEMS PVT LTD | +919705922256 | —
+  [40] ILIOS Power | +918374455663 | —
+[2026-03-25 00:41:01] ✓ 39 new leads from: solar energy company Hyderabad
+[2026-03-25 00:41:01] ✓ Scrape complete — 390 new leads total
+
+─────────────────────── ENRICH ───────────────────────
+[2026-03-25 00:41:01]   Enriching 5 lead(s)…
+[2026-03-25 00:41:05] ✓ Enriched 5 lead(s)
+
+─────────────────────── VERIFY ───────────────────────
+[2026-03-25 00:41:05]   Verifying 5 lead(s)…
+[2026-03-25 00:41:11] ✓ Verified: 0  Invalid: 5
+
+────────────────────── GENERATE ──────────────────────
+[i] No verified leads to generate drafts for.
+[2026-03-25 00:41:11] ~ No verified leads needing drafts
+
+────────────────────── FOLLOWUP ──────────────────────
+[>] Checking 39 contacted lead(s) for due follow-ups…
+
+  [·] mTouch Labs – Software Development Compa — step-3 due in 1.0d
+  [·] Techally Labs — step-3 due in 1.0d
+  [·] Innoit Labs Pvt Ltd — step-3 due in 1.0d
+  [·] SEASON 5 EVENTS — step-3 due in 1.0d
+  [·] Applogic Consulting — step-3 due in 1.0d
+  [·] Waytowebs — step-3 due in 1.0d
+  [·] TONNI WEBS — step-3 due in 1.0d
+  [·] HYDERABAD DENTAL HOSPITAL & IMPLANT CENT — step-3 due in 1.0d
+  [·] Dezy Dental Clinic — step-3 due in 1.0d
+  [·] Galaxy Dental Care — step-3 due in 1.0d
+  [·] Clove Dental Clinic — step-3 due in 1.0d
+  [·] Ameerpet Dental Hospital — step-3 due in 2.2d
+  [·] Clove Dental Clinic — step-3 due in 3.0d
+  [·] Dr Smiles Dental Clinic — step-3 due in 3.0d
+  [·] National Dental Care — step-3 due in 3.0d
+  [·] The Dental Practice — step-3 due in 3.0d
+  [·] Partha Dental Clinic — step-3 due in 3.0d
+  [·] Hyderabad Smiles Advanced Dental Hospita — step-3 due in 3.0d
+  [·] Partha Dental Clinic — step-3 due in 3.0d
+  [·] Clove Dental Clinic in Jubilee Hills Roa — step-3 due in 3.0d
+  [·] Clove Dental Clinic in Botanical Gardens — step-3 due in 3.0d
+  [·] Alux Dental Clinic — step-3 due in 3.0d
+  [·] Dr Reddis Dental Clinic — step-3 due in 3.0d
+  [·] Best Smiles Dental Clinic — step-3 due in 3.0d
+  [·] Clove Dental Clinic — step-3 due in 3.0d
+  [·] Partha Dental Clinic — step-3 due in 3.0d
+  [·] Absolute Law Firm — step-3 due in 3.0d
+  [·] Pillix Law Firm — step-3 due in 3.0d
+  [·] Rights & Marks IP Law Firm — step-3 due in 3.0d
+  [·] Orient Lawfirm — step-3 due in 3.0d
+  [·] Partha — step-3 due in 3.0d
+  [·] Partha Dental Clinic — step-3 due in 3.0d
+  [·] Launch IT Consulting India Pvt. Ltd. — step-3 due in 3.0d
+  [·] Clove Dental Clinic in Madhapur — step-3 due in 3.0d
+  [·] Toot Dental Clinic S R Nagar — step-3 due in 3.0d
+  [·] SJ Law Firm, Shalini Junjur Advocate — step-3 due in 3.0d
+  [·] BlueStone Consultancy (NON IT) toomanyjo — step-3 due in 3.0d
+  [·] Apollo Dental Clinic, Jubilee Hills — step-3 due in 3.0d
+  [+] Ekadanta Dental Care — queuing step-2 (day-3) follow-up (3.7d since step-1)
+[2026-03-25 00:41:11] ✓ Follow-ups queued — step2: 1  step3: 0
+
+──────────────────────── SEND ────────────────────────
+=== Email Sender ===
+
+  Quota today : 0 sent / 80 limit
+  Remaining   : 80
+  This batch  : 1 email(s)
+  Send window : 10:00–13:00, 14:00–18:00 IST
+
+[>] Connecting to Gmail SMTP…
+[✓] Connected.
+
+  [01/1] Ekadanta Dental Care                → addressinfo@ekadantadental.com
+          ✓ sent
+
+=============================================
+✓ Sent: 1  |  Failed: 0
+  Total sent today: 1/80
+[2026-03-25 00:41:12] ✓ Sent 1 email(s) today (1/80)
+
+──────────────────────── TRACK ────────────────────────
+[2026-03-25 00:41:12]   Checking inbox for replies since 24-Mar-2026…
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+[2026-03-25 00:41:15] ✓ Replies: 0  Auto-replies: 15  Unmatched: 1
+
+─────────────────────── SUMMARY ───────────────────────
+[2026-03-25 00:41:15]   Total leads in DB : 665
+[2026-03-25 00:41:15]   Scraped           : 0
+[2026-03-25 00:41:15]   Enriched          : 0
+[2026-03-25 00:41:15]   Verified          : 0
+[2026-03-25 00:41:15]   Draft ready       : 2
+[2026-03-25 00:41:15]   Contacted         : 39
+[2026-03-25 00:41:15]   Replied           : 0
+[2026-03-25 00:41:15]   Interested        : 0
+[2026-03-25 00:41:15]   Converted         : 0
+
+───────────────────────────────────────────────────────
+[2026-03-25 00:41:15]   Pipeline complete.
+
+─────────────────── PIPELINE START ───────────────────
+[2026-03-25 04:00:18]   Running steps: followup, send, track
+
+────────────────────── FOLLOWUP ──────────────────────
+[>] Checking 39 contacted lead(s) for due follow-ups…
+
+  [·] mTouch Labs – Software Development Compa — step-3 due in 0.9d
+  [·] Techally Labs — step-3 due in 0.9d
+  [·] Innoit Labs Pvt Ltd — step-3 due in 0.9d
+  [·] SEASON 5 EVENTS — step-3 due in 0.9d
+  [·] Applogic Consulting — step-3 due in 0.9d
+  [·] Waytowebs — step-3 due in 0.9d
+  [·] TONNI WEBS — step-3 due in 0.9d
+  [·] HYDERABAD DENTAL HOSPITAL & IMPLANT CENT — step-3 due in 0.9d
+  [·] Dezy Dental Clinic — step-3 due in 0.9d
+  [·] Galaxy Dental Care — step-3 due in 0.9d
+  [·] Clove Dental Clinic — step-3 due in 0.9d
+  [·] Ameerpet Dental Hospital — step-3 due in 2.1d
+  [·] Clove Dental Clinic — step-3 due in 2.9d
+  [·] Dr Smiles Dental Clinic — step-3 due in 2.9d
+  [·] National Dental Care — step-3 due in 2.9d
+  [·] The Dental Practice — step-3 due in 2.9d
+  [·] Partha Dental Clinic — step-3 due in 2.9d
+  [·] Hyderabad Smiles Advanced Dental Hospita — step-3 due in 2.9d
+  [·] Partha Dental Clinic — step-3 due in 2.9d
+  [·] Clove Dental Clinic in Jubilee Hills Roa — step-3 due in 2.9d
+  [·] Clove Dental Clinic in Botanical Gardens — step-3 due in 2.9d
+  [·] Alux Dental Clinic — step-3 due in 2.9d
+  [·] Dr Reddis Dental Clinic — step-3 due in 2.9d
+  [·] Best Smiles Dental Clinic — step-3 due in 2.9d
+  [·] Clove Dental Clinic — step-3 due in 2.9d
+  [·] Partha Dental Clinic — step-3 due in 2.9d
+  [·] Absolute Law Firm — step-3 due in 2.9d
+  [·] Pillix Law Firm — step-3 due in 2.9d
+  [·] Rights & Marks IP Law Firm — step-3 due in 2.9d
+  [·] Orient Lawfirm — step-3 due in 2.9d
+  [·] Partha — step-3 due in 2.9d
+  [·] Partha Dental Clinic — step-3 due in 2.9d
+  [·] Launch IT Consulting India Pvt. Ltd. — step-3 due in 2.9d
+  [·] Clove Dental Clinic in Madhapur — step-3 due in 2.9d
+  [·] Toot Dental Clinic S R Nagar — step-3 due in 2.9d
+  [·] SJ Law Firm, Shalini Junjur Advocate — step-3 due in 2.9d
+  [·] BlueStone Consultancy (NON IT) toomanyjo — step-3 due in 2.9d
+  [·] Apollo Dental Clinic, Jubilee Hills — step-3 due in 2.9d
+  [·] Ekadanta Dental Care — step-3 due in 3.9d
+[2026-03-25 04:00:18] ~ No follow-ups due yet
+
+──────────────────────── SEND ────────────────────────
+[2026-03-25 04:00:18] ~ Outside send window — skipping send
+
+──────────────────────── TRACK ────────────────────────
+[2026-03-25 04:00:18]   Checking inbox for replies since 25-Mar-2026…
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+[2026-03-25 04:00:20] ✓ Replies: 0  Auto-replies: 1  Unmatched: 0
+
+─────────────────────── SUMMARY ───────────────────────
+[2026-03-25 04:00:20]   Total leads in DB : 665
+[2026-03-25 04:00:20]   Scraped           : 0
+[2026-03-25 04:00:20]   Enriched          : 0
+[2026-03-25 04:00:20]   Verified          : 0
+[2026-03-25 04:00:20]   Draft ready       : 2
+[2026-03-25 04:00:20]   Contacted         : 39
+[2026-03-25 04:00:20]   Replied           : 0
+[2026-03-25 04:00:20]   Interested        : 0
+[2026-03-25 04:00:20]   Converted         : 0
+
+───────────────────────────────────────────────────────
+[2026-03-25 04:00:20]   Pipeline complete.
+
+─────────────────── PIPELINE START ───────────────────
+[2026-03-26 00:40:22]   Running steps: scrape, enrich, verify, generate, followup, send, track
+
+─────────────────────── SCRAPE ───────────────────────
+[2026-03-26 00:40:22]   Scraping: software development company Hyderabad
+[>] Google Maps: software development company Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+  [02] mTouch Labs – Software Development Company | +919390683154 | http://www.mtouchlabs.com/
+  [03] Ahex Technologies | +918885564224 | —
+  [04] BSIT Software Services Pvt. Ltd.- Leading Software Development Company. | +919985222841 | —
+  [05] iPrism Technologies | +919848220099 | —
+  [06] Access Info Sources | +919848780827 | —
+  [07] Conquerors Software Technologies | +917013196804 | —
+  [08] Techweblabs | +917670837961 | —
+  [09] Syoft- Software Development Company | +919030819534 | —
+  [10] Tvisha Technologies | +918688810000 | —
+  [11] Techally Labs | +919985202223 | http://www.mtouchlabs.com/
+  [12] Enterpi Software Solutions Private Limited | +918885251753 | —
+  [13] Innoit Labs Pvt Ltd | +916305553907 | http://www.mtouchlabs.com/
+  [14] Spark Infosys | +918886100031 | —
+  [15] Siri IT Innovations Pvt Ltd | +918374444448 | —
+  [16] Cosmicvent | +917702063689 | —
+  [17] DevRabbit | +914023551445 | —
+  [18] Infochord Technologies Pvt. Ltd. | +918099636946 | —
+  [19] Highladder Software Solutions Pvt. Ltd. | +917330866644 | —
+  [20] United Online Software Development Pvt. Ltd | +914066824444 | —
+  [21] Sparity | +914064650707 | —
+  [22] Premind Software Pvt Ltd | +914023376659 | —
+  [23] Analogue IT Solutions-Best Mobile App Development Company | +918919088163 | —
+  [24] Velocious Solutions Pvt. Ltd. | +918106413242 | —
+  [25] Siri IT Innovations Pvt Ltd | +918374444448 | —
+  [26] Techally Labs | +919985202223 | http://www.mtouchlabs.com/
+  [27] Techally Labs | +919985202223 | http://www.mtouchlabs.com/
+  [28] Rational Technologies | +918179797732 | —
+  [29] Vrinda Techapps | +919985739100 | —
+  [30] Melvault Software Solutions, Pvt Ltd | +914029300768 | —
+  [31] Sparity | +914064650707 | —
+  [32] IBaseIT: Product Engineering & Quality Assurance Services | +914068156789 | —
+  [33] IBaseIT: Product Engineering & Quality Assurance Services | +914068156789 | —
+  [34] SSR Technologies | +917981094895 | —
+  [35] Suvidha Software Solutions | +914040150065 | —
+  [36] Pranathi Software Services | +914069030320 | —
+  [37] Devathon (Crypsis Technologies Pvt. Ltd.) | +918070780101 | —
+  [38] Focus Softnet | +918008403263 | —
+  [39] Kamex IT Solutions (OPC) Private Limited | +918686142306 | —
+  [40] EasyQuickWeb | +918142445122 | —
+[2026-03-26 02:16:29] ✓ 39 new leads from: software development company Hyderabad
+[2026-03-26 02:16:29]   Scraping: digital marketing agency Hyderabad
+[>] Google Maps: digital marketing agency Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] Digital Mojo | +919908398763 | https://digitalmojo.in/
+  [03] Geekschip | +919100068885 | —
+  [04] DigitalZap – Digital Marketing, SEO & Branding Agency | +917331122663 | —
+  [05] Vihaan Digitals | +917396033325 | —
+  [06] Brandingnuts | +918341392803 | —
+  [07] Digital i360 | +918599002222 | —
+  [08] Digital Shout | +918919203640 | —
+  [09] Social DNA | +919849561567 | —
+  [10] KL ADS INDIA PVT LTD | +918919175736 | —
+  [11] Infinity Reach | +918500666366 | —
+  [12] Web Rocz | +917799660016 | —
+  [13] 3DM | +917799009912 | —
+  [14] ShootOrder | +916303921512 | —
+  [15] Emblix Solutions | +919849555829 | —
+  [16] DigitalCatalyst | +919849037822 | —
+  [17] WE PROMOTE U DIGITAL MARKETING AGENCY | +917337441363 | —
+  [18] RevSoc Digital Marketing Agency | +919182892264 | —
+  [19] 8 Views | +918099708888 | —
+  [20] We Are Very | +919459557999 | —
+  [21] Digital Brandlance | +919390242702 | —
+  [22] DigitalCatalyst | +919849037822 | —
+  [23] 3DM | +917799009912 | —
+  [24] Orion Digital | +917013079193 | —
+  [25] Orion Digital | +917013079193 | —
+  [26] Digital Brandlance | +919390242702 | —
+  [!] Card 27 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").nth(26)
+    - locator resolved to <div role="article" class="Nv2PK tH5CWc THOPZb " jsaction="mouseover:pane.wfvdle134;mouseout:pane.wfvdle134" aria-label="RevSoc Digital Marketing Agency in Hyderabad | SEO Services">…</div>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+
+  [28] Web Rocz | +917799660016 | —
+  [29] Souvenir-IT | +919705696696 | —
+  [30] GenYmedium | +918019888314 | —
+  [31] Redmatter Full-Funnel Marketing Agency | +917901010174 | —
+  [32] Redmatter Full-Funnel Marketing Agency | +917901010174 | —
+  [33] Digi Carotene | +919959820874 | https://digitalmojo.in/
+  [34] Samskriti Business Solutions | +914023402060 | —
+  [35] Brand Your Work | +919160197157 | —
+  [36] Tag Digital | +919640498584 | —
+  [37] ITinfo Digital | +919959052728 | —
+  [38] DigLvate | — | —
+  [39] ET Creatives | +916309552323 | —
+  [40] Doctor Digital | +919741752537 | —
+[2026-03-26 02:48:06] ✓ 38 new leads from: digital marketing agency Hyderabad
+[2026-03-26 02:48:06]   Scraping: chartered accountant firm Hyderabad
+[>] Google Maps: chartered accountant firm Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] VNR Associates | +919392144289 | http://www.vnrassociates.com/
+  [03] KS Pratap & Co., Chartered Accountants (CA Firm) | +919000786310 | —
+  [04] CH & Associates | +919700246888 | http://www.vnrassociates.com/
+  [05] Chartered Accountants l CA office I CA firms | +919160337807 | —
+  [06] GG & Company (Formerly Gandhi & Gandhi) | +914067018000 | —
+  [07] Owaisuddin and Associates -Chartered Accountant | +918639348078 | http://www.vnrassociates.com/
+  [08] SIR & COMPANY ; Chartered Accountants || Kothapet | +919492484060 | —
+  [09] Anil Reddy and Co | +916357445566 | —
+  [10] Vijendra & Co (Company Secretary, CS, CA, Chartered Accountant, Valuation, Payroll, Accounting, Foreign Subsidiary) | +919032225574 | —
+  [11] C B & Associates, Chartered Accountants | +917022013892 | http://www.vnrassociates.com/
+  [12] C L A N & Associates | +919742384394 | http://www.vnrassociates.com/
+  [13] Raju And Prasad Chartered Accountants | +914023410404 | —
+  [14] Praveen Lakshmi & Co Chartered Accountant Firms | +917416406177 | —
+  [15] PSMG & ASSOCIATES., Chartered Accountants(CA FIRM) | +919032427206 | http://www.vnrassociates.com/
+  [16] SRINATH MANIKANTA & CO (Chartered Accountants, Tax Notice Experts) | — | —
+  [17] AMRV AND ASSOCIATES | +919986435189 | http://www.vnrassociates.com/
+  [18] M S Y and Associates, Chartered Accountants | +914040024527 | http://www.vnrassociates.com/
+  [19] LPC Services | +918919382274 | —
+  [20] Palod and Loya,Chartered Accountants | +918125306067 | —
+  [21] Shivam D & Co Chartered Accountants | +916300347380 | —
+  [22] Shivam D & Co Chartered Accountants | +916300347380 | —
+  [23] Vijendra & Co (Company Secretary, CS, CA, Chartered Accountant, Valuation, Payroll, Accounting, Foreign Subsidiary) | +919032225574 | —
+  [24] Vijendra & Co (Company Secretary, CS, CA, Chartered Accountant, Valuation, Payroll, Accounting, Foreign Subsidiary) | +919032225574 | —
+  [25] Arpan Bohra & Co, Chartered Accountants CA firm | +919030499151 | —
+  [26] Gokhale & Co Chartered Accountants | +914023228874 | —
+  [27] BANDARI AND ASSOCIATES, Expert Chartered Accountants: Auditing, Taxation, and Financial Advisory Services | +919652261086 | http://www.vnrassociates.com/
+  [28] Suravaram and Associates, Chartered Accountants | +919440050047 | http://www.vnrassociates.com/
+  [29] A P T AND Co LLP. Chartered Accountants | +919490119196 | —
+  [30] SVRL & Co, Chartered Accountants | +919440663011 | —
+  [31] L A B & Associates – Chartered Accountants |CA Laxman|Near by CA | +918897448201 | http://www.vnrassociates.com/
+  [32] IRFAN ALI SYED & Co. (CHARTERED ACCOUNTANTS) CA CPA | +919623631990 | —
+  [33] Prashanth and Neeraj Chartered Accountants | +919059843067 | —
+  [34] Gudipati Nagaraju & Co , Chartered Accountants | +919652469056 | —
+  [35] S.Bhalotia & Associates Chartered Accountants CA | +919550009518 | http://www.vnrassociates.com/
+  [36] U S K & ASSOCIATES, Chartered Accountants | — | http://www.vnrassociates.com/
+  [37] V N R C & Associates | +919493929333 | http://www.vnrassociates.com/
+  [38] LPC Services | +918919382274 | —
+  [39] Ravi Ladia & Co | +919182561916 | —
+  [40] Ravi Ladia & Co | +919182561916 | —
+[2026-03-26 03:39:49] ✓ 39 new leads from: chartered accountant firm Hyderabad
+[2026-03-26 03:39:49]   Scraping: architect firm Hyderabad
+[>] Google Maps: architect firm Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    5 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+  [02] Finger6 Architects | +914048565966 | http://www.f6architects.com/
+  [03] B DESIGN STUDIOS | +919885777181 | —
+  [04] RAJA ARCHITECTS | +914023006699 | http://www.f6architects.com/
+  [05] Architects | +917997181426 | http://www.f6architects.com/
+  [06] NA Architects (Niroop Associates) | — | http://www.f6architects.com/
+  [07] MDeepa Architects And Interiors | +918309838138 | http://www.f6architects.com/
+  [08] N S Associates® | +919849023778 | —
+  [09] Raj Architects | +919849034433 | http://www.f6architects.com/
+  [10] FHD India Consultants LLP | +914023743324 | —
+  [11] AN ARCHITECT_FSD | — | http://www.f6architects.com/
+  [12] SEP Architects Private Limited | +914066203330 | http://www.f6architects.com/
+  [13] STUDIO ARCHITECTS GROUP | +914040184606 | http://www.f6architects.com/
+  [14] DEV & KAUSHIK ARCHITECTS | +918501839626 | http://www.f6architects.com/
+  [15] Studio A+D | +917090656433 | http://www.f6architects.com/
+  [16] b9architects | +919849018515 | http://www.f6architects.com/
+  [17] b9architects | +919849018515 | http://www.f6architects.com/
+  [18] Arkadesign Studio | +919701052861 | —
+  [19] Genesis Planners Pvt.Ltd | +914066977777 | —
+  [20] Clark Lloyd Architects(CLA) | +919553518185 | http://www.f6architects.com/
+  [21] YD Architects & Interiors | +919866872794 | http://www.f6architects.com/
+  [22] Murty & Manyam Architects & Engineers | +914023318020 | http://www.f6architects.com/
+  [23] DEV & KAUSHIK ARCHITECTS | +918501839626 | http://www.f6architects.com/
+  [24] DEV & KAUSHIK ARCHITECTS | +918501839626 | http://www.f6architects.com/
+  [25] KANAN MODI ASSOCIATES LLP | +918977514137 | —
+  [26] YD Architects & Interiors | +919866872794 | http://www.f6architects.com/
+  [27] BIM & GRAFX INTEGRATED STUDIO PVT. LTD. | +914029709867 | —
+  [28] BIM & GRAFX INTEGRATED STUDIO PVT. LTD. | +914029709867 | —
+  [29] FHD India Consultants LLP | +914023743324 | —
+  [30] Clark Lloyd Architects(CLA) | +919553518185 | http://www.f6architects.com/
+  [31] Instone Architects | +914023310971 | http://www.f6architects.com/
+  [32] Instone Architects | +914023310971 | http://www.f6architects.com/
+  [33] SPARROCON architects | +914035839398 | http://www.f6architects.com/
+  [34] STUDIO ARCHITECTS GROUP | +914040184606 | http://www.f6architects.com/
+  [35] Kiron Cheerla Architecture | +919849014541 | —
+  [36] Kruthica Architects | +914023355794 | http://www.f6architects.com/
+  [37] Aarna Architects | +919000143390 | http://www.f6architects.com/
+  [38] Aarna Architects | +919000143390 | http://www.f6architects.com/
+  [39] Simha Associates | +914023354247 | —
+  [40] DEEJOS Architects & Constructions | +918328306145 | http://www.f6architects.com/
+[2026-03-26 05:41:25] ✓ 39 new leads from: architect firm Hyderabad
+[2026-03-26 05:41:25]   Scraping: event management company Hyderabad
+[>] Google Maps: event management company Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+  [02] SOS Party | +917973432360 | https://www.sosparty.io/
+  [03] Traditions Event Management & Marketing Pvt. Ltd | +919849666080 | —
+  [04] SEASON 5 EVENTS | +919963979723 | —
+  [05] Vajra Events | +919248755551 | —
+  [06] Alankaran Events- Best Event Management & Wedding Management Company | +919177210150 | —
+  [07] Susaadhya Event Management | +917386777177 | —
+  [08] iGRACE EVENTS | +918977481234 | —
+  [09] Hyderabad Events - Event Organizers in Hyderabad | +919966828280 | —
+  [10] Eventina | +919959999182 | —
+  [11] Ideal Events | +917842224444 | —
+  [12] RakLead Events | +919550760678 | —
+  [13] Event Needz | +919100009770 | —
+  [14] Golden trumpet events | — | —
+  [15] Gold Feather Events | +918179860774 | —
+  [16] Gold Feather Events | +918179860774 | —
+  [17] New Image Events | +919849386552 | —
+  [18] Harsha Events & Wedding Planners | +919030516216 | —
+  [19] Wizcraft Entertainment Agency Pvt Ltd | +914040201215 | —
+  [20] KMK Event Management Limited | — | —
+  [21] Eventara Events -Corporate Event Management & Wedding Planners | +919346505686 | —
+  [22] Megha Varna Events planner birthday organiser | +919666599335 | —
+  [23] The Show | +919030345929 | —
+  [24] The Show | +919030345929 | —
+  [25] Events By Eshu : Event Organisers | +919160428252 | —
+  [26] Gold Feather Events | +918179860774 | —
+  [27] Gold Feather Events | +918179860774 | —
+  [28] Isheeka Events | +917842395867 | —
+  [29] Isheeka Events | +917842395867 | —
+  [30] Swastik Event Management | +919885146505 | —
+  [31] KASA LIVE | +919052493999 | —
+  [32] Rachnoutsav Events Pvt. Ltd | +919848012241 | —
+  [33] MY DREAM EVENTS|| best wedding planner | +919160606040 | —
+  [34] Brand Act An Event Organisers | +919949095038 | —
+  [35] KMK Event Management Limited | — | —
+  [36] KMK Event Management Limited | — | —
+  [37] We Connect | +919030090100 | —
+  [38] We Connect | +919030090100 | —
+  [39] Allika Event Planners | +919000200200 | —
+  [40] Evento Global | +917995475810 | —
+[2026-03-26 06:40:50] ✓ 39 new leads from: event management company Hyderabad
+[2026-03-26 06:40:50]   Scraping: IT consulting firm Hyderabad
+[>] Google Maps: IT consulting firm Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+  [02] Launch IT Consulting India Pvt. Ltd. | — | https://www.launchcg.com/
+  [03] BlueStone Consultancy (NON IT) toomanyjobs.com | +919291691234 | —
+  [04] Applogic Consulting | +918978886018 | —
+  [05] Tecdatum | +914027897009 | —
+  [06] Launchio Consulting Pvt. Ltd | +917337327769 | —
+  [07] Acme Consulting | +919959599903 | —
+  [08] H2o IT Consulting | +919515377951 | —
+  [09] Magnific IT Consulting | +919985201444 | —
+  [10] Futurz Consultancy Services | +919182575391 | —
+  [11] Imarat Consulting Services | +919885256273 | —
+  [12] OpenTeQ Technologies Pvt. Ltd. | +917032254999 | —
+  [13] AG Consulting Services Pvt Ltd | +914048575859 | —
+  [14] SQUARE ROUTE CONSULTANCY | +917993996222 | —
+  [15] Fly Consulting Services | — | —
+  [16] Velocious Solutions Pvt. Ltd. | +918106413242 | —
+  [17] Squircle IT Consulting Services Pvt Ltd | +914048549044 | —
+  [18] Delta Consulting Company | — | —
+  [19] Cornerstone IT Consulting | +919949655597 | —
+  [20] First Tech Consulting | +919039032829 | —
+  [21] JSS Pro Services, part of TMF Group | +919951267070 | —
+  [22] Imarat Consulting Services | +919885256273 | —
+  [23] Imarat Consulting Services | +919885256273 | —
+  [24] Specular Business Services | +919129916699 | —
+  [25] DRG JOB PLACEMENT MANPOWER CONSULTANT | +919492049200 | —
+  [26] ManVision Consulting | +917815957947 | —
+  [27] AG Consulting Services Pvt Ltd | +914048575859 | —
+  [28] GEMSOURCE IT CONSULTING LIMITED | +914040170111 | —
+  [29] Virtusa Consulting Services Private Limited | +914030847500 | —
+  [30] SQUARE ROUTE CONSULTANCY | +917993996222 | —
+  [31] Blackridge Research & Consulting (Market Research Services Provider) | +918500460460 | —
+  [32] Blackridge Research & Consulting (Market Research Services Provider) | +918500460460 | —
+  [33] Worthit Consultancy Services Pvt. Ltd. | — | —
+  [34] Fabrise Consulting | +917780569930 | —
+  [35] Fly Consulting Services | — | —
+  [36] Fly Consulting Services | — | —
+  [37] Quest Ph.D Consultancy | +917672023883 | —
+  [38] Vagdevi Consultancy Services Pvt. Ltd. | +919052520090 | —
+  [39] Delta Consulting Company | — | —
+  [40] First Tech Consulting | +919039032829 | —
+[2026-03-26 08:20:48] ✓ 39 new leads from: IT consulting firm Hyderabad
+[2026-03-26 08:20:48]   Scraping: web design company Hyderabad
+[>] Google Maps: web design company Hyderabad
+[2026-03-26 08:24:19] ✗ Step 'scrape' failed: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/maps/search/web+design+company+Hyderabad", waiting until "domcontentloaded"
+
+Traceback (most recent call last):
+  File "/Users/sanmaypachika/my-project/student-jobs/runner.py", line 230, in run_pipeline
+    "track":          step_track,
+                     ^^^^
+  File "/Users/sanmaypachika/my-project/student-jobs/runner.py", line 72, in step_scrape
+    log(f"Scraping: {q}")
+            ^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/my-project/student-jobs/lead_scraper.py", line 106, in scrape_google_maps
+    page.goto(url, wait_until="domcontentloaded", timeout=30000)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/site-packages/playwright/sync_api/_generated.py", line 9054, in goto
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.goto(
+        ^^^^^^^^^^^^^^^^^^^^
+            url=url, timeout=timeout, waitUntil=wait_until, referer=referer
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+    )
+    ^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/site-packages/playwright/_impl/_page.py", line 552, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/site-packages/playwright/_impl/_frame.py", line 153, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://www.google.com/maps/search/web+design+company+Hyderabad", waiting until "domcontentloaded"
+
+
+─────────────────────── ENRICH ───────────────────────
+[2026-03-26 08:24:19]   Enriching 1 lead(s)…
+[2026-03-26 08:24:19] ✓ Enriched 1 lead(s)
+
+─────────────────────── VERIFY ───────────────────────
+[2026-03-26 08:24:19]   Verifying 1 lead(s)…
+[2026-03-26 08:24:19] ✓ Verified: 0  Invalid: 1
+
+────────────────────── GENERATE ──────────────────────
+[i] No verified leads to generate drafts for.
+[2026-03-26 08:24:19] ~ No verified leads needing drafts
+
+────────────────────── FOLLOWUP ──────────────────────
+[>] Checking 39 contacted lead(s) for due follow-ups…
+
+  [+] mTouch Labs – Software Development Compa — queuing step-3 (day-7) follow-up (4.3d since step-2)
+  [+] Techally Labs — queuing step-3 (day-7) follow-up (4.3d since step-2)
+  [+] Innoit Labs Pvt Ltd — queuing step-3 (day-7) follow-up (4.3d since step-2)
+  [+] SEASON 5 EVENTS — queuing step-3 (day-7) follow-up (4.3d since step-2)
+  [+] Applogic Consulting — queuing step-3 (day-7) follow-up (4.3d since step-2)
+  [+] Waytowebs — queuing step-3 (day-7) follow-up (4.3d since step-2)
+  [+] TONNI WEBS — queuing step-3 (day-7) follow-up (4.3d since step-2)
+  [+] HYDERABAD DENTAL HOSPITAL & IMPLANT CENT — queuing step-3 (day-7) follow-up (4.3d since step-2)
+  [+] Dezy Dental Clinic — queuing step-3 (day-7) follow-up (4.3d since step-2)
+  [+] Galaxy Dental Care — queuing step-3 (day-7) follow-up (4.3d since step-2)
+  [+] Clove Dental Clinic — queuing step-3 (day-7) follow-up (4.3d since step-2)
+  [·] Ameerpet Dental Hospital — step-3 due in 0.9d
+  [·] Clove Dental Clinic — step-3 due in 1.7d
+  [·] Dr Smiles Dental Clinic — step-3 due in 1.7d
+  [·] National Dental Care — step-3 due in 1.7d
+  [·] The Dental Practice — step-3 due in 1.7d
+  [·] Partha Dental Clinic — step-3 due in 1.7d
+  [·] Hyderabad Smiles Advanced Dental Hospita — step-3 due in 1.7d
+  [·] Partha Dental Clinic — step-3 due in 1.7d
+  [·] Clove Dental Clinic in Jubilee Hills Roa — step-3 due in 1.7d
+  [·] Clove Dental Clinic in Botanical Gardens — step-3 due in 1.7d
+  [·] Alux Dental Clinic — step-3 due in 1.7d
+  [·] Dr Reddis Dental Clinic — step-3 due in 1.7d
+  [·] Best Smiles Dental Clinic — step-3 due in 1.7d
+  [·] Clove Dental Clinic — step-3 due in 1.7d
+  [·] Partha Dental Clinic — step-3 due in 1.7d
+  [·] Absolute Law Firm — step-3 due in 1.7d
+  [·] Pillix Law Firm — step-3 due in 1.7d
+  [·] Rights & Marks IP Law Firm — step-3 due in 1.7d
+  [·] Orient Lawfirm — step-3 due in 1.7d
+  [·] Partha — step-3 due in 1.7d
+  [·] Partha Dental Clinic — step-3 due in 1.7d
+  [·] Launch IT Consulting India Pvt. Ltd. — step-3 due in 1.7d
+  [·] Clove Dental Clinic in Madhapur — step-3 due in 1.7d
+  [·] Toot Dental Clinic S R Nagar — step-3 due in 1.7d
+  [·] SJ Law Firm, Shalini Junjur Advocate — step-3 due in 1.7d
+  [·] BlueStone Consultancy (NON IT) toomanyjo — step-3 due in 1.7d
+  [·] Apollo Dental Clinic, Jubilee Hills — step-3 due in 1.7d
+  [·] Ekadanta Dental Care — step-3 due in 2.7d
+[2026-03-26 08:24:20] ✓ Follow-ups queued — step2: 0  step3: 11
+
+──────────────────────── SEND ────────────────────────
+=== Email Sender ===
+
+  Quota today : 0 sent / 80 limit
+  Remaining   : 80
+  This batch  : 11 email(s)
+  Send window : 10:00–13:00, 14:00–18:00 IST
+
+[>] Connecting to Gmail SMTP…
+[✓] Connected.
+
+  [01/11] mTouch Labs – Software Development  → servicescontact@mtouchlabs.com
+          ✓ sent
+          ↳ waiting 4.3s…
+  [02/11] Techally Labs                       → servicescontact@mtouchlabs.com
+          ✓ sent
+          ↳ waiting 3.2s…
+  [03/11] Innoit Labs Pvt Ltd                 → servicescontact@mtouchlabs.com
+          ✓ sent
+          ↳ waiting 5.6s…
+  [04/11] SEASON 5 EVENTS                     → season@season5events.com
+          ✓ sent
+          ↳ waiting 4.3s…
+  [05/11] Applogic Consulting                 → applogic@applogicconsulting.com
+          ✓ sent
+          ↳ waiting 5.1s…
+  [06/11] Waytowebs                           → design@waytowebs.com
+          ✓ sent
+          ↳ waiting 7.1s…
+  [07/11] TONNI WEBS                          → design@waytowebs.com
+          ✓ sent
+          ↳ waiting 4.2s…
+  [08/11] HYDERABAD DENTAL HOSPITAL & IMPLANT → dental@hyderabaddentalhospitals.com
+          ✓ sent
+          ↳ waiting 4.9s…
+  [09/11] Dezy Dental Clinic                  → dezy@dezy.com
+          ✓ sent
+          ↳ waiting 4.2s…
+  [10/11] Galaxy Dental Care                  → galaxy@galaxydentalcare.in
+          ✓ sent
+          ↳ waiting 6.7s…
+  [11/11] Clove Dental Clinic                 → clove@clovedental.in
+          ✓ sent
+
+=============================================
+✓ Sent: 11  |  Failed: 0
+  Total sent today: 11/80
+[2026-03-26 08:25:25] ✓ Sent 11 email(s) today (11/80)
+
+──────────────────────── TRACK ────────────────────────
+[2026-03-26 08:25:25]   Checking inbox for replies since 25-Mar-2026…
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+  [AUTO] Mail Delivery Subsystem <mailer-daemon@g | Delivery Status Notification (Failure)
+[2026-03-26 08:25:29] ✓ Replies: 0  Auto-replies: 9  Unmatched: 1
+
+─────────────────────── SUMMARY ───────────────────────
+[2026-03-26 08:25:29]   Total leads in DB : 666
+[2026-03-26 08:25:29]   Scraped           : 0
+[2026-03-26 08:25:29]   Enriched          : 0
+[2026-03-26 08:25:29]   Verified          : 0
+[2026-03-26 08:25:29]   Draft ready       : 2
+[2026-03-26 08:25:29]   Contacted         : 39
+[2026-03-26 08:25:29]   Replied           : 0
+[2026-03-26 08:25:29]   Interested        : 0
+[2026-03-26 08:25:29]   Converted         : 0
+
+───────────────────────────────────────────────────────
+[2026-03-26 08:25:29]   Pipeline complete.
+
+─────────────────── PIPELINE START ───────────────────
+[2026-03-26 08:25:59]   Running steps: followup, send, track
+
+────────────────────── FOLLOWUP ──────────────────────
+[>] Checking 39 contacted lead(s) for due follow-ups…
+
+  [·] Ameerpet Dental Hospital — step-3 due in 0.9d
+  [·] Clove Dental Clinic — step-3 due in 1.7d
+  [·] Dr Smiles Dental Clinic — step-3 due in 1.7d
+  [·] National Dental Care — step-3 due in 1.7d
+  [·] The Dental Practice — step-3 due in 1.7d
+  [·] Partha Dental Clinic — step-3 due in 1.7d
+  [·] Hyderabad Smiles Advanced Dental Hospita — step-3 due in 1.7d
+  [·] Partha Dental Clinic — step-3 due in 1.7d
+  [·] Clove Dental Clinic in Jubilee Hills Roa — step-3 due in 1.7d
+  [·] Clove Dental Clinic in Botanical Gardens — step-3 due in 1.7d
+  [·] Alux Dental Clinic — step-3 due in 1.7d
+  [·] Dr Reddis Dental Clinic — step-3 due in 1.7d
+  [·] Best Smiles Dental Clinic — step-3 due in 1.7d
+  [·] Clove Dental Clinic — step-3 due in 1.7d
+  [·] Partha Dental Clinic — step-3 due in 1.7d
+  [·] Absolute Law Firm — step-3 due in 1.7d
+  [·] Pillix Law Firm — step-3 due in 1.7d
+  [·] Rights & Marks IP Law Firm — step-3 due in 1.7d
+  [·] Orient Lawfirm — step-3 due in 1.7d
+  [·] Partha — step-3 due in 1.7d
+  [·] Partha Dental Clinic — step-3 due in 1.7d
+  [·] Launch IT Consulting India Pvt. Ltd. — step-3 due in 1.7d
+  [·] Clove Dental Clinic in Madhapur — step-3 due in 1.7d
+  [·] Toot Dental Clinic S R Nagar — step-3 due in 1.7d
+  [·] SJ Law Firm, Shalini Junjur Advocate — step-3 due in 1.7d
+  [·] BlueStone Consultancy (NON IT) toomanyjo — step-3 due in 1.7d
+  [·] Apollo Dental Clinic, Jubilee Hills — step-3 due in 1.7d
+  [·] Ekadanta Dental Care — step-3 due in 2.7d
+[2026-03-26 08:25:59] ~ No follow-ups due yet
+
+──────────────────────── SEND ────────────────────────
+[i] No drafts to send. Run outreach_generator.py first.
+[2026-03-26 08:25:59] ✓ Sent 0 email(s) today (11/80)
+
+──────────────────────── TRACK ────────────────────────
+[2026-03-26 08:25:59]   Checking inbox for replies since 26-Mar-2026…
+[2026-03-26 08:33:42] ✗ Step 'track' failed: [Errno 54] Connection reset by peer
+Traceback (most recent call last):
+  File "/Users/sanmaypachika/my-project/student-jobs/runner.py", line 230, in run_pipeline
+    "track":          step_track,
+                     ^^^^
+  File "/Users/sanmaypachika/my-project/student-jobs/runner.py", line 186, in step_track
+    mail = get_imap()
+               ~~~~^^
+  File "/Users/sanmaypachika/my-project/student-jobs/reply_tracker.py", line 127, in fetch_new_emails
+    _, msg_data = mail.fetch(msg_id, "(RFC822)")
+                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 557, in fetch
+    typ, dat = self._simple_command(name, message_set, message_parts)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1239, in _simple_command
+    return self._command_complete(name, self._command(name, *args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1056, in _command_complete
+    typ, data = self._get_tagged_response(tag, expect_bye=logout)
+                ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1182, in _get_tagged_response
+    self._get_response()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1084, in _get_response
+    resp = self._get_line()
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1192, in _get_line
+    line = self.readline()
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 332, in readline
+    line = self.file.readline(_MAXLINE + 1)
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+─────────────────────── SUMMARY ───────────────────────
+[2026-03-26 08:33:42]   Total leads in DB : 666
+[2026-03-26 08:33:42]   Scraped           : 0
+[2026-03-26 08:33:42]   Enriched          : 0
+[2026-03-26 08:33:42]   Verified          : 0
+[2026-03-26 08:33:42]   Draft ready       : 2
+[2026-03-26 08:33:42]   Contacted         : 28
+[2026-03-26 08:33:42]   Replied           : 0
+[2026-03-26 08:33:42]   Interested        : 0
+[2026-03-26 08:33:42]   Converted         : 0
+
+───────────────────────────────────────────────────────
+[2026-03-26 08:33:42]   Pipeline complete.
+
+─────────────────── PIPELINE START ───────────────────
+[2026-03-27 00:34:22]   Running steps: scrape, enrich, verify, generate, followup, send, track
+
+─────────────────────── SCRAPE ───────────────────────
+[2026-03-27 00:34:22]   Scraping: software development company Hyderabad
+[>] Google Maps: software development company Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] mTouch Labs – Software Development Company | +919390683154 | http://www.mtouchlabs.com/
+  [03] Ahex Technologies | +918885564224 | —
+  [04] iPrism Technologies | +919848220099 | —
+  [05] BSIT Software Services Pvt. Ltd.- Leading Software Development Company. | +919985222841 | —
+  [06] Access Info Sources | +919848780827 | —
+  [07] Conquerors Software Technologies | +917013196804 | —
+  [08] Techweblabs | +917670837961 | —
+  [09] Tvisha Technologies | +918688810000 | —
+  [10] Syoft- Software Development Company | +919030819534 | —
+  [11] Enterpi Software Solutions Private Limited | +918885251753 | —
+  [12] Techally Labs | +919985202223 | http://www.mtouchlabs.com/
+  [13] Innoit Labs Pvt Ltd | +916305553907 | http://www.mtouchlabs.com/
+  [14] Spark Infosys | +918886100031 | —
+  [15] Siri IT Innovations Pvt Ltd | +918374444448 | —
+  [16] Cosmicvent | +917702063689 | —
+  [17] Highladder Software Solutions Pvt. Ltd. | +917330866644 | —
+  [18] Infochord Technologies Pvt. Ltd. | +918099636946 | —
+  [19] DevRabbit | +914023551445 | —
+  [20] Devopod Digital | +919618173161 | —
+  [21] Sparity | +914064650707 | —
+  [22] United Online Software Development Pvt. Ltd | +914066824444 | —
+  [23] Analogue IT Solutions-Best Mobile App Development Company | +918919088163 | —
+  [24] Velocious Solutions Pvt. Ltd. | +918106413242 | —
+  [25] Rational Technologies | +918179797732 | —
+  [26] Techally Labs | +919985202223 | http://www.mtouchlabs.com/
+  [27] Techally Labs | +919985202223 | http://www.mtouchlabs.com/
+  [28] Siri IT Innovations Pvt Ltd | +918374444448 | —
+  [29] Siri IT Innovations Pvt Ltd | +918374444448 | —
+  [30] Vrinda Techapps | +919985739100 | —
+  [31] Sparity | +914064650707 | —
+  [32] Sparity | +914064650707 | —
+  [33] Mariox Software | +919599287045 | —
+  [34] Pranathi Software Services | +914069030320 | —
+  [35] Suvidha Software Solutions | +914040150065 | —
+  [36] Devathon (Crypsis Technologies Pvt. Ltd.) | +918070780101 | —
+  [37] IBaseIT: Product Engineering & Quality Assurance Services | +914068156789 | —
+  [38] Focus Softnet | +918008403263 | —
+  [39] EasyQuickWeb | +918142445122 | —
+  [40] Lahari Technologies | +918977615615 | —
+[2026-03-27 00:35:29] ✓ 39 new leads from: software development company Hyderabad
+[2026-03-27 00:35:29]   Scraping: digital marketing agency Hyderabad
+[>] Google Maps: digital marketing agency Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+
+  [02] 2Digital | +919618083683 | —
+  [03] Digital Mojo | +919908398763 | —
+  [04] Geekschip | +919100068885 | —
+  [05] DigitalZap – Digital Marketing, SEO & Branding Agency | +917331122663 | —
+  [06] Brandingnuts | +918341392803 | —
+  [07] Vihaan Digitals | +917396033325 | —
+  [08] Digital i360 | +918599002222 | —
+  [09] Digital Shout | +918919203640 | —
+  [10] Social DNA | +919849561567 | —
+  [11] Web Rocz | +917799660016 | —
+  [12] KL ADS INDIA PVT LTD | +918919175736 | —
+  [13] Infinity Reach | +918500666366 | —
+  [14] 3DM | +917799009912 | —
+  [15] Emblix Solutions | +919849555829 | —
+  [16] DigitalCatalyst | +919849037822 | —
+  [17] RevSoc Digital Marketing Agency | +919182892264 | —
+  [18] WE PROMOTE U DIGITAL MARKETING AGENCY | +917337441363 | —
+  [19] 8 Views | +918099708888 | —
+  [20] Digital Brandlance | +919390242702 | —
+  [21] We Are Very | +919459557999 | —
+  [22] Brand 'N' Digital Private Limited | +917500565005 | —
+  [23] 2Digital | +919618083683 | —
+  [24] 2Digital | +919618083683 | —
+  [25] 8 Views | +918099708888 | —
+  [26] 8 Views | +918099708888 | —
+  [27] DigitalCatalyst | +919849037822 | —
+  [28] DigitalCatalyst | +919849037822 | —
+  [29] Orion Digital | +917013079193 | —
+  [30] Digital Brandlance | +919390242702 | —
+  [31] 3DM | +917799009912 | —
+  [32] Souvenir-IT | +919705696696 | —
+  [33] Souvenir-IT | +919705696696 | —
+  [34] GenYmedium | +918019888314 | —
+  [35] Redmatter Full-Funnel Marketing Agency | +917901010174 | —
+  [36] Digi Carotene | +919959820874 | —
+  [37] DigLvate | — | —
+  [38] Doctor Digital | +919741752537 | —
+  [39] Tag Digital | +919640498584 | —
+  [40] Brand Your Work | +919160197157 | —
+[2026-03-27 00:41:23] ✓ 39 new leads from: digital marketing agency Hyderabad
+[2026-03-27 00:41:23]   Scraping: chartered accountant firm Hyderabad
+[>] Google Maps: chartered accountant firm Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] VNR Associates | +919392144289 | http://www.vnrassociates.com/
+  [03] KS Pratap & Co., Chartered Accountants (CA Firm) | +919000786310 | —
+  [04] CH & Associates | +919700246888 | http://www.vnrassociates.com/
+  [05] Owaisuddin and Associates -Chartered Accountant | +918639348078 | http://www.vnrassociates.com/
+  [06] GG & Company (Formerly Gandhi & Gandhi) | +914067018000 | —
+  [07] Chartered Accountants l CA office I CA firms | +919160337807 | —
+  [08] SIR & COMPANY ; Chartered Accountants || Kothapet | +919492484060 | —
+  [09] C L A N & Associates | +919742384394 | http://www.vnrassociates.com/
+  [10] Anil Reddy and Co | +916357445566 | —
+  [11] Vijendra & Co (Company Secretary, CS, CA, Chartered Accountant, Valuation, Payroll, Accounting, Foreign Subsidiary) | +919032225574 | —
+  [12] C B & Associates, Chartered Accountants | +917022013892 | http://www.vnrassociates.com/
+  [13] SRINATH MANIKANTA & CO (Chartered Accountants, Tax Notice Experts) | — | —
+  [14] Raju And Prasad Chartered Accountants | +914023410404 | —
+  [15] Praveen Lakshmi & Co Chartered Accountant Firms | +917416406177 | —
+  [16] AMRV AND ASSOCIATES | +919986435189 | http://www.vnrassociates.com/
+  [17] PSMG & ASSOCIATES., Chartered Accountants(CA FIRM) | +919032427206 | http://www.vnrassociates.com/
+  [18] Palod and Loya,Chartered Accountants | +918125306067 | —
+  [19] Shivam D & Co Chartered Accountants | +916300347380 | —
+  [20] LPC Services | +918919382274 | —
+  [21] Arpan Bohra & Co, Chartered Accountants CA firm | +919030499151 | —
+  [22] Shivam D & Co Chartered Accountants | +916300347380 | —
+  [23] Shivam D & Co Chartered Accountants | +916300347380 | —
+  [24] M S Y and Associates, Chartered Accountants | +914040024527 | http://www.vnrassociates.com/
+  [25] M S Y and Associates, Chartered Accountants | +914040024527 | http://www.vnrassociates.com/
+  [26] Kondeti and Co, Chartered Accountants | +917842923441 | —
+  [27] IRFAN ALI SYED & Co. (CHARTERED ACCOUNTANTS) CA CPA | +919623631990 | —
+  [28] BANDARI AND ASSOCIATES, Expert Chartered Accountants: Auditing, Taxation, and Financial Advisory Services | +919652261086 | http://www.vnrassociates.com/
+  [29] Suravaram and Associates, Chartered Accountants | +919440050047 | http://www.vnrassociates.com/
+  [30] L A B & Associates – Chartered Accountants |CA Laxman|Near by CA | +918897448201 | http://www.vnrassociates.com/
+  [31] SVRL & Co, Chartered Accountants | +919440663011 | —
+  [32] A P T AND Co LLP. Chartered Accountants | +919490119196 | —
+  [33] Gudipati Nagaraju & Co , Chartered Accountants | +919652469056 | —
+  [34] Gokhale & Co Chartered Accountants | +914023228874 | —
+  [35] S.Bhalotia & Associates Chartered Accountants CA | +919550009518 | http://www.vnrassociates.com/
+  [36] U S K & ASSOCIATES, Chartered Accountants | — | http://www.vnrassociates.com/
+  [37] U S K & ASSOCIATES, Chartered Accountants | — | http://www.vnrassociates.com/
+  [38] LPC Services | +918919382274 | —
+  [39] LPC Services | +918919382274 | —
+  [40] V N R C & Associates | +919493929333 | http://www.vnrassociates.com/
+[2026-03-27 00:42:35] ✓ 39 new leads from: chartered accountant firm Hyderabad
+[2026-03-27 00:42:35]   Scraping: architect firm Hyderabad
+[>] Google Maps: architect firm Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] N S Associates® | +919849023778 | —
+  [03] B DESIGN STUDIOS | +919885777181 | —
+  [04] B DESIGN STUDIOS | +919885777181 | —
+  [05] MDeepa Architects And Interiors | +918309838138 | http://nsarchitects.in/
+  [06] Genesis Planners Pvt.Ltd | +914066977777 | —
+  [07] Architects | +917997181426 | http://nsarchitects.in/
+  [08] Hyderabad Design Collective - Architecture, Interiors, Landscapes, 3d visualisation & Furniture (Primary Category: Architect) | +919553094404 | —
+  [09] RAJA ARCHITECTS | +914023006699 | http://nsarchitects.in/
+  [10] Studio A+D | +917090656433 | http://nsarchitects.in/
+  [11] AN ARCHITECT_FSD | — | http://nsarchitects.in/
+  [12] STUDIO ARCHITECTS GROUP | +914040184606 | http://nsarchitects.in/
+  [13] F+S Designs | +914042618550 | —
+  [14] Raj Architects | +919849034433 | http://nsarchitects.in/
+  [15] Shvas Design Studio | +918008617273 | —
+  [16] Arkadesign Studio | +919701052861 | —
+  [17] DEEJOS Architects & Constructions | +918328306145 | http://nsarchitects.in/
+  [18] FHD India Consultants LLP | +914023743324 | —
+  [19] DEV & KAUSHIK ARCHITECTS | +918501839626 | http://nsarchitects.in/
+  [20] b9architects | +919849018515 | http://nsarchitects.in/
+  [21] TEAM ONE INDIA PVT. LTD | +914064510101 | —
+  [22] b9architects | +919849018515 | http://nsarchitects.in/
+  [23] b9architects | +919849018515 | http://nsarchitects.in/
+  [24] DesignSpace Architects | +914023335353 | http://nsarchitects.in/
+  [25] FHD India Consultants LLP | +914023743324 | —
+  [26] FHD India Consultants LLP | +914023743324 | —
+  [27] Shilpalaya Associates | +919885107087 | —
+  [28] BIM & GRAFX INTEGRATED STUDIO PVT. LTD. | +914029709867 | —
+  [29] Moriq | +918978622266 | —
+  [30] YD Architects & Interiors | +919866872794 | http://nsarchitects.in/
+  [31] Megatech Engineering Consultants -Architectural-Structural Design | +919441783464 | —
+  [32] NA Architects (Niroop Associates) | — | http://nsarchitects.in/
+  [33] F+S Designs | +914042618550 | —
+  [34] TRIQUETRA DESIGNS PRIVATE LIMITED | +918179456163 | —
+  [35] Simha Associates | +914023354247 | —
+  [36] Murty & Manyam Architects & Engineers | +914023318020 | http://nsarchitects.in/
+  [37] DesignAware | +919393447479 | —
+  [38] CHARAN ASSOCIATES | — | http://nsarchitects.in/
+  [39] RSP Design Consultants (India) Pvt Ltd | +914046786868 | —
+  [40] Hyderabad Design Collective - Architecture, Interiors, Landscapes, 3d visualisation & Furniture (Primary Category: Architect) | +919553094404 | —
+[2026-03-27 00:43:41] ✓ 39 new leads from: architect firm Hyderabad
+[2026-03-27 00:43:41]   Scraping: event management company Hyderabad
+[>] Google Maps: event management company Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] SOS Party | +917973432360 | https://www.sosparty.io/
+  [03] Traditions Event Management & Marketing Pvt. Ltd | +919849666080 | —
+  [04] SEASON 5 EVENTS | +919963979723 | —
+  [05] Susaadhya Event Management | +917386777177 | —
+  [06] Vajra Events | +919248755551 | —
+  [07] Alankaran Events- Best Event Management & Wedding Management Company | +919177210150 | —
+  [08] iGRACE EVENTS | +918977481234 | —
+  [09] Eventina | +919959999182 | —
+  [10] Hyderabad Events - Event Organizers in Hyderabad | +919966828280 | —
+  [11] Ideal Events | +917842224444 | —
+  [12] RakLead Events | +919550760678 | —
+  [13] Event Needz | +919100009770 | —
+  [14] Harsha Events & Wedding Planners | +919030516216 | —
+  [15] Isheeka Events | +917842395867 | —
+  [16] New Image Events | +919849386552 | —
+  [17] Athidi Event Management | +918801101133 | —
+  [18] KMK Event Management Limited | — | —
+  [19] Eventara Events -Corporate Event Management & Wedding Planners | +919346505686 | —
+  [20] Go-Grandiose Events and Management | +918019317298 | —
+  [21] Rachnoutsav Events Pvt. Ltd | +919848012241 | —
+  [22] Megha Varna Events planner birthday organiser | +919666599335 | —
+  [23] The Show | +919030345929 | —
+  [24] AVANT EVENTZ | +919866711711 | —
+  [25] Events By Eshu : Event Organisers | +919160428252 | —
+  [26] JASARENA INDIA PRIVATE LIMITED | +917099040106 | —
+  [27] Isheeka Events | +917842395867 | —
+  [28] Swastik Event Management | +919885146505 | —
+  [29] Swastik Event Management | +919885146505 | —
+  [30] KMK Event Management Limited | — | —
+  [31] Athidi Event Management | +918801101133 | —
+  [32] We Connect | +919030090100 | —
+  [33] We Connect | +919030090100 | —
+  [34] Smart Choice Events | — | —
+  [35] HiFiEventsOfficial Best Event planner | +919652517975 | —
+  [36] Allika Event Planners | +919000200200 | —
+  [37] GiggleMug Events | +919704403988 | —
+  [38] Meety Events – Professional Conference Organiser(PCO) | +919848440272 | —
+  [39] Anandapriya Events | +919122291911 | —
+  [40] Evento Global | +917995475810 | —
+[2026-03-27 00:44:41] ✓ 39 new leads from: event management company Hyderabad
+[2026-03-27 00:44:41]   Scraping: IT consulting firm Hyderabad
+[>] Google Maps: IT consulting firm Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] BlueStone Consultancy (NON IT) toomanyjobs.com | +919291691234 | https://toomanyjobs.com/
+  [03] Applogic Consulting | +918978886018 | —
+  [04] Launchio Consulting Pvt. Ltd | +917337327769 | —
+  [05] Acme Consulting | +919959599903 | —
+  [06] H2o IT Consulting | +919515377951 | —
+  [07] Futurz Consultancy Services | +919182575391 | —
+  [08] Magnific IT Consulting | +919985201444 | —
+  [09] AG Consulting Services Pvt Ltd | +914048575859 | —
+  [10] Fly Consulting Services | — | —
+  [11] Velocious Solutions Pvt. Ltd. | +918106413242 | —
+  [12] Squircle IT Consulting Services Pvt Ltd | +914048549044 | —
+  [13] SQUARE ROUTE CONSULTANCY | +917993996222 | —
+  [14] Delta Consulting Company | — | —
+  [15] Imarat Consulting Services | +919885256273 | —
+  [16] Imarat Consulting Services | +919885256273 | —
+  [17] Cornerstone IT Consulting | +919949655597 | —
+  [18] First Tech Consulting | +919039032829 | —
+  [19] JSS Pro Services, part of TMF Group | +919951267070 | —
+  [20] UR TURN Consulting & Services | +919000774488 | —
+  [21] Kamex IT Solutions (OPC) Private Limited | +918686142306 | —
+  [22] Virtusa Consulting Services Private Limited | +914030847500 | —
+  [23] GEMSOURCE IT CONSULTING LIMITED | +914040170111 | —
+  [24] TEKhops | +919722568703 | —
+  [25] AG Consulting Services Pvt Ltd | +914048575859 | —
+  [26] Blackridge Research & Consulting (Market Research Services Provider) | +918500460460 | —
+  [27] SQUARE ROUTE CONSULTANCY | +917993996222 | —
+  [28] SQUARE ROUTE CONSULTANCY | +917993996222 | —
+  [29] Fabrise Consulting | +917780569930 | —
+  [30] Fabrise Consulting | +917780569930 | —
+  [31] La Global Consultancy | — | —
+  [32] Accurate Consulting Group | +919440688100 | —
+  [33] Fly Consulting Services | — | —
+  [34] Quest Ph.D Consultancy | +917672023883 | —
+  [35] Quest Ph.D Consultancy | +917672023883 | —
+  [36] JOBMINAR-Best Training and Recruitment and Jobs Consultancy | +919951111167 | —
+  [37] First Tech Consulting | +919039032829 | —
+  [38] Vagdevi Consultancy Services Pvt. Ltd. | +919052520090 | —
+  [39] Imarat Consulting Services | +919885256273 | —
+  [40] Imarat Consulting Services | +919885256273 | —
+[2026-03-27 00:46:04] ✓ 39 new leads from: IT consulting firm Hyderabad
+[2026-03-27 00:46:04]   Scraping: web design company Hyderabad
+[>] Google Maps: web design company Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] Waytowebs | +919951991336 | https://www.waytowebs.com/
+  [03] Dizi Solutions | +918374419650 | —
+  [04] EasyQuickWeb | +918142445122 | —
+  [05] TONNI WEBS | +919666666493 | https://www.waytowebs.com/
+  [06] VS Techno Solutions | +919052052200 | —
+  [07] Freelance website designer | +919949922244 | —
+  [08] 4 Max Designers | +919700210681 | —
+  [09] CLOUDTIMON | +918125771969 | —
+  [10] Slash Web Designers | +918143019933 | —
+  [11] Innovative House | +919849473457 | —
+  [12] Sky Web Design | +918106393972 | —
+  [13] SriG Systems | +918341377722 | —
+  [14] Spark Infosys | +918886100031 | —
+  [15] Lahari Technologies | +918977615615 | —
+  [16] 3KITS | +919032868666 | —
+  [17] Catliza | +918801391616 | —
+  [18] Srikanth Giddalur Webmaster | +919989529756 | —
+  [19] Aakruti Software Solutions | +919247026268 | —
+  [20] ARM Website | +919250101070 | —
+  [21] Highladder Software Solutions Pvt. Ltd. | +917330866644 | —
+  [22] Patsav Academy | — | —
+  [23] Highladder Software Solutions Pvt. Ltd. | +917330866644 | —
+  [24] Spark Infosys | +918886100031 | —
+  [25] Spark Infosys | +918886100031 | —
+  [26] Webfx | +919133332463 | —
+  [27] Hosting Square | +918466876489 | —
+  [28] Aakruti Software Solutions | +919247026268 | —
+  [29] Aakruti Software Solutions | +919247026268 | —
+  [30] Rational Technologies | +918179797732 | —
+  [31] DigitalZap – Digital Marketing, SEO & Branding Agency | +917331122663 | —
+  [32] Web Gen World | +919000748471 | —
+  [33] Edone Solutions | +919494720878 | —
+  [34] ZIM Web Solutions | +919059086074 | —
+  [35] Kiwart Solutions | — | —
+  [36] Web Artise | +919618481258 | —
+  [37] Website designers | +917702406026 | —
+  [38] ITinfo Digital | +919959052728 | —
+  [39] J H Web | +919391348470 | —
+  [40] iPrism Technologies | +919848220099 | —
+[2026-03-27 00:47:03] ✓ 39 new leads from: web design company Hyderabad
+[2026-03-27 00:47:03]   Scraping: dental clinic Hyderabad
+[>] Google Maps: dental clinic Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    46 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] FMS International Dental Center | +918885060770 | —
+  [03] FMS DENTAL CLINICS | — | —
+  [04] HYDERABAD DENTAL HOSPITAL & IMPLANT CENTRE | +919705856879 | http://www.hyderabaddentalhospitals.com/
+  [05] GA Dental Clinic | +919505443330 | —
+  [06] FMS DENTAL Hospital | +918886643223 | https://www.fmsdental.com/fms-dental-hospitals-koti/
+  [07] Dantam The Dental Lounge | +919912186174 | https://www.dantamclinics.com/
+  [08] Clove Dental Clinic | +914069260057 | https://clovedental.in/dentist-near-me/hyderabad/sr-nagar?utm_source=website&utm_medium=gmb&utm_campaign=SR_Nagar_GMB
+  [09] Smiline Dental Hospital | +914029804422 | https://smiline.com/smiline-hitech-city/
+  [10] The Dental Specialists | +919959448800 | https://www.thedentalspecialists.in/
+  [11] FMS International Dental Center | +918885060770 | —
+  [12] FMS International Dental Center | +918885060770 | —
+  [13] Smiline dental hospital | +919676100045 | https://smiline.com/smiline-panjagutta/
+  [14] Dr Smiles Dental Clinic | +919849077320 | https://drsmiles.co.in/vidyanagar.html
+  [15] Ameerpet Dental Hospital | +919989691114 | https://www.adsdentalhospitals.com/
+  [16] Eledent Dental Hospital | +917799639994 | https://eledenthospitals.com/kondapur/
+  [17] National Dental Care | +919169269369 | https://www.nationaldentalcare.in/?utm_source=google&utm_medium=organic&utm_campaign=GMB-Srinagar+Colony
+  [18] National Dental Care | +919169269369 | https://www.nationaldentalcare.in/?utm_source=google&utm_medium=organic&utm_campaign=GMB-Kukatpally
+  [19] National Dental Care | +919169269369 | https://www.nationaldentalcare.in/?utm_source=google&utm_medium=organic&utm_campaign=GMB-Gachibowli
+  [20] Partha Dental Clinic | +919154076445 | https://parthadental.com/dental-skin-hair-clinic-banjara-hills/?utm_source=google&utm_medium=banjara-hills
+  [21] Harsha Dental | +917093220226 | http://www.dantamclinics.com/
+  [22] Hyderabad Smiles Advanced Dental Hospital | +918106247675 | https://hyderabadsmiles.com/
+  [23] Clove Dental Clinic in Jubilee Hills Road No 1 | +914038245760 | https://clovedental.in/dentist-near-me/hyderabad/jubilee-hills?utm_source=website&utm_medium=gmb&utm_campaign=Jubilee_Hills_Road_No_1_GMB_Hyderabad
+  [24] FMS International Dental Center | +918885060770 | —
+  [25] FMS International Dental Center | +918885060770 | —
+  [26] Alux Dental Clinic | +917676111999 | http://www.aluxdental.com/
+  [27] Clove Dental Clinic | +914038245763 | https://clovedental.in/dentist-near-me/hyderabad/himayathnagar?utm_source=website&utm_medium=gmb&utm_campaign=Himayathnagar_GMB_Hyderabad
+  [28] Smiline dental hospital | +919676100045 | https://smiline.com/smiline-panjagutta/
+  [29] Smiline dental hospital | +919676100045 | https://smiline.com/smiline-panjagutta/
+  [30] Hyderabad Smiles Advanced Dental Hospital | +918106247675 | https://hyderabadsmiles.com/
+  [31] Clove Dental Clinic in Jubilee Hills Road No 1 | +914038245760 | https://clovedental.in/dentist-near-me/hyderabad/jubilee-hills?utm_source=website&utm_medium=gmb&utm_campaign=Jubilee_Hills_Road_No_1_GMB_Hyderabad
+  [32] National Dental Care | +919169269369 | https://www.nationaldentalcare.in/?utm_source=google&utm_medium=organic&utm_campaign=GMB-Kukatpally
+  [33] FMS International Dental Center | +918885060770 | —
+  [34] FMS International Dental Center | +918885060770 | —
+  [35] Partha Dental Clinic | +919154076445 | https://parthadental.com/dental-skin-hair-clinic-banjara-hills/?utm_source=google&utm_medium=banjara-hills
+  [36] Partha Dental Clinic | +919154076445 | https://parthadental.com/dental-skin-hair-clinic-banjara-hills/?utm_source=google&utm_medium=banjara-hills
+  [37] Clove Dental Clinic | +914069260057 | https://clovedental.in/dentist-near-me/hyderabad/kavuri-hills?utm_source=website&utm_medium=gmb&utm_campaign=Kavuri_Hills_GMB
+  [38] Apollo Dental Clinic, Jubilee Hills | +91 1800 102 02 | https://apollodental.in/?utm_source=gmb-jubileehills&utm_medium=website+button&utm_campaign=gmb+traffic
+  [39] Diamond Multispeciality Dental Clinic | +919603023562 | http://www.thediamonddental.com/
+  [40] Partha Dental Clinic | +919030622077 | https://parthadental.com/dental-hair-clinic-ameerpet/?utm_source=google&utm_medium=gmb&utm_campaign=ameerpet
+[2026-03-27 00:58:04] ✓ 39 new leads from: dental clinic Hyderabad
+[2026-03-27 00:58:04]   Scraping: law firm Hyderabad
+[>] Google Maps: law firm Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    56 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+
+  [02] Absolute Law Firm | +918179360507 | https://absolutelawfirm.in/
+  [03] Kamal & Co. Advocates | +917899752900 | —
+  [04] TLH, Advocates and Solicitors | +914023581000 | —
+  [05] Brzee Law Firm (Corporate, Real Estate, all Civil, Criminal & Family cases) 18 years of expertise | +918884456656 | https://absolutelawfirm.in/
+  [06] HYDERABAD LAW FIRM(R) | +919030006491 | https://absolutelawfirm.in/
+  [07] Advocate Syed Hashim Adil & Associates Law Firm | +919700000531 | —
+  [08] BMR Law Offices | +914048503199 | —
+  [09] Khanna Law Associates | +919848091011 | —
+  [10] AequitasJuris Law Firm | +918790301199 | https://absolutelawfirm.in/
+  [11] Sai Krishna Azad Advocate | +919491856568 | —
+  [12] Hyderabad Lawyer for NRIs | +919490119818 | —
+  [13] KR SunilKumar Advocate | — | —
+  [14] Juris Prime Law Services | +914023551101 | —
+  [15] G.M.Rao Advocates & Associates LLP | +919590059999 | —
+  [16] SL LAW FIRM | +917654040506 | https://absolutelawfirm.in/
+  [17] Sanghi Law Chamber | +919849001994 | —
+  [18] Orient Lawfirm | — | https://absolutelawfirm.in/
+  [19] Unnam Law Firm | +919701890891 | https://absolutelawfirm.in/
+  [20] Misra Law Office | +919849188398 | —
+  [21] Jai Bhim Attorney's law Firm | +919618780445 | https://absolutelawfirm.in/
+  [22] Jai Bhim Attorney's law Firm | +919618780445 | https://absolutelawfirm.in/
+  [23] NRK LAW FIRM (NARENDER REDDY K) | +919703104446 | https://absolutelawfirm.in/
+  [24] SJ Law Firm | +916305371529 | https://absolutelawfirm.in/
+  [25] Rights & Marks IP Law Firm | — | https://absolutelawfirm.in/
+  [26] Sanghi Law Chamber | +919849001994 | —
+  [27] Sanghi Law Chamber | +919849001994 | —
+  [28] JSL Advocates | +919048809468 | —
+  [29] Orient Lawfirm | — | https://absolutelawfirm.in/
+  [30] Thakur & Co Law Firm | +918886686177 | https://absolutelawfirm.in/
+  [31] Thakur & Co Law Firm | +918886686177 | https://absolutelawfirm.in/
+  [32] SJ Law Firm, Shalini Junjur Advocate | +919885515039 | https://absolutelawfirm.in/
+  [33] Ambadipudi Law Firm | +919849131651 | https://absolutelawfirm.in/
+  [34] Unnam Law Firm | +919701890891 | https://absolutelawfirm.in/
+  [35] Satya lawyer | +919182220670 | —
+  [36] Satya lawyer | +919182220670 | —
+  [37] AR Law Warrior's Firm | +919100003727 | https://absolutelawfirm.in/
+  [38] AR Law Warrior's Firm | +919100003727 | https://absolutelawfirm.in/
+  [39] SV LAW FIRM | +919121708172 | https://absolutelawfirm.in/
+  [40] RVK Law Associates | +917093247988 | —
+[2026-03-27 01:17:39] ✓ 39 new leads from: law firm Hyderabad
+[2026-03-27 01:17:39]   Scraping: solar energy company Hyderabad
+[>] Google Maps: solar energy company Hyderabad
+[>] Scrolling for up to 40 listings…
+[>] 40 cards found — extracting details…
+  [!] Card 1 skipped: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div[role=\"feed\"] > div > div[jsaction]").first
+    - locator resolved to <div role="region" class="fp2VUc" jslog="127728;" aria-roledescription="carousel" aria-label="Available filters for this search" jsaction="keydown:pane.wfvdle2.navigate; mousedown:pane.wfvdle2.dragCards; mousewheel:pane.wfvdle2.navigate wheel:pane.wfvdle2.navigate; DOMMouseScroll:pane.wfvdle2.navigate; focus:pane.wfvdle2.focus; mousemove:pane.wfvdle2.focus">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    12 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+  [02] Four Solar Energy Systems Pvt Ltd | +919248716892 | https://www.foursolar.com/
+  [03] Suntek Energy Systems Pvt Ltd (Truzon Solar) | +919030032222 | —
+  [04] Freyr Energy | +919000828333 | —
+  [05] Creative Energy Solutions (Best Solar Energy Company) | +917095677321 | —
+  [06] SolarCircuit Energy | +919440757763 | —
+  [07] 🌞 Oliytech Solar – Best Solar Energy Company | +919032102837 | —
+  [08] 🌞 Oliytech Solar – Best Solar Energy Company | +919032102837 | —
+  [09] Unisolar Power Private Limited | +918897196960 | —
+  [10] Satyajan Energy Solutions Pvt.Ltd. | +918019179159 | —
+  [11] AB SOLAR POWER SYSTEMS | +918099040600 | —
+  [12] GIGAWATT SOLAR PVT LTD | +918977759911 | —
+  [13] GIGAWATT SOLAR PVT LTD | +918977759911 | —
+  [14] Greentek India Limited | +914027807145 | —
+  [15] NextGen Solar Power | +919542227772 | —
+  [16] Milestone Solarcom Pvt. Ltd. | +919030005033 | —
+  [17] Valcan Solar | +919030033425 | —
+  [18] OSMIUM ENERGY PRIVATE LIMITED | +918977780597 | —
+  [19] Junna Solar Systems Limited | +916309395555 | —
+  [20] Solar | — | —
+  [21] Avghni Renewable Energy System India Pvt. Ltd. | +914040033983 | —
+  [22] Avghni Renewable Energy System India Pvt. Ltd. | +914040033983 | —
+  [23] Avghni Renewable Energy System India Pvt. Ltd. | +914040033983 | —
+  [24] Nuevosol Energy Pvt Ltd | +918978575413 | —
+  [25] SOLAK RENEWABLES ENERGY | +918187864440 | —
+  [26] Punarvi Projects Pvt Ltd | +917799757777 | —
+  [27] Rishi Solar LLP | +919542877302 | —
+  [28] Greentek India Limited | +914027807145 | —
+  [29] Greentek India Limited | +914027807145 | —
+  [30] Kypas Solar Power Private Limited | +919100522215 | —
+  [31] AB SOLAR POWER SYSTEMS | +918099040600 | —
+  [32] AB SOLAR POWER SYSTEMS | +918099040600 | —
+  [33] SOLAR6 | +919912355344 | —
+  [34] Dinkrit Solar Power Systems | +919030552238 | —
+  [35] Sunup Solar Power Systems | +918885052521 | —
+  [36] Solar rooftop | +919392293942 | —
+  [37] Pioneer Renewable Energy Pvt.Ltd | +919985257822 | —
+  [38] Milestone Solarcom Pvt. Ltd. | +919030005033 | —
+  [39] ILIOS Power | +918374455663 | —
+  [40] ILIOS Power | +918374455663 | —
+[2026-03-27 02:07:13] ✓ 39 new leads from: solar energy company Hyderabad
+[2026-03-27 02:07:13] ✓ Scrape complete — 390 new leads total
+
+─────────────────────── ENRICH ───────────────────────
+[2026-03-27 02:07:13]   Enriching 11 lead(s)…
+         ✗ domain mismatch: nsarchitects.in ≠ 'CHARAN ASSOCIATES' — skipping
+[2026-03-27 02:07:18] ✓ Enriched 11 lead(s)
+
+─────────────────────── VERIFY ───────────────────────
+[2026-03-27 02:07:18]   Verifying 11 lead(s)…
+[2026-03-27 02:07:18] ✓ Verified: 0  Invalid: 11
+
+────────────────────── GENERATE ──────────────────────
+[i] No verified leads to generate drafts for.
+[2026-03-27 02:07:18] ~ No verified leads needing drafts
+
+────────────────────── FOLLOWUP ──────────────────────
+[>] Checking 28 contacted lead(s) for due follow-ups…
+
+  [·] Ameerpet Dental Hospital — step-3 due in 0.2d
+  [·] Clove Dental Clinic — step-3 due in 0.9d
+  [·] Dr Smiles Dental Clinic — step-3 due in 0.9d
+  [·] National Dental Care — step-3 due in 0.9d
+  [·] The Dental Practice — step-3 due in 0.9d
+  [·] Partha Dental Clinic — step-3 due in 0.9d
+  [·] Hyderabad Smiles Advanced Dental Hospita — step-3 due in 0.9d
+  [·] Partha Dental Clinic — step-3 due in 0.9d
+  [·] Clove Dental Clinic in Jubilee Hills Roa — step-3 due in 0.9d
+  [·] Clove Dental Clinic in Botanical Gardens — step-3 due in 0.9d
+  [·] Alux Dental Clinic — step-3 due in 0.9d
+  [·] Dr Reddis Dental Clinic — step-3 due in 0.9d
+  [·] Best Smiles Dental Clinic — step-3 due in 0.9d
+  [·] Clove Dental Clinic — step-3 due in 0.9d
+  [·] Partha Dental Clinic — step-3 due in 0.9d
+  [·] Absolute Law Firm — step-3 due in 0.9d
+  [·] Pillix Law Firm — step-3 due in 0.9d
+  [·] Rights & Marks IP Law Firm — step-3 due in 0.9d
+  [·] Orient Lawfirm — step-3 due in 0.9d
+  [·] Partha — step-3 due in 0.9d
+  [·] Partha Dental Clinic — step-3 due in 0.9d
+  [·] Launch IT Consulting India Pvt. Ltd. — step-3 due in 0.9d
+  [·] Clove Dental Clinic in Madhapur — step-3 due in 0.9d
+  [·] Toot Dental Clinic S R Nagar — step-3 due in 0.9d
+  [·] SJ Law Firm, Shalini Junjur Advocate — step-3 due in 0.9d
+  [·] BlueStone Consultancy (NON IT) toomanyjo — step-3 due in 0.9d
+  [·] Apollo Dental Clinic, Jubilee Hills — step-3 due in 0.9d
+  [·] Ekadanta Dental Care — step-3 due in 1.9d
+[2026-03-27 02:07:18] ~ No follow-ups due yet
+
+──────────────────────── SEND ────────────────────────
+[i] No drafts to send. Run outreach_generator.py first.
+[2026-03-27 02:07:18] ✓ Sent 0 email(s) today (0/80)
+
+──────────────────────── TRACK ────────────────────────
+[2026-03-27 02:07:18]   Checking inbox for replies since 26-Mar-2026…
+[2026-03-27 02:10:44] ✗ Step 'track' failed: [Errno 8] nodename nor servname provided, or not known
+Traceback (most recent call last):
+  File "/Users/sanmaypachika/my-project/student-jobs/runner.py", line 230, in run_pipeline
+    "track":          step_track,
+                     ^^^^
+  File "/Users/sanmaypachika/my-project/student-jobs/runner.py", line 185, in step_track
+    try:
+    
+  File "/Users/sanmaypachika/my-project/student-jobs/reply_tracker.py", line 111, in get_imap
+    mail = imaplib.IMAP4_SSL(IMAP_HOST, IMAP_PORT)
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1315, in __init__
+    IMAP4.__init__(self, host, port, timeout)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 205, in __init__
+    self.open(host, port, timeout)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1328, in open
+    IMAP4.open(self, host, port, timeout)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 315, in open
+    self.sock = self._create_socket(timeout)
+                ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1318, in _create_socket
+    sock = IMAP4._create_socket(self, timeout)
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 305, in _create_socket
+    return socket.create_connection(address)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/socket.py", line 840, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+─────────────────────── SUMMARY ───────────────────────
+[2026-03-27 02:10:44]   Total leads in DB : 677
+[2026-03-27 02:10:44]   Scraped           : 0
+[2026-03-27 02:10:44]   Enriched          : 0
+[2026-03-27 02:10:44]   Verified          : 0
+[2026-03-27 02:10:44]   Draft ready       : 2
+[2026-03-27 02:10:44]   Contacted         : 28
+[2026-03-27 02:10:44]   Replied           : 0
+[2026-03-27 02:10:44]   Interested        : 0
+[2026-03-27 02:10:44]   Converted         : 0
+
+───────────────────────────────────────────────────────
+[2026-03-27 02:10:44]   Pipeline complete.
+
+─────────────────── PIPELINE START ───────────────────
+[2026-03-27 04:22:55]   Running steps: followup, send, track
+
+────────────────────── FOLLOWUP ──────────────────────
+[>] Checking 28 contacted lead(s) for due follow-ups…
+
+  [·] Ameerpet Dental Hospital — step-3 due in 0.1d
+  [·] Clove Dental Clinic — step-3 due in 0.8d
+  [·] Dr Smiles Dental Clinic — step-3 due in 0.8d
+  [·] National Dental Care — step-3 due in 0.8d
+  [·] The Dental Practice — step-3 due in 0.8d
+  [·] Partha Dental Clinic — step-3 due in 0.8d
+  [·] Hyderabad Smiles Advanced Dental Hospita — step-3 due in 0.8d
+  [·] Partha Dental Clinic — step-3 due in 0.8d
+  [·] Clove Dental Clinic in Jubilee Hills Roa — step-3 due in 0.8d
+  [·] Clove Dental Clinic in Botanical Gardens — step-3 due in 0.8d
+  [·] Alux Dental Clinic — step-3 due in 0.8d
+  [·] Dr Reddis Dental Clinic — step-3 due in 0.8d
+  [·] Best Smiles Dental Clinic — step-3 due in 0.8d
+  [·] Clove Dental Clinic — step-3 due in 0.8d
+  [·] Partha Dental Clinic — step-3 due in 0.8d
+  [·] Absolute Law Firm — step-3 due in 0.8d
+  [·] Pillix Law Firm — step-3 due in 0.8d
+  [·] Rights & Marks IP Law Firm — step-3 due in 0.8d
+  [·] Orient Lawfirm — step-3 due in 0.8d
+  [·] Partha — step-3 due in 0.8d
+  [·] Partha Dental Clinic — step-3 due in 0.8d
+  [·] Launch IT Consulting India Pvt. Ltd. — step-3 due in 0.8d
+  [·] Clove Dental Clinic in Madhapur — step-3 due in 0.8d
+  [·] Toot Dental Clinic S R Nagar — step-3 due in 0.8d
+  [·] SJ Law Firm, Shalini Junjur Advocate — step-3 due in 0.8d
+  [·] BlueStone Consultancy (NON IT) toomanyjo — step-3 due in 0.8d
+  [·] Apollo Dental Clinic, Jubilee Hills — step-3 due in 0.8d
+  [·] Ekadanta Dental Care — step-3 due in 1.8d
+[2026-03-27 04:22:56] ~ No follow-ups due yet
+
+──────────────────────── SEND ────────────────────────
+[2026-03-27 04:22:56] ~ Outside send window — skipping send
+
+──────────────────────── TRACK ────────────────────────
+[2026-03-27 04:22:56]   Checking inbox for replies since 26-Mar-2026…
+[2026-03-27 08:08:45] ✗ Step 'track' failed: [Errno 54] Connection reset by peer
+Traceback (most recent call last):
+  File "/Users/sanmaypachika/my-project/student-jobs/runner.py", line 230, in run_pipeline
+    "track":          step_track,
+                     ^^^^
+  File "/Users/sanmaypachika/my-project/student-jobs/runner.py", line 186, in step_track
+    mail = get_imap()
+               ~~~~^^
+  File "/Users/sanmaypachika/my-project/student-jobs/reply_tracker.py", line 127, in fetch_new_emails
+    _, msg_data = mail.fetch(msg_id, "(RFC822)")
+                  ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 557, in fetch
+    typ, dat = self._simple_command(name, message_set, message_parts)
+               ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1239, in _simple_command
+    return self._command_complete(name, self._command(name, *args))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1056, in _command_complete
+    typ, data = self._get_tagged_response(tag, expect_bye=logout)
+                ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1182, in _get_tagged_response
+    self._get_response()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 1131, in _get_response
+    data = self.read(size)
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/imaplib.py", line 322, in read
+    data = self.file.read(cursize)
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/sanmaypachika/miniconda3/lib/python3.13/ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+─────────────────────── SUMMARY ───────────────────────
+[2026-03-27 08:08:46]   Total leads in DB : 677
+[2026-03-27 08:08:46]   Scraped           : 0
+[2026-03-27 08:08:46]   Enriched          : 0
+[2026-03-27 08:08:46]   Verified          : 0
+[2026-03-27 08:08:46]   Draft ready       : 2
+[2026-03-27 08:08:46]   Contacted         : 28
+[2026-03-27 08:08:46]   Replied           : 0
+[2026-03-27 08:08:46]   Interested        : 0
+[2026-03-27 08:08:46]   Converted         : 0
+
+───────────────────────────────────────────────────────
+[2026-03-27 08:08:46]   Pipeline complete.
