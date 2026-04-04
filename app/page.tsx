@@ -574,7 +574,11 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 text-sm text-slate-400 md:flex-row">
           <span className="text-lg font-black" style={{ color: "#f97316" }}>HeyPuja</span>
           <p>© 2026 HeyPuja. All rights reserved.</p>
-          <span>Pan India · 40+ Cities</span>
+          <div className="flex gap-4">
+            <a href="/privacy" style={{ color: "#f97316" }} className="hover:underline">Privacy Policy</a>
+            <a href="/terms" style={{ color: "#f97316" }} className="hover:underline">Terms of Service</a>
+            <span>Pan India · 40+ Cities</span>
+          </div>
         </div>
       </footer>
     </div>
