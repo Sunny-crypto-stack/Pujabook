@@ -63,7 +63,7 @@ const TESTIMONIALS = [
     name: "Anita Reddy",
     location: "Mumbai",
     quote:
-      "Finally an easy way to find a reliable priest. Used PujaBook for my daughter's naming ceremony — highly recommend.",
+      "Finally an easy way to find a reliable priest. Used HeyPuja for my daughter's naming ceremony — highly recommend.",
     stars: 5,
   },
 ];
@@ -361,7 +361,7 @@ export default function HomePage() {
       <nav className="sticky top-0 z-50 border-b border-orange-100 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="/" className="text-xl font-black tracking-tight" style={{ color: "#f97316" }}>
-            PujaBook
+            HeyPuja
           </a>
           <div className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
             <a href="#how-it-works" className="hover:text-slate-900 transition-colors">How it Works</a>
@@ -537,7 +537,7 @@ export default function HomePage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
             <div>
               <h2 className="text-3xl font-black md:text-4xl">
-                Grow your practice.<br />Join PujaBook.
+                Grow your practice.<br />Join HeyPuja.
               </h2>
               <p className="mt-4 text-orange-100 leading-relaxed">
                 Reach hundreds of families looking for priests in your city. No middlemen, no hassle.
@@ -572,8 +572,8 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t px-6 py-8" style={{ borderColor: "#fed7aa", backgroundColor: "white" }}>
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 text-sm text-slate-400 md:flex-row">
-          <span className="text-lg font-black" style={{ color: "#f97316" }}>PujaBook</span>
-          <p>© 2026 PujaBook. All rights reserved.</p>
+          <span className="text-lg font-black" style={{ color: "#f97316" }}>HeyPuja</span>
+          <p>© 2026 HeyPuja. All rights reserved.</p>
           <span>Pan India · 40+ Cities</span>
         </div>
       </footer>

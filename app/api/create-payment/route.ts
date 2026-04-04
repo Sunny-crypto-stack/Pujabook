@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         amount: Math.round(Number(amount) * 100), // paise
         currency: "INR",
-        description: `${ceremony} - PujaBook`,
+        description: `${ceremony} - HeyPuja`,
         customer: {
           name: customer_name,
           contact: customer_phone?.replace(/\D/g, "").slice(-10) ?? "",

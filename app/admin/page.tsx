@@ -46,7 +46,7 @@ const BOOKING_STATUSES = ["Pending", "Confirmed", "Completed", "Cancelled"];
 
 // ── Password ──────────────────────────────────────────────────────────────────
 
-const ADMIN_PASSWORD = "pujabook2026";
+const ADMIN_PASSWORD = "heypuja2026";
 const LS_KEY = "pb_admin_authed";
 
 // ── Stat Card ─────────────────────────────────────────────────────────────────
@@ -205,7 +205,7 @@ export default function AdminPage() {
       <div className="flex min-h-screen items-center justify-center px-6" style={{ backgroundColor: "#1e1b18" }}>
         <div className="w-full max-w-sm">
           <div className="mb-8 text-center">
-            <span className="text-3xl font-black" style={{ color: "#f97316" }}>PujaBook</span>
+            <span className="text-3xl font-black" style={{ color: "#f97316" }}>HeyPuja</span>
             <p className="mt-1 text-sm text-slate-400">Admin Dashboard</p>
           </div>
           <div className="rounded-2xl p-8" style={{ backgroundColor: "#292524", border: "1px solid #44403c" }}>
@@ -262,7 +262,7 @@ export default function AdminPage() {
       >
         {/* Logo */}
         <div className="flex items-center gap-2 px-6 py-5 border-b border-stone-800">
-          <span className="text-xl font-black" style={{ color: "#f97316" }}>PujaBook</span>
+          <span className="text-xl font-black" style={{ color: "#f97316" }}>HeyPuja</span>
           <span className="rounded px-1.5 py-0.5 text-xs font-medium text-orange-300" style={{ backgroundColor: "#431407" }}>Admin</span>
         </div>
 

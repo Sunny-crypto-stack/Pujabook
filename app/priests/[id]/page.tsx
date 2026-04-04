@@ -504,7 +504,7 @@ export default function PriestDetailPage() {
       {/* Navbar */}
       <nav className="sticky top-0 z-50 border-b border-orange-100 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="/" className="text-xl font-black" style={{ color: "#f97316" }}>PujaBook</a>
+          <a href="/" className="text-xl font-black" style={{ color: "#f97316" }}>HeyPuja</a>
           <a href="/#for-priests" className="rounded-full px-5 py-2 text-sm font-semibold text-white" style={{ backgroundColor: "#f97316" }}>
             Register as Priest
           </a>
